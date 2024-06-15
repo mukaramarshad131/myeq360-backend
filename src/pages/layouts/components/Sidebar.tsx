@@ -70,19 +70,13 @@ export default function Sidebar() {
 					label: "Dashboard",
 				},
 				{
-					url: "/videos",
+					url: "/admin",
 					icon: "FileTextOutlined",
-					label: "Assessment",
+					label: "Admin",
 					children: [
 						{
-							url: "/uploads/sub1",
-							label: "Assessment Results",
-							// icon: "QrcodeOutlined",
-						},
-						{
-							url: "/uploads/sub1",
-							label: "Add Questions",
-							// icon: "QrcodeOutlined",
+							url: "/admin",
+							label: "Admin",
 						},
 					],
 				},

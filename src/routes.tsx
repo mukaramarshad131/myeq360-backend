@@ -1,6 +1,7 @@
 import { useAppSelector } from "@hooks/reduxHook";
 
 import Login from "@pages/auth/Login";
+// import SignUp from "@pages/auth/SignUp";
 
 import Dashboard from "@pages/dashboard/Dashboard";
 import ErrorPage from "@pages/layouts/errors/ErrorPage";
@@ -11,6 +12,7 @@ import {
 	RouterProvider,
 	createBrowserRouter,
 } from "react-router-dom";
+import AdminDashboard from "./components/Admin/Admin";
 
 const routes = createBrowserRouter([
 	{
@@ -20,12 +22,17 @@ const routes = createBrowserRouter([
 	},
 	{
 		path: "/login",
-		element: <Login />,
+		element: <Login/>,
 		errorElement: <ErrorPage />
 	},
 	{
 		path: "/dashboard",
 		element: <Dashboard />,
+		errorElement: <ErrorPage />
+	},
+	{
+		path: "/admin",
+		element: <AdminDashboard />,
 		errorElement: <ErrorPage />
 	},
 	{
