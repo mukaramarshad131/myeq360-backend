@@ -4,7 +4,7 @@ import { ReactElement, createElement, useEffect, useState } from "react";
 import { AntdIconProps } from "@ant-design/icons/lib/components/AntdIcon";
 import { useNavigate } from "react-router-dom";
 import { useAppSelector } from "@hooks/reduxHook";
-import logo from "../../../assets/img/logo_img.png";
+import logo from '../assets/img/logo_img.png'
 
 type IconMap = {
 	[key: string]: ReactElement;

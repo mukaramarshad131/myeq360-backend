@@ -1,4 +1,5 @@
-import { stats } from "../../../constants";
+// import { stats } from "../../../constants";
+import { stats } from '../../../constants'
 import { StatCard } from "./StatCard";
 
 export function StatCardSection() {

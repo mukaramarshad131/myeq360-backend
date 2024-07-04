@@ -1,10 +1,12 @@
 import { useAppDispatch, useAppSelector } from "@hooks/reduxHook";
 import { User } from "@mytypes/authType";
-import Guest from "@pages/layouts/Guest";
+import Guest from "../../Errors/Guest";
 import { loginSuccess } from "@redux/slices/authSlice";
 import { Button, Checkbox, Form, FormProps, Input } from "antd";
 import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
+
+
 
 export default function Login() {
 	// const [showAlert, setShowAlert] = useState(false);
@@ -40,6 +42,8 @@ export default function Login() {
 	};
 
 	return (
+		<>
+		
 		<Guest>
 			<Form
 				name="basic"
@@ -48,7 +52,7 @@ export default function Login() {
 				onFinishFailed={onFinishFailed}
 				autoComplete="off"
 			>
-				<label className="font-semibold text-lg">Username</label>
+				<label className="font-normal text-lg">Username</label>
 				<Form.Item
 					name="email"
 					rules={[
@@ -58,7 +62,7 @@ export default function Login() {
 					<Input size="large" className="mt-2" />
 				</Form.Item>
 
-				<label className="font-semibold text-lg">Password</label>
+				<label className="font-normal text-lg">Password</label>
 				<Form.Item
 					name="password"
 					rules={[{ required: true, message: "Please input your Password." }]}
@@ -72,7 +76,7 @@ export default function Login() {
 					</Form.Item>
 					<Button
 						type="link"
-						className="text-base"
+						className="text-base text-red-500"
 						onClick={() => navigate("/forget-password")}
 					>
 						Forget Password!
@@ -90,6 +94,12 @@ export default function Login() {
 					</Button>
 				</Form.Item>
 			</Form>
-		</Guest>
-	);
+			<button
+				onClick={() => navigate("/signup")}
+				className="flex items-center justify-center m-auto mb-5 mt-5 text-base "
+			>
+				Not have account yet &nbsp; <span className="text-green-500">SignUp Now</span>
+			</button>
+		</Guest></>
+	); 
 }

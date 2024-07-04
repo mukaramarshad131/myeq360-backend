@@ -1,5 +1,6 @@
 import { Button, Result } from "antd";
-import Guest from "../Guest";
+// import Guest from "../Guest";
+import Guest from '../Errors/Guest'
 import { useNavigate } from "react-router-dom";
 
 export default function NotFound() {

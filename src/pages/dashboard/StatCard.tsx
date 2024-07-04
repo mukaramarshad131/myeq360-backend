@@ -1,4 +1,5 @@
 import image from '../../assets/img/image.jpg';
+// import image from '../assets/img/image.jpg'
 type StatCardProps = {
   
     title: string;

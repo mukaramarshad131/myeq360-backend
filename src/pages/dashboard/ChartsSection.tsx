@@ -1,17 +1,16 @@
 import ReactECharts from "echarts-for-react";
 import { useState } from "react";
-
-import { durationOptions } from "../../../constants";
-import { barOptions } from "../../../constants/barOptions";
-import { pieOptions } from "../../../constants/pieOptions";
-import SectionHeading from "../ui/SectionHeading";
-import SelectComponent from "../ui/SelectComponent";
+import {durationOptions} from '../../../constants'
+import { barOptions } from '../../../constants/barOptions'
+import { pieOptions } from '../../../constants/pieOptions'
+import SectionHeading from "../../components/ui/SectionHeading";
+import SelectComponent from '../../components/ui/SelectComponent'
 
 export function ChartsSection() {
 	const [duration, setDuration] = useState(durationOptions[0]);
 	// console.log(duration);
 	return (
-		<section className="h-full grid md:grid-cols-1 lg:grid-cols-3 gap-8 mb-8 lg:max-h-[350px] max-h-fit w-auto">
+		<section className=" mt-10  h-full grid md:grid-cols-1 lg:grid-cols-3 gap-8 mb-10 lg:max-h-[350px] max-h-fit w-auto">
 			<div className="rouded md:col-span-1 rounded-xl gap-2 lg:col-span-2 bg-white border flex justify-center p-4 flex-col h-full">
 				<div className="flex justify-between">
 					<div>

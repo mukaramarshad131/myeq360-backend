@@ -1,8 +1,8 @@
 import { Layout, Typography} from "antd";
 import { ReactNode, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import Sidebar from "./components/Sidebar";
-import Navbar from "./components/Navbar";
+import Sidebar from '../Layouts/Sidebar'
+import Navbar from "../Layouts/Navbar";
 import { BreadcrumbItemType } from "antd/es/breadcrumb/Breadcrumb";
 import { Breadcrumb as Bc } from "antd";
 import { useAppSelector } from "@hooks/reduxHook";

@@ -4,15 +4,18 @@ import Login from "@pages/auth/Login";
 // import SignUp from "@pages/auth/SignUp";
 
 import Dashboard from "@pages/dashboard/Dashboard";
-import ErrorPage from "@pages/layouts/errors/ErrorPage";
-import NotFound from "@pages/layouts/errors/NotFound";
+// import ErrorPage from "@pages/layouts/errors/ErrorPage";
+import ErrorPage from '../src/Errors/ErrorPage'
+import NotFound from "../src/Errors/NotFound";
 import { ConfigProvider, theme } from "antd";
 import {
 	Navigate,
 	RouterProvider,
 	createBrowserRouter,
 } from "react-router-dom";
-import AdminDashboard from "./components/Admin/Admin";
+import AdminDashboard from "./components/Admin";
+import ForgotPassword from "@pages/auth/ForgotPassword";
+import SignUp from "@pages/auth/SignUp";
 
 const routes = createBrowserRouter([
 	{
@@ -21,8 +24,18 @@ const routes = createBrowserRouter([
 		errorElement: <ErrorPage />
 	},
 	{
+		path: "/signup",
+		element: <SignUp/>,
+		errorElement: <ErrorPage />
+	},
+	{
 		path: "/login",
 		element: <Login/>,
+		errorElement: <ErrorPage />
+	},
+	{
+		path: "/forget-password",
+		element: <ForgotPassword/>,
 		errorElement: <ErrorPage />
 	},
 	{

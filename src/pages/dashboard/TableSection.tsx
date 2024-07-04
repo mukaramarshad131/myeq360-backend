@@ -1,8 +1,9 @@
 import { Table, TableProps } from "antd";
 import { useState } from "react";
-import SectionHeading from "../ui/SectionHeading";
-import SelectComponent from "../ui/SelectComponent";
-import { productData } from "../../../constants";
+import SectionHeading from '../../components/ui/SectionHeading'
+import SelectComponent from "../../components/ui/SelectComponent";
+import { productData } from '../../../constants'
+
 import img from '../../assets/img/img.jpg'
 
 export type DataType = {

@@ -1,18 +1,28 @@
+import axios from "axios";
+import { loginProps } from "../types/Interface/Authentication";
+import {baseUrl} from '../utils/environments/environment'
 
-export interface LoginResponse {
-    success: boolean;
-    message?: string;
-  }
-  
-  export const login = async (username: string, password: string): Promise<LoginResponse> => {
-    return new Promise((resolve, reject) => {
-      setTimeout(() => {
-        if (username === "admin" && password === "123") {
-          resolve({ success: true });
-        } else {
-          reject(new Error("Invalid username or password"));
-        }
-      }, 1000); // Simulate network delay
-    });
-  };
-  
+export const signIn = async (loginData: loginProps) => {
+  return await axios.post(`${baseUrl}authentication/signin`, loginData);
+};
+
+export const forgetPassword = async (email: string) => {
+  return await axios.post(`${baseUrl}authentication/forget-password`, {
+    email: email,
+  });
+};
+
+export const getResetPassword = async (id: any) => {
+  return await axios.get(`${baseUrl}authentication/get-reset-password/${id}`);
+};
+
+export const resetPassword = async (
+  id: any,
+  values: { email: string; password: string }
+) => {
+  return await axios.put(`${baseUrl}authentication/reset-password`, {
+    key_account: id,
+    email: values.email,
+    password: values.password,
+  });
+};
