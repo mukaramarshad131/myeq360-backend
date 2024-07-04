@@ -24,11 +24,18 @@ function RegisterForm() {
     <>
       <div className="mb-4 text-2xl font-bold xl:text-3xl">{t('sys.login.signUpFormTitle')}</div>
       <Form name="normal_login" size="large" initialValues={{ remember: true }} onFinish={onFinish}>
+        {/* // "accountPlaceholder": "Please input username", */}
         <Form.Item
-          name="username"
-          rules={[{ required: true, message: t('sys.login.accountPlaceholder') }]}
+          name="firstname"
+          rules={[{ required: true, message: t('sys.login.firstNamePlaceholder') }]}
         >
-          <Input placeholder={t('sys.login.userName')} />
+          <Input placeholder={t('sys.login.firstName')} />
+        </Form.Item>
+        <Form.Item
+          name="lastname"
+          rules={[{ required: true, message: t('sys.login.lastNamePlaceholder') }]}
+        >
+          <Input placeholder={t('sys.login.lastName')} />
         </Form.Item>
         <Form.Item
           name="email"
@@ -38,10 +45,27 @@ function RegisterForm() {
         </Form.Item>
         <Form.Item
           name="password"
-          rules={[{ required: true, message: t('sys.login.passwordPlaceholder') }]}
+          rules={[
+            { required: true, message: t('sys.login.passwordPlaceholder') }, // Existing required rule
+            { min: 8, message: t('sys.login.passwordMinLength') }, // Minimum length
+            {
+              validator: (rule, value) => {
+                const hasUppercase = /[A-Z]/.test(value);
+                const hasLowercase = /[a-z]/.test(value);
+                const hasNumber = /[0-9]/.test(value);
+                const hasSpecialChar = /[^a-zA-Z0-9 ]/.test(value); // Special characters
+
+                if (!hasUppercase || !hasLowercase || !hasNumber || !hasSpecialChar) {
+                  return Promise.reject(t('sys.login.passwordComplexity')); // More descriptive error message
+                }
+                return Promise.resolve(); // Password is valid
+              },
+            },
+          ]}
         >
-          <Input.Password type="password" placeholder={t('sys.login.password')} />
+          <Input.Password placeholder={t('sys.login.password')} />
         </Form.Item>
+
         <Form.Item
           name="confirmPassword"
           rules={[
