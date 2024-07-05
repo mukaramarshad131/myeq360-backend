@@ -33,7 +33,7 @@ function ResetForm() {
           <Input placeholder={t('sys.login.email')} />
         </Form.Item>
         <Form.Item>
-          <Button type="primary" htmlType="submit" className="w-full !bg-black">
+          <Button type="primary" htmlType="submit" className="w-full !bg-[#259A75]">
             {t('sys.login.sendEmailButton')}
           </Button>
         </Form.Item>

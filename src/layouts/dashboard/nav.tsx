@@ -12,7 +12,7 @@ import { menuFilter } from '@/router/utils';
 import { useSettingActions, useSettings } from '@/store/settingStore';
 import { useThemeToken } from '@/theme/hooks';
 
-import logo from '../../assets/images/logo_img.png';
+import logo from '../../assets/images/eqlogo.png';
 
 import { NAV_COLLAPSED_WIDTH, NAV_WIDTH } from './config';
 
