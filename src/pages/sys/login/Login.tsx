@@ -1,4 +1,4 @@
-import { Layout, Typography } from 'antd';
+import { Layout } from 'antd';
 import Color from 'color';
 import { useTranslation } from 'react-i18next';
 import { Navigate } from 'react-router-dom';
@@ -34,18 +34,19 @@ function Login() {
   return (
     <Layout className="relative flex !min-h-screen !w-full !flex-row">
       <div
-        className="hidden grow flex-col items-center justify-center gap-[50px] bg-center  bg-no-repeat md:flex"
+        className="hidden grow flex-col items-center justify-center gap-[10px] bg-center  bg-no-repeat md:flex"
         style={{
           background: bg,
         }}
       >
         <div className="text-3xl font-bold leading-normal lg:text-4xl xl:text-5xl">
-          <img className="mt-[20px] max-w-[400px] xl:max-w-[200px]" src={eq} alt="eq360" />
+          <img className="mt-[20px] max-w-[350px] xl:max-w-[150px]" src={eq} alt="eq360" />
         </div>
         <img className="max-w-[480px] xl:max-w-[560px]" src={dashboardimg} alt="" />
-        <Typography.Text className="flex flex-row gap-[16px] text-2xl">
-          {t('sys.login.signInSecondTitle')}
-        </Typography.Text>
+        <p className="text-3xl font-bold text-[#37466E]">
+          {' '}
+          Emotional Intelligence Update Your IQ with EQ
+        </p>
       </div>
 
       <div className="m-auto flex !h-screen w-full max-w-[480px] flex-col justify-center px-[16px] lg:px-[64px]">
