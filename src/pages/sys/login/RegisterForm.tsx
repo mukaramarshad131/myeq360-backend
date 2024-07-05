@@ -24,7 +24,6 @@ function RegisterForm() {
     <>
       <div className="mb-4 text-2xl font-bold xl:text-3xl">{t('sys.login.signUpFormTitle')}</div>
       <Form name="normal_login" size="large" initialValues={{ remember: true }} onFinish={onFinish}>
-        {/* // "accountPlaceholder": "Please input username", */}
         <Form.Item
           name="firstname"
           rules={[{ required: true, message: t('sys.login.firstNamePlaceholder') }]}
@@ -46,19 +45,19 @@ function RegisterForm() {
         <Form.Item
           name="password"
           rules={[
-            { required: true, message: t('sys.login.passwordPlaceholder') }, // Existing required rule
-            { min: 8, message: t('sys.login.passwordMinLength') }, // Minimum length
+            { required: true, message: t('sys.login.passwordPlaceholder') },
+            { min: 8, message: t('sys.login.passwordMinLength') },
             {
               validator: (rule, value) => {
                 const hasUppercase = /[A-Z]/.test(value);
                 const hasLowercase = /[a-z]/.test(value);
                 const hasNumber = /[0-9]/.test(value);
-                const hasSpecialChar = /[^a-zA-Z0-9 ]/.test(value); // Special characters
+                const hasSpecialChar = /[^a-zA-Z0-9 ]/.test(value);
 
                 if (!hasUppercase || !hasLowercase || !hasNumber || !hasSpecialChar) {
-                  return Promise.reject(t('sys.login.passwordComplexity')); // More descriptive error message
+                  return Promise.reject(t('sys.login.passwordComplexity'));
                 }
-                return Promise.resolve(); // Password is valid
+                return Promise.resolve();
               },
             },
           ]}

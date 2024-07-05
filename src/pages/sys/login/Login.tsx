@@ -3,7 +3,6 @@ import Color from 'color';
 import { useTranslation } from 'react-i18next';
 import { Navigate } from 'react-router-dom';
 
-// import DashboardImg from '@/assets/images/background/dashboard.png';
 import Overlay2 from '@/assets/images/background/overlay_2.jpg';
 import eq from '@/assets/images/eqlogo.png';
 import dashboardimg from '@/assets/images/file.png';
@@ -42,8 +41,6 @@ function Login() {
       >
         <div className="text-3xl font-bold leading-normal lg:text-4xl xl:text-5xl">
           <img className="mt-[20px] max-w-[400px] xl:max-w-[200px]" src={eq} alt="eq360" />
-          {/* <span className="text-[#3B4970]"> My EQ</span>{' '}
-          <span className="ml-[-10px] text-[#259A75]">360</span> */}
         </div>
         <img className="max-w-[480px] xl:max-w-[560px]" src={dashboardimg} alt="" />
         <Typography.Text className="flex flex-row gap-[16px] text-2xl">
