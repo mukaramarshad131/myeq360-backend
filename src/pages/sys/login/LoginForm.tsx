@@ -2,6 +2,7 @@ import { Button, Checkbox, Col, Divider, Form, Input, Row } from 'antd';
 import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { AiFillGoogleCircle } from 'react-icons/ai';
+import { Link } from 'react-router-dom';
 
 import { DEFAULT_USER } from '@/_mock/assets';
 import { SignInReq } from '@/api/services/userService';
@@ -77,13 +78,11 @@ function LoginForm() {
         </Form.Item>
 
         <Row align="middle" gutter={8}>
-          <Col
-            className="m-auto"
-            span={6}
-            flex="1"
-            onClick={() => setLoginState(LoginStateEnum.REGISTER)}
-          >
-            <Button className=" w-full !text-sm">{t('sys.login.signUpFormTitle')}</Button>
+          <Col className="m-auto" onClick={() => setLoginState(LoginStateEnum.REGISTER)}>
+            Don't have account yet?{'   '}
+            <Link to="/login" className="border-none">
+              {t('sys.login.signUpFormTitle')}
+            </Link>
           </Col>
         </Row>
 
