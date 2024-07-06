@@ -217,6 +217,15 @@ const COMPONENTS_PERMISSION = {
       component: '/components/editor/index.tsx',
     },
     {
+      id: '3745638746582948',
+      parentId: '2271615060673773',
+      label: 'sys.menu.table',
+      name: 'Table',
+      type: PermissionType.MENU,
+      route: 'table',
+      component: '/components/table/index.tsx',
+    },
+    {
       id: '2501920741714350',
       parentId: '2271615060673773',
       label: 'sys.menu.i18n',
@@ -472,13 +481,12 @@ const OTHERS_PERMISSION = [
 export const PERMISSION_LIST = [
   DASHBOARD_PERMISSION,
   MANAGEMENT_PERMISSION,
-  COMPONENTS_PERMISSION,
-  FUNCTIONS_PERMISSION,
-  MENU_LEVEL_PERMISSION,
-  ERRORS_PERMISSION,
-  ...OTHERS_PERMISSION,
+  // COMPONENTS_PERMISSION,
+  // FUNCTIONS_PERMISSION,
+  // MENU_LEVEL_PERMISSION,
+  // ERRORS_PERMISSION,
+  // ...OTHERS_PERMISSION,
 ];
-
 /**
  * User role mock
  */
@@ -498,10 +506,9 @@ const TEST_ROLE = {
   status: BasicStatus.ENABLE,
   order: 2,
   desc: 'test',
-  permission: [DASHBOARD_PERMISSION, COMPONENTS_PERMISSION, FUNCTIONS_PERMISSION],
+  permission: [DASHBOARD_PERMISSION],
 };
 export const ROLE_LIST = [ADMIN_ROLE, TEST_ROLE];
-
 /**
  * User data mock
  */

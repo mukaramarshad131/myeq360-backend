@@ -8,6 +8,7 @@ import { AppRouteObject } from '#/router';
 
 const AnimatePage = lazy(() => import('@/pages/components/animate'));
 const ScrollPage = lazy(() => import('@/pages/components/scroll'));
+const TableWithFilter = lazy(() => import('@/pages/components/table'));
 const MarkdownPage = lazy(() => import('@/pages/components/markdown'));
 const EditorPage = lazy(() => import('@/pages/components/editor'));
 const MultiLanguagePage = lazy(() => import('@/pages/components/multi-language'));
@@ -42,6 +43,11 @@ const components: AppRouteObject = {
       path: 'animate',
       element: <AnimatePage />,
       meta: { label: 'sys.menu.animate', key: '/components/animate' },
+    },
+    {
+      path: 'table',
+      element: <TableWithFilter />,
+      meta: { label: 'sys.menu.table', key: '/components/table' },
     },
     {
       path: 'scroll',

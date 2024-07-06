@@ -90,6 +90,7 @@
       "dashboard": "Dashboard",
       "workbench": "Workbench",
       "analysis": "Analysis",
+      "table":"Table",
       "management": "Management",
       "user": {
         "index": "User",
