@@ -77,27 +77,19 @@
       "privacyPolicy": " Privacy policy ",
       "logout": "Logout"
     },
-    "tab": {
-      "fullscreen": "FullScreen",
-      "refresh": "Refresh",
-      "close": "Close",
-      "closeOthers": "Close Others",
-      "closeAll": "Close All",
-      "closeLeft": "Close Left",
-      "closeRight": "Close Right"
-    },
+   
     "menu": {
       "dashboard": "Dashboard",
-      "workbench": "Workbench",
-      "analysis": "Analysis",
+      "workbench": "Self Assessment",
+      "analysis": "Take Assessment",
       "management": "Management",
       "user": {
-        "index": "User",
+        "index": "Manage User",
         "profile": "Profile",
         "account": "Account"
       },
       "system": {
-        "index": "System",
+        "index": "Manage User",
         "organization": "Organization",
         "permission": "Permission",
         "role": "Role",
@@ -136,8 +128,6 @@
       "external_link": "External Link",
       "iframe": "Iframe",
       "blank": "Blank",
-      "calendar": "Calendar",
-      "kanban": "Kanban",
       "error": {
         "index": "Error Page",
         "403": "403",

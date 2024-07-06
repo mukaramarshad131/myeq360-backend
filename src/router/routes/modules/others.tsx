@@ -9,39 +9,11 @@ import { AppRouteObject } from '#/router';
 
 const ExternalLink = lazy(() => import('@/pages/sys/others/iframe/external-link'));
 const Iframe = lazy(() => import('@/pages/sys/others/iframe'));
-const Calendar = lazy(() => import('@/pages/sys/others/calendar'));
-const Kanban = lazy(() => import('@/pages/sys/others/kanban'));
 
 function Wrapper({ children }: any) {
   return <Suspense fallback={<CircleLoading />}>{children}</Suspense>;
 }
 const others: AppRouteObject[] = [
-  {
-    path: 'calendar',
-    element: (
-      <Wrapper>
-        <Calendar />
-      </Wrapper>
-    ),
-    meta: {
-      label: 'sys.menu.calendar',
-      icon: <Iconify icon="solar:calendar-bold-duotone" size={24} />,
-      key: '/calendar',
-    },
-  },
-  {
-    path: 'kanban',
-    element: (
-      <Wrapper>
-        <Kanban />
-      </Wrapper>
-    ),
-    meta: {
-      label: 'sys.menu.kanban',
-      icon: <Iconify icon="solar:clipboard-bold-duotone" size={24} />,
-      key: '/kanban',
-    },
-  },
   {
     element: (
       <Wrapper>

@@ -384,26 +384,6 @@ const ERRORS_PERMISSION = {
 };
 const OTHERS_PERMISSION = [
   {
-    id: '3981225257359246',
-    parentId: '',
-    label: 'sys.menu.calendar',
-    name: 'Calendar',
-    icon: 'solar:calendar-bold-duotone',
-    type: PermissionType.MENU,
-    route: 'calendar',
-    component: '/sys/others/calendar/index.tsx',
-  },
-  {
-    id: '3513985683886393',
-    parentId: '',
-    label: 'sys.menu.kanban',
-    name: 'kanban',
-    icon: 'solar:clipboard-bold-duotone',
-    type: PermissionType.MENU,
-    route: 'kanban',
-    component: '/sys/others/kanban/index.tsx',
-  },
-  {
     id: '5455837930804461',
     parentId: '',
     label: 'sys.menu.disabled',
@@ -412,7 +392,7 @@ const OTHERS_PERMISSION = [
     type: PermissionType.MENU,
     route: 'disabled',
     status: BasicStatus.DISABLE,
-    component: '/sys/others/calendar/index.tsx',
+   
   },
   {
     id: '7728048658221587',

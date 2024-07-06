@@ -65,7 +65,7 @@ export default function AccountDropdown() {
       ),
       key: '0',
     },
-    { label: <NavLink to={HOMEPAGE}>{t('sys.menu.dashboard')}</NavLink>, key: '1' },
+    { label: <NavLink to={HOMEPAGE}>{t('.dashboard')}</NavLink>, key: '1' },
     {
       label: <NavLink to="/management/user/profile">{t('sys.menu.user.profile')}</NavLink>,
       key: '2',

@@ -115,19 +115,29 @@ export default function Nav(props: Props) {
       className="flex h-full flex-col"
       style={{
         width: collapsed ? NAV_COLLAPSED_WIDTH : NAV_WIDTH,
+        marginLeft: collapsed ? '20px' : '',
       }}
     >
-      <div className="relative flex h-20 items-center justify-center py-4">
-        <MotionContainer className="flex items-center">
-          <img src={logo} alt="logo" height="auto" width="80px" style={{ margin: 'auto' }} />
+      <div className=" flex h-20 flex-row items-center justify-around ">
+        <MotionContainer>
+          <img src={logo} alt="logo" height="auto" width="80px" />
           {themeLayout !== ThemeLayout.Mini && <m.div variants={slideInLeft} />}
         </MotionContainer>
         <button
           onClick={toggleCollapsed}
-          className="absolute right-0 top-7 z-50 hidden h-6 w-6 translate-x-1/2 cursor-pointer select-none rounded-full text-center !text-gray md:block"
+          className="  h-6 w-6 cursor-pointer select-none rounded-full text-center !text-gray md:block"
           style={{ color: colorTextBase, borderColor: colorTextBase, fontSize: 16 }}
         >
-          {collapsed ? <MenuUnfoldOutlined size={20} /> : <MenuFoldOutlined size={20} />}
+          {collapsed ? (
+            <span style={{ marginLeft: '15px', fontSize: '20px' }}>
+              {' '}
+              <MenuUnfoldOutlined size={20} />
+            </span>
+          ) : (
+            <span>
+              <MenuFoldOutlined size={20} />
+            </span>
+          )}
         </button>
       </div>
 
