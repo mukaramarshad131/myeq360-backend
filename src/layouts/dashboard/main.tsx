@@ -6,8 +6,6 @@ import { useSettings } from '@/store/settingStore';
 import { useResponsive } from '@/theme/hooks';
 
 import { NAV_WIDTH, NAV_COLLAPSED_WIDTH, HEADER_HEIGHT, MULTI_TABS_HEIGHT } from './config';
-import MultiTabs from './multi-tabs';
-import { MultiTabsProvider } from './multi-tabs/multi-tabs-provider';
 
 import { ThemeLayout } from '#/enum';
 
@@ -41,13 +39,7 @@ const Main = forwardRef<HTMLDivElement, Props>(({ offsetTop = false }, ref) => {
           themeStretch ? '' : 'xl:max-w-screen-xl'
         }`}
       >
-        {multiTab ? (
-          <MultiTabsProvider>
-            <MultiTabs offsetTop={offsetTop} />
-          </MultiTabsProvider>
-        ) : (
-          <Outlet />
-        )}
+        <Outlet />
       </div>
     </Content>
   );

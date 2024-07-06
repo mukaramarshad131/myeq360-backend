@@ -4,8 +4,8 @@ import { useTranslation } from 'react-i18next';
 import { Navigate } from 'react-router-dom';
 
 import Overlay2 from '@/assets/images/background/overlay_2.jpg';
+import dashboardimg from '@/assets/images/Designer.jpeg';
 import eq from '@/assets/images/eqlogo.png';
-import dashboardimg from '@/assets/images/file.png';
 import LocalePicker from '@/components/locale-picker';
 import { useUserToken } from '@/store/userStore';
 import { useThemeToken } from '@/theme/hooks';
@@ -36,13 +36,13 @@ function Login() {
       <div
         className="hidden grow flex-col items-center justify-center gap-[10px] bg-center  bg-no-repeat md:flex"
         style={{
-          background: bg,
+          background: ' #FCFEFD',
         }}
       >
         <div className="text-3xl font-bold leading-normal lg:text-4xl xl:text-5xl">
           <img className="mt-[20px] max-w-[350px] xl:max-w-[150px]" src={eq} alt="eq360" />
         </div>
-        <img className="max-w-[480px] xl:max-w-[560px]" src={dashboardimg} alt="" />
+        <img className="max-w-[400px] xl:max-w-[450px]" src={dashboardimg} alt="" />
         <p className="text-3xl font-bold text-[#37466E]">
           {' '}
           Emotional Intelligence Update Your IQ with EQ
