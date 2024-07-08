@@ -53,6 +53,8 @@
    
       "firstNamePlaceholder": "Please input first name",
       "lastNamePlaceholder": "Please input last name",
+      "userName":"Please input user name",
+      "accountPlaceholder":"Please input user name",
       "passwordPlaceholder": "Please input password",
       "confirmPasswordPlaceholder": "Please input confirm password",
     
@@ -62,7 +64,7 @@
       "smsPlaceholder": "Please input sms code",
       "mobilePlaceholder": "Please input mobile",
       "policyPlaceholder": "Register after checking",
-      "diffPwd": "The two passwords are inconsistent",
+      "diffPwd": "The two passwords must be inconsistent",
 
       "firstName": "First Name",
       "lastName": "Last Name",

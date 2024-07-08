@@ -4,8 +4,8 @@ import { useTranslation } from 'react-i18next';
 import { Navigate } from 'react-router-dom';
 
 import Overlay2 from '@/assets/images/background/overlay_2.jpg';
-import dashboardimg from '@/assets/images/Designer.jpeg';
 import eq from '@/assets/images/eqlogo.png';
+import dashboardimg from '@/assets/images/file (1).png';
 import LocalePicker from '@/components/locale-picker';
 import { useUserToken } from '@/store/userStore';
 import { useThemeToken } from '@/theme/hooks';
@@ -34,7 +34,7 @@ function Login() {
   return (
     <Layout className="relative flex !min-h-screen !w-full !flex-row">
       <div
-        className="hidden grow flex-col items-center justify-center gap-[10px] bg-center  bg-no-repeat md:flex"
+        className="hidden grow flex-col items-center justify-around bg-center  bg-no-repeat md:flex"
         style={{
           background: ' #FCFEFD',
         }}

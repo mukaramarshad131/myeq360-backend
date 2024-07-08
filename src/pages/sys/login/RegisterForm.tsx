@@ -45,8 +45,8 @@ function RegisterForm() {
         <Form.Item
           name="password"
           rules={[
-            { required: true, message: t('sys.login.passwordPlaceholder') },
-            { min: 8 },
+            { required: true },
+
             {
               validator: (rule, value) => {
                 const hasUppercase = /[A-Z]/.test(value);
