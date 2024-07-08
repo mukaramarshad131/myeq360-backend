@@ -7,7 +7,7 @@ export function TrialLinkCard() {
       className=" flex  flex-col items-center justify-between rounded-2xl p-6 py-12 max-lg:w-full"
       style={{ background: '#92d6e5', color: 'white' }}
     >
-      <h1 className="text-'#08979C' text-xl font-bold">Free Individual Assessment </h1>
+      <h1 className="text-'#D9DDE0' text-2xl font-semibold">Free Individual Assessment </h1>
       <div
         style={{ color: 'white', fontSize: '15px' }}
         className="mx-auto mb-6 mt-4 max-w-sm  text-sm  md:mx-0"
@@ -29,10 +29,10 @@ export function TrialLinkCard() {
         </a>
         <button
           className="font-mediumtext-black flex items-center justify-center rounded-lg px-2 py-1 shadow-none md:m-0"
-          style={{ backgroundColor: '#0092B3', color: '#fff' }}
+          style={{ backgroundColor: '#0092B3', color: '#fff', padding: 7 }}
           onClick={() => window.open('https://myeq360.com/')}
         >
-          <span className="ml-2 font-normal">Attempt Free Assessment</span>
+          <span className="ml-2 font-normal text-['20px']">Attempt Free Assessment</span>
         </button>
       </div>
     </div>

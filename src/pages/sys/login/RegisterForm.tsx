@@ -46,7 +46,7 @@ function RegisterForm() {
           name="password"
           rules={[
             { required: true, message: t('sys.login.passwordPlaceholder') },
-            { min: 8, message: t('sys.login.passwordMinLength') },
+            { min: 8 },
             {
               validator: (rule, value) => {
                 const hasUppercase = /[A-Z]/.test(value);

@@ -55,8 +55,8 @@
       "lastNamePlaceholder": "Please input last name",
       "passwordPlaceholder": "Please input password",
       "confirmPasswordPlaceholder": "Please input confirm password",
-      "passwordMinLength": "Password must be at least 8 Characters long",
-      "passwordComplexity": "Password should more than 8 character contains 1 upercase, 1 special character, 1 number",
+    
+      "passwordComplexity": "Password must be 8 characters long contains 1 upercase, 1 special character, 1 number",
 
       "emaildPlaceholder": "Please input email",
       "smsPlaceholder": "Please input sms code",
