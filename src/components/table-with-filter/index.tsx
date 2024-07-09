@@ -62,7 +62,7 @@ export default function TableWithFilter({
         title={modalTitle || 'Add New'}
         onCancel={() => setShowModal(false)}
         show={showModal}
-        onOk={() => {
+        onSubmit={() => {
           console.log('first');
         }}
       >
