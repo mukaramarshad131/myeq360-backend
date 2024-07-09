@@ -3,13 +3,13 @@ import { Modal } from 'antd';
 type ModalProps = {
   title: string;
   show: boolean;
-  onOk: VoidFunction;
+  onSubmit: VoidFunction;
   onCancel: VoidFunction;
   children: any;
 };
-export default function EQModal({ title, show, onOk, onCancel, children }: ModalProps) {
+export default function EQModal({ title, show, onSubmit, onCancel, children }: ModalProps) {
   return (
-    <Modal title={title} open={show} onOk={onOk} onCancel={onCancel}>
+    <Modal title={title} open={show} onOk={onSubmit} onCancel={onCancel}>
       {children}
     </Modal>
   );
