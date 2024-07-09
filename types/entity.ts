@@ -1,3 +1,6 @@
+import { TablePaginationConfig } from 'antd';
+import { ReactNode } from 'react';
+
 import { BasicStatus, PermissionType } from './enum';
 
 export interface UserToken {
@@ -25,6 +28,17 @@ export interface Organization {
   children?: Organization[];
 }
 
+export interface TableInterface {
+  showFilter?: boolean;
+  title: string;
+  pagination?: false | TablePaginationConfig | undefined;
+  addModal?: boolean;
+  dataSource: [];
+  column: [];
+  modalBtnTitle?: string;
+  modalTitle?: string;
+  modalChildren?: ReactNode;
+}
 export interface Permission {
   id: string;
   parentId: string;

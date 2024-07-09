@@ -11,7 +11,7 @@ import { ThemeMode } from '#/enum';
 type Props = {
   organizations?: Organization[];
 };
-export default function OrganizationChart({ organizations = [] }: Props) {
+export default function EQAccountChart({ organizations = [] }: Props) {
   const themeToken = useThemeToken();
   const { themeMode } = useSettings();
   return (

@@ -1,4 +1,4 @@
-import { MenuUnfoldOutlined, MenuFoldOutlined } from '@ant-design/icons';
+import { CloseOutlined, MenuOutlined } from '@ant-design/icons';
 import { Menu, MenuProps } from 'antd';
 import { m } from 'framer-motion';
 import { CSSProperties, useEffect, useState } from 'react';
@@ -27,8 +27,7 @@ export default function Nav(props: Props) {
   const navigate = useNavigate();
   const matches = useMatches();
   const { pathname } = useLocation();
-
-  const { colorPrimary, colorTextBase, colorBgElevated, colorBorder } = useThemeToken();
+  const { colorTextBase, colorBgElevated } = useThemeToken();
 
   const settings = useSettings();
   const { themeLayout } = settings;
@@ -42,7 +41,6 @@ export default function Nav(props: Props) {
   const permissionRoutes = usePermissionRoutes();
   const menuRoutes = menuFilter(permissionRoutes);
   const menuList = routeToMenuFn(menuRoutes);
-
   // 获取拍平后的路由菜单
   const flattenedRoutes = useFlattenedRoutes();
 
@@ -80,11 +78,7 @@ export default function Nav(props: Props) {
     setOpenKeys(keys);
   };
   const onClick: MenuProps['onClick'] = ({ key }) => {
-    // 从扁平化的路由信息里面匹配当前点击的那个
     const nextLink = flattenedRoutes?.find((el) => el.key === key);
-
-    // 处理菜单项中，外链的特殊情况
-    // 点击外链时，不跳转路由，不在当前项目添加tab，不选中当前路由，新开一个 tab 打开外链
     if (nextLink?.hideTab && nextLink?.frameSrc) {
       window.open(nextLink?.frameSrc, '_blank');
       return;
@@ -112,22 +106,29 @@ export default function Nav(props: Props) {
 
   return (
     <div
-      className="flex h-full flex-col"
+      className="flex h-full flex-col transition-all duration-300 ease-in-out"
       style={{
         width: collapsed ? NAV_COLLAPSED_WIDTH : NAV_WIDTH,
       }}
     >
       <div className="relative flex h-20 items-center justify-center py-4">
-        <MotionContainer className="flex items-center">
-          <img src={logo} alt="logo" height="auto" width="80px" style={{ margin: 'auto' }} />
+        <MotionContainer className="flex items-center ">
+          <img
+            src={logo}
+            alt="logo"
+            height="auto"
+            width={collapsed ? '80px' : '150px'}
+            style={{ margin: 'auto' }}
+            className="transition-all duration-300 ease-in-out"
+          />
           {themeLayout !== ThemeLayout.Mini && <m.div variants={slideInLeft} />}
         </MotionContainer>
         <button
           onClick={toggleCollapsed}
-          className="absolute right-0 top-7 z-50 hidden h-6 w-6 translate-x-1/2 cursor-pointer select-none rounded-full text-center !text-gray md:block"
-          style={{ color: colorTextBase, borderColor: colorTextBase, fontSize: 16 }}
+          className="absolute right-[-13px] top-[18px] z-50 hidden h-6 w-6 translate-x-1/2 cursor-pointer select-none rounded-full text-center font-bold !text-[#4c9e77] md:block"
+          style={{ color: colorTextBase, borderColor: colorTextBase, fontSize: 20 }}
         >
-          {collapsed ? <MenuUnfoldOutlined size={20} /> : <MenuFoldOutlined size={20} />}
+          {collapsed ? <MenuOutlined /> : <CloseOutlined />}
         </button>
       </div>
 
