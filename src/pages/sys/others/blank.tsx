@@ -8,8 +8,8 @@ export default function BlankPage() {
   return (
     <Card className="flex flex-col">
       <div className="flex flex-row gap-2 max-lg:flex-col">
-        <IndividualBannerCard />
         <TrialLinkCard />
+        <IndividualBannerCard />
       </div>
       <Faq />
     </Card>

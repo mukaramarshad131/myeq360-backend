@@ -21,13 +21,6 @@ export default function IndividualBannerCard() {
       style={{ background: bg }}
     >
       <Col span={24} md={12} xl={16} className="flex-1 text-center md:text-left">
-        <div
-          className="mt-4 text-lg font-semibold md:text-xl"
-          style={{ color: themeToken.colorPrimaryActive }}
-        >
-          <h4>Welcome back 👋 </h4>
-          <h4>{username}</h4>
-        </div>
         <h1 style={{ color: themeToken.colorPrimaryActive }} className="mt-3 text-xl font-bold">
           What is Emotional Intelligence ?
         </h1>
