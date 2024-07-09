@@ -13,7 +13,7 @@ const obj = [
     id: 2,
     Q: 'Q. WHAT WILL MY EQ TEST RESULTS LOOK LIKE?',
     Ans: 'A. Your results show your scores on the five dimensions of emotional intelligence.',
-    bg: '#92D6E5',
+    bg: '#E6FFFB',
     color: '#08979C',
   },
   {
@@ -27,7 +27,7 @@ const obj = [
     id: 4,
     Q: 'Q. DO I NEED TO COMPLETE THIS EMOTIONAL INTELLIGENCE TEST ALL AT ONCE?',
     Ans: 'A. If you’ve created an account and are logged in when you take the test, your responses will be saved as you go through the test. If you do not log in to a Truity account before starting the test, your progress will not be saved and you will need to complete the test all at once.',
-    bg: '#92D6E5',
+    bg: '#E6FFFB',
     color: '#08979C',
   },
   {
@@ -42,7 +42,7 @@ const obj = [
 function Faq() {
   const [expandedId, setExpandedId] = useState(null);
 
-  const toggleAnswer = (id) => {
+  const toggleAnswer = (id: any) => {
     if (expandedId === id) {
       setExpandedId(null); // Collapse the answer if it's already expanded
     } else {

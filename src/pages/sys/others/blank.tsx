@@ -1,8 +1,9 @@
 import Card from '@/components/card';
+import Analysis from '@/pages/dashboard/analysis';
 
 import Faq from './Faq';
 import IndividualBannerCard from './IndividaulBannerCard';
-import { TrialLinkCard } from './trialLinkCard';
+import { TrialLinkCard } from './TrialLinkCard';
 
 export default function BlankPage() {
   return (
@@ -11,6 +12,7 @@ export default function BlankPage() {
         <TrialLinkCard />
         <IndividualBannerCard />
       </div>
+      <Analysis />
       <Faq />
     </Card>
   );
