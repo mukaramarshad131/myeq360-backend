@@ -2,7 +2,7 @@ import Card from '@/components/card';
 
 import Faq from './Faq';
 import IndividualBannerCard from './IndividaulBannerCard';
-import { TrialLinkCard } from './TrialLinkCard';
+import { TrialLinkCard } from './trialLinkCard';
 
 export default function BlankPage() {
   return (
