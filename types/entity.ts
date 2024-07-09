@@ -39,6 +39,37 @@ export interface TableInterface {
   modalTitle?: string;
   modalChildren?: ReactNode;
 }
+
+export interface EQInput {
+  type: string;
+  disabled?: boolean;
+  inputName: string;
+  placeHolder?: string;
+  className?: string;
+  allowClear?: boolean;
+  onChange?: VoidFunction;
+  defaultValue?: string | number | undefined;
+  maxLength?: number;
+  inputLabel?: string | ReactNode | undefined;
+  showCount?: boolean;
+  mandatory?: boolean;
+}
+
+export type Series = {
+  name: string;
+  data: number[];
+};
+export interface ChartInterface {
+  dataLable: string[];
+  series: number[] | Series[];
+  height?: number;
+  width?: number;
+}
+
+export interface ChartCardInterface {
+  title: string | ReactNode;
+  children: ReactNode;
+}
 export interface Permission {
   id: string;
   parentId: string;

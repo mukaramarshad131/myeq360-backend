@@ -7,13 +7,12 @@ import { Link } from 'react-router-dom';
 import { DEFAULT_USER } from '@/_mock/assets';
 import { SignInReq } from '@/api/services/userService';
 import { useSignIn } from '@/store/userStore';
-import { useThemeToken } from '@/theme/hooks';
 
 import { LoginStateEnum, useLoginStateContext } from './providers/LoginStateProvider';
 
 function LoginForm() {
   const { t } = useTranslation();
-  const themeToken = useThemeToken();
+  // const themeToken = useThemeToken();
   const [loading, setLoading] = useState(false);
 
   const { loginState, setLoginState } = useLoginStateContext();
@@ -79,7 +78,7 @@ function LoginForm() {
 
         <Row align="middle" gutter={8}>
           <Col className="m-auto" onClick={() => setLoginState(LoginStateEnum.REGISTER)}>
-            Don't have account yet?{'   '}
+            Don&apos;t have account yet?{'   '}
             <Link to="/login" className="border-none">
               {t('sys.login.signUpFormTitle')}
             </Link>

@@ -1,14 +1,16 @@
 import Chart from '@/components/chart/chart';
 import useChart from '@/components/chart/useChart';
 
-const series = [44, 55, 13, 43];
-export default function ChartDonut() {
+import { ChartInterface } from '#/entity';
+
+export default function ChartDonut({ series, dataLable, height, width }: ChartInterface) {
   const chartOptions = useChart({
-    labels: ['Apple', 'Mango', 'Orange', 'Watermelon'],
+    labels: dataLable,
     stroke: {
       show: false,
     },
     legend: {
+      position: 'bottom',
       horizontalAlign: 'center',
     },
     tooltip: {
@@ -17,11 +19,30 @@ export default function ChartDonut() {
     plotOptions: {
       pie: {
         donut: {
-          size: '90%',
+          size: '60%',
+          labels: {
+            show: true,
+            value: {
+              show: true,
+              fontSize: '16px',
+            },
+            total: {
+              show: true,
+              fontSize: '16px',
+            },
+          },
         },
       },
     },
   });
 
-  return <Chart type="donut" series={series} options={chartOptions} height={320} />;
+  return (
+    <Chart
+      type="donut"
+      series={series}
+      options={chartOptions}
+      height={height || 320}
+      width={width || '100%'}
+    />
+  );
 }
