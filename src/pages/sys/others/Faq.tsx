@@ -13,7 +13,7 @@ const obj = [
     id: 2,
     Q: 'Q. WHAT WILL MY EQ TEST RESULTS LOOK LIKE?',
     Ans: 'A. Your results show your scores on the five dimensions of emotional intelligence.',
-    bg: '#92D6E5',
+    bg: '#E6FFFB',
     color: '#08979C',
   },
   {
