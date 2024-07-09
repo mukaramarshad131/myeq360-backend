@@ -53,7 +53,7 @@
    
       "firstNamePlaceholder": "Please input first name",
       "lastNamePlaceholder": "Please input last name",
-      "userName":"Please input user name",
+      "userName":" user name",
       "accountPlaceholder":"Please input user name",
       "passwordPlaceholder": "Please input password",
       "confirmPasswordPlaceholder": "Please input confirm password",
