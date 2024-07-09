@@ -162,9 +162,23 @@ const MANAGEMENT_PERMISSION = {
   ],
 };
 
+const OTHERS_PERMISSION = [
+  {
+    id: '0941594969900756',
+    parentId: '',
+    label: 'sys.menu.blank',
+    name: 'Disabled',
+    icon: 'ic_blank',
+    type: PermissionType.MENU,
+    route: 'blank',
+    component: '/sys/others/blank.tsx',
+  },
+];
+
 export const PERMISSION_LIST = [
   DASHBOARD_PERMISSION,
   MANAGEMENT_PERMISSION,
+  ...OTHERS_PERMISSION
 ];
 /**
  * User role mock
