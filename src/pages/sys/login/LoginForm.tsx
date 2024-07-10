@@ -12,7 +12,6 @@ import { LoginStateEnum, useLoginStateContext } from './providers/LoginStateProv
 
 function LoginForm() {
   const { t } = useTranslation();
-  // const themeToken = useThemeToken();
   const [loading, setLoading] = useState(false);
 
   const { loginState, setLoginState } = useLoginStateContext();
@@ -78,7 +77,8 @@ function LoginForm() {
 
         <Row align="middle" gutter={8}>
           <Col className="m-auto" onClick={() => setLoginState(LoginStateEnum.REGISTER)}>
-            Don&apos;t have account yet?{'   '}
+            {t('sys.login.notAccount')}
+            {'   '}
             <Link to="/login" className="border-none">
               {t('sys.login.signUpFormTitle')}
             </Link>

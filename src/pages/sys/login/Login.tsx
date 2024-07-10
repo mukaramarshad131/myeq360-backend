@@ -1,14 +1,11 @@
 import { Layout } from 'antd';
-import Color from 'color';
-import { useTranslation } from 'react-i18next';
+import { t } from 'i18next';
 import { Navigate } from 'react-router-dom';
 
-import Overlay2 from '@/assets/images/background/overlay_2.jpg';
 import eq from '@/assets/images/eqlogo.png';
 import dashboardimg from '@/assets/images/file (1).png';
 import LocalePicker from '@/components/locale-picker';
 import { useUserToken } from '@/store/userStore';
-import { useThemeToken } from '@/theme/hooks';
 
 import LoginForm from './LoginForm';
 import { LoginStateProvider } from './providers/LoginStateProvider';
@@ -18,19 +15,10 @@ import ResetForm from './ResetForm';
 const { VITE_APP_HOMEPAGE: HOMEPAGE } = import.meta.env;
 
 function Login() {
-  const { t } = useTranslation();
   const token = useUserToken();
-  const { colorBgElevated } = useThemeToken();
-
-  // 判断用户是否有权限
   if (token.accessToken) {
-    // 如果有授权，则跳转到首页
     return <Navigate to={HOMEPAGE} replace />;
   }
-
-  const gradientBg = Color(colorBgElevated).alpha(0.9).toString();
-  const bg = `linear-gradient(${gradientBg}, ${gradientBg}) center center / cover no-repeat,url(${Overlay2})`;
-
   return (
     <Layout className="relative flex !min-h-screen !w-full !flex-row">
       <div
@@ -43,10 +31,7 @@ function Login() {
           <img className="mt-[20px] max-w-[350px] xl:max-w-[150px]" src={eq} alt="eq360" />
         </div>
         <img className="max-w-[400px] xl:max-w-[450px]" src={dashboardimg} alt="" />
-        <p className="text-3xl font-bold text-[#37466E]">
-          {' '}
-          Emotional Intelligence Update Your IQ with EQ
-        </p>
+        <p className="text-3xl font-bold text-[#37466E]"> {t('sys.login.quote')}</p>
       </div>
 
       <div className="m-auto flex !h-screen w-full max-w-[480px] flex-col justify-center px-[16px] lg:px-[64px]">

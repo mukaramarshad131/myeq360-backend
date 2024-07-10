@@ -59,14 +59,14 @@ export type Series = {
   name: string;
   data: number[];
 };
-export interface ChartInterface {
+export interface ChartConfig {
   dataLable: string[];
   series: number[] | Series[];
   height?: number;
   width?: number;
 }
 
-export interface ChartCardInterface {
+export interface CardProps {
   title: string | ReactNode;
   children: ReactNode;
   titleBorderWidth?: string | number;

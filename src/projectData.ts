@@ -8,9 +8,9 @@ export const skillAssessmentData = [
     dataLable: ['25-06-2024', '09-07-2024'],
     percent: 75,
     children: [
-      { key: '10', title: 'emotionalAwareness', status: 'exceeding' },
-      { key: '11', title: 'selfPerception', status: 'exceeding' },
-      { key: '12', title: 'optimisticOutlook', status: 'developing' },
+      { key: '10', title: 'sys.selfAwareness.emotionalAwareness', status: 'exceeding' },
+      { key: '11', title: 'sys.selfAwareness.selfPerception', status: 'exceeding' },
+      { key: '12', title: 'sys.selfAwareness.optimisticOutlook', status: 'developing' },
     ],
   },
   {
@@ -20,9 +20,9 @@ export const skillAssessmentData = [
     dataLable: ['25-06-2024'],
     percent: 50,
     children: [
-      { key: '13', title: 'internalRegulation', status: 'developing' },
-      { key: '14', title: 'behaviorControl', status: 'developing' },
-      { key: '15', title: 'goalPursuance', status: 'developing' },
+      { key: '13', title: 'sys.selfManagement.internalRegulation', status: 'developing' },
+      { key: '14', title: 'sys.selfManagement.behaviorControl', status: 'developing' },
+      { key: '15', title: 'sys.selfManagement.goalPursuance', status: 'developing' },
     ],
   },
   {
@@ -32,9 +32,9 @@ export const skillAssessmentData = [
     dataLable: ['25-06-2024', '09-07-2024'],
     percent: 50,
     children: [
-      { key: '16', title: 'appreciatingSocial', status: 'meeting' },
-      { key: '17', title: 'adaptiveBehavior', status: 'developing' },
-      { key: '18', title: 'resourceSupportRecognition', status: 'developing' },
+      { key: '16', title: 'sys.socialAwareness.appreciatingSocial', status: 'meeting' },
+      { key: '17', title: 'sys.socialAwareness.adaptiveBehavior', status: 'developing' },
+      { key: '18', title: 'sys.socialAwareness.resourceSupportRecognition', status: 'developing' },
     ],
   },
   {
@@ -44,9 +44,9 @@ export const skillAssessmentData = [
     dataLable: ['25-06-2024', '09-07-2024'],
     percent: 50,
     children: [
-      { key: '19', title: 'communication', status: 'exceeding' },
-      { key: '20', title: 'socialEngagement', status: 'developing' },
-      { key: '21', title: 'interdependence', status: 'developing' },
+      { key: '19', title: 'sys.relationshipSkills.communication', status: 'exceeding' },
+      { key: '20', title: 'sys.relationshipSkills.socialEngagement', status: 'developing' },
+      { key: '21', title: 'sys.relationshipSkills.interdependence', status: 'developing' },
     ],
   },
   {
@@ -56,9 +56,13 @@ export const skillAssessmentData = [
     dataLable: ['25-06-2024', '09-07-2024'],
     percent: 75,
     children: [
-      { key: '22', title: 'constructiveThinking', status: 'meeting' },
-      { key: '23', title: 'consequenceEvaluation', status: 'exceeding' },
-      { key: '24', title: 'respectForSelf', status: 'meeting' },
+      { key: '22', title: 'sys.responsibleDecisionMaking.constructiveThinking', status: 'meeting' },
+      {
+        key: '23',
+        title: 'sys.responsibleDecisionMaking.consequenceEvaluation',
+        status: 'exceeding',
+      },
+      { key: '24', title: 'sys.responsibleDecisionMaking.respectForSelf', status: 'meeting' },
     ],
   },
   {
@@ -68,9 +72,9 @@ export const skillAssessmentData = [
     dataLable: ['25-06-2024 13:26:10', '09-07-2024 13:26:10'],
     percent: 75,
     children: [
-      { key: '25', title: 'enthusiasm', status: 'developing' },
-      { key: '26', title: 'initiative', status: 'meeting' },
-      { key: '27', title: 'resilience', status: 'meeting' },
+      { key: '25', title: 'sys.motivation.enthusiasm', status: 'developing' },
+      { key: '26', title: 'sys.motivation.initiative', status: 'meeting' },
+      { key: '27', title: 'sys.motivation.resilience', status: 'meeting' },
     ],
   },
 ];

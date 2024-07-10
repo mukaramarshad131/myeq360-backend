@@ -1,9 +1,9 @@
 import Chart from '@/components/chart/chart';
 import useChart from '@/components/chart/useChart';
 
-import { ChartInterface } from '#/entity';
+import { ChartConfig } from '#/entity';
 
-export default function ChartPie({ series, dataLable, height, width }: ChartInterface) {
+export default function ChartPie({ series, dataLable, height, width }: ChartConfig) {
   const chartOptions = useChart({
     labels: dataLable,
     legend: {

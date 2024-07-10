@@ -1,4 +1,4 @@
-import { ChartCardInterface } from '#/entity';
+import { CardProps } from '#/entity';
 
 function ChartCard({
   title,
@@ -7,7 +7,7 @@ function ChartCard({
   titleBorderColor,
   titleCenter,
   titleSize,
-}: ChartCardInterface) {
+}: CardProps) {
   return (
     <div className="h-full border-[1px] border-t-0 border-[#d3d3d3] drop-shadow-lg">
       <div
