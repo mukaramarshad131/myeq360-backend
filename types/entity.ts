@@ -1,5 +1,5 @@
 import { TablePaginationConfig } from 'antd';
-import { ReactNode } from 'react';
+import { FC, ReactNode } from 'react';
 
 import { BasicStatus, PermissionType } from './enum';
 
@@ -40,7 +40,7 @@ export interface TableInterface {
   modalChildren?: ReactNode;
 }
 
-export interface EQInput {
+export interface InputInterface {
   type: string;
   disabled?: boolean;
   inputName: string;
@@ -69,6 +69,14 @@ export interface ChartInterface {
 export interface ChartCardInterface {
   title: string | ReactNode;
   children: ReactNode;
+  titleBorderWidth?: string | number;
+  titleBorderColor?: string;
+  titleCenter?: boolean;
+  titleSize?: string;
+}
+export interface MappedComponentProps<T> {
+  array: T[];
+  Component: FC<{ item: T }>;
 }
 export interface Permission {
   id: string;

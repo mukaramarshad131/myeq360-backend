@@ -3,7 +3,7 @@ import Table from 'antd/es/table';
 import { TableRowSelection } from 'antd/es/table/interface';
 import { useState } from 'react';
 
-import EQModal from '../eq-modal';
+import CustomModal from '../custom-modal';
 
 import TableFilter from './tableFilter';
 
@@ -58,7 +58,7 @@ export default function TableWithFilter({
           rowSelection={{ ...rowSelection }}
         />
       </Card>
-      <EQModal
+      <CustomModal
         title={modalTitle || 'Add New'}
         onCancel={() => setShowModal(false)}
         show={showModal}
@@ -67,7 +67,7 @@ export default function TableWithFilter({
         }}
       >
         {modalChildren}
-      </EQModal>
+      </CustomModal>
     </Space>
   );
 }

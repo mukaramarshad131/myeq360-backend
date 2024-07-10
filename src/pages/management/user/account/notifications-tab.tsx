@@ -1,7 +1,7 @@
 import { App, Button, Col, Row, Switch, Typography } from 'antd';
 
 import Card from '@/components/card';
-import EQResultCard from '@/components/eq-result-card';
+import SkillAssessmentResult from '@/components/skill-assessment-result';
 import { useThemeToken } from '@/theme/hooks';
 
 export default function NotificationsTab() {
@@ -76,7 +76,7 @@ export default function NotificationsTab() {
           </div>
         </Row>
       </Card>
-      <EQResultCard />
+      <SkillAssessmentResult />
     </>
   );
 }

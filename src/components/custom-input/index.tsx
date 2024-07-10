@@ -2,7 +2,7 @@ import { EyeInvisibleOutlined, EyeOutlined } from '@ant-design/icons';
 import { Input } from 'antd';
 import { useState } from 'react';
 
-import { EQInput } from '#/entity';
+import { InputInterface } from '#/entity';
 
 function CustomInput({
   type,
@@ -17,7 +17,7 @@ function CustomInput({
   showCount,
   defaultValue,
   inputLabel,
-}: EQInput) {
+}: InputInterface) {
   const [passType, setPassType] = useState('password');
   const checkPassword = () => {
     setPassType(passType === 'password' ? 'text' : 'password');

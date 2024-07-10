@@ -24,6 +24,50 @@
       "errMsg504": "Network timeout!",
       "errMsg505": "The http version does not support the request!"
     },
+    "skillCategories": {
+      "selfAwareness": "Self-Awareness",
+      "selfManagement": "Self-Management",
+      "socialAwareness": "Social Awareness",
+      "relationshipSkills": "Relationship Skills",
+      "responsibleDecisionMaking": "Responsible Decision-Making",
+      "motivation": "Motivation"
+    },
+    "skillLevels": {
+      "exceeding": "Exceeding",
+      "developing": "Developing",
+      "meeting": "Meeting",
+      "emerging": "Emerging"
+    },
+    "selfAwareness": {
+      "emotionalAwareness": "Emotional Awareness",
+      "selfPerception": "Self-Perception",
+      "optimisticOutlook": "Optimistic Outlook"
+    },
+    "selfManagement": {
+      "internalRegulation": "Internal Regulation",
+      "behaviorControl": "Behavior Control",
+      "goalPursuance": "Goal Pursuance"
+    },
+    "socialAwareness": {
+      "appreciatingSocial": "Appreciating Social & Environmental Diversity",
+      "adaptiveBehavior": "Adaptive Behavior",
+      "resourceSupportRecognition": "Resource & Support Recognition"
+    },
+    "relationshipSkills": {
+      "communication": "Communication",
+      "socialEngagement": "Social Engagement",
+      "interdependence": "Interdependence"
+    },
+    "responsibleDecisionMaking": {
+      "constructiveThinking": "Constructive Thinking",
+      "consequenceEvaluation": "Consequence Evaluation",
+      "respectForSelf": "Respect for Self & Others"
+    },
+    "motivation": {
+      "enthusiasm": "Enthusiasm",
+      "initiative": "Initiative",
+      "resilience": "Resilience"
+    },
     "login": {
       "backSignIn": "Back sign in",
       "signInFormTitle": "Sign in",
@@ -50,14 +94,13 @@
       "loginSuccessTitle": "Login successful",
       "loginSuccessDesc": "Welcome back",
 
-   
       "firstNamePlaceholder": "Please input first name",
       "lastNamePlaceholder": "Please input last name",
-      "userName":" user name",
-      "accountPlaceholder":"Please input user name",
+      "userName": " user name",
+      "accountPlaceholder": "Please input user name",
       "passwordPlaceholder": "Please input password",
       "confirmPasswordPlaceholder": "Please input confirm password",
-    
+
       "passwordComplexity": "Password must be 8 characters long contains 1 upercase, 1 special character, 1 number",
 
       "emaildPlaceholder": "Please input email",
@@ -79,7 +122,7 @@
       "privacyPolicy": " Privacy policy ",
       "logout": "Logout"
     },
-   
+
     "menu": {
       "dashboard": "Dashboard",
       "workbench": "Self Assessment",
