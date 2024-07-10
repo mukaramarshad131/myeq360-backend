@@ -1,18 +1,18 @@
 import Card from '@/components/card';
-import Analysis from '@/pages/dashboard/analysis';
 
 import Faq from './Faq';
 import IndividualBannerCard from './IndividaulBannerCard';
+import IndStatCard from './IndStatCards';
 import { TrialLinkCard } from './TrialLinkCard';
 
-export default function BlankPage() {
+export default function IndividualDashboard() {
   return (
-    <Card className="flex flex-col">
+    <Card className="flex w-full flex-col gap-10">
       <div className="flex flex-row gap-2 max-lg:flex-col">
         <TrialLinkCard />
         <IndividualBannerCard />
       </div>
-      <Analysis />
+      <IndStatCard />
       <Faq />
     </Card>
   );

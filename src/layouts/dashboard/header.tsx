@@ -2,6 +2,7 @@ import { Drawer } from 'antd';
 import Color from 'color';
 import { CSSProperties, useState } from 'react';
 
+import upgrade from '@/assets/icons/upgrade.png';
 import { IconButton, SvgIcon } from '@/components/icon';
 import LocalePicker from '@/components/locale-picker';
 import Logo from '@/components/logo';
@@ -50,7 +51,7 @@ export default function Header({ className = '', offsetTop = false }: Props) {
 
   return (
     <>
-      <header className={`z-20 w-full ${className}`} style={headerStyle}>
+      <header className={`z-20  w-full ${className}`} style={headerStyle}>
         <div
           className="flex flex-grow items-center justify-between px-4 text-gray backdrop-blur xl:px-6 2xl:px-10"
           style={{
@@ -66,20 +67,17 @@ export default function Header({ className = '', offsetTop = false }: Props) {
             ) : (
               <Logo />
             )}
-            {/* <div className="ml-4 hidden md:block">{breadCrumb ? <BreadCrumb /> : null}</div> */}
           </div>
 
-          <div className="flex">
+          <div className="flex items-center gap-1">
+            <button className="text-white flex h-8 flex-row items-center gap-2 rounded-xl bg-green px-4">
+              <img src={upgrade} alt="" width={22} height={22} />
+              <p style={{ color: 'white' }}> Upgrade to Premium</p>
+            </button>
+
             <SearchBar />
             <LocalePicker />
-            {/* <IconButton onClick={() => window.open('https://github.com/d3george/slash-admin')}>
-              <Iconify icon="mdi:github" size={24} />
-            </IconButton>
-            <IconButton onClick={() => window.open('https://discord.gg/fXemAXVNDa')}>
-              <Iconify icon="carbon:logo-discord" size={24} />
-            </IconButton> */}
             <NoticeButton />
-            {/* <SettingButton /> */}
             <AccountDropdown />
           </div>
         </div>

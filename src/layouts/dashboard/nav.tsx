@@ -4,6 +4,7 @@ import { m } from 'framer-motion';
 import { CSSProperties, useEffect, useState } from 'react';
 import { useLocation, useMatches, useNavigate } from 'react-router-dom';
 
+import logo from '@/assets/images/eqlogo.png';
 import MotionContainer from '@/components/animate/motion-container';
 import { varSlide } from '@/components/animate/variants';
 import Scrollbar from '@/components/scrollbar';
@@ -11,8 +12,6 @@ import { useRouteToMenuFn, usePermissionRoutes, useFlattenedRoutes } from '@/rou
 import { menuFilter } from '@/router/utils';
 import { useSettingActions, useSettings } from '@/store/settingStore';
 import { useThemeToken } from '@/theme/hooks';
-
-import logo from '../../assets/images/eqlogo.png';
 
 import { NAV_COLLAPSED_WIDTH, NAV_WIDTH } from './config';
 
