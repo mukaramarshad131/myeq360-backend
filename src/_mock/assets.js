@@ -167,10 +167,10 @@ const OTHERS_PERMISSION = [
     id: '0941594969900756',
     parentId: '',
     label: 'sys.menu.blank',
-    name: 'Disabled',
+    name: 'Individual Assessment',
     icon: 'ic_blank',
     type: PermissionType.MENU,
-    route: 'blank',
+    route: 'individual_dashboard',
     component: '/sys/others/blank.tsx',
   },
 ];

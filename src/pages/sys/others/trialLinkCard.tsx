@@ -1,21 +1,23 @@
+import { useTranslation } from 'react-i18next';
+
 import { useUserInfo } from '@/store/userStore';
 
 export function TrialLinkCard() {
   const { username } = useUserInfo();
+  const { t } = useTranslation();
   return (
     <div
       className=" flex  flex-col items-center justify-between rounded-2xl p-6 py-12 max-lg:w-full"
       style={{ background: '#92d6e5', color: 'white' }}
     >
-      <h1 className="text-'#D9DDE0' text-2xl font-semibold">Free Individual Assessment </h1>
+      <h1 className=" text-'#D9DDE0' text-2xl font-semibold">
+        {t('sys.freeIndividualAssessment.freeAssessment')}
+      </h1>
       <div
-        style={{ color: 'white', fontSize: '15px' }}
+        style={{ color: '#F3F4F5', fontSize: '13px' }}
         className="mx-auto mb-6 mt-4 max-w-sm  text-sm  md:mx-0"
       >
-        Join our EQ360 Emotional Intelligence Assessment free trial!. Track your progress with
-        MyEQ360 and master your emotional skills for greater success. Understand yourself better and
-        enhance your communication abilities with our comprehensive evaluation. Start mastering your
-        emotions today and unlock your full potential!
+        {t('sys.freeIndividualAssessment.freeAssessmentDes')}
       </div>
       <div className="flex flex-col gap-5">
         <a
@@ -25,14 +27,16 @@ export function TrialLinkCard() {
           style={{ color: 'white' }}
           rel="noreferrer"
         >
-          What is your Emotional Intelligence?
+          {t('sys.freeIndividualAssessment.yourEq')}
         </a>
         <button
           className="font-mediumtext-black flex items-center justify-center rounded-lg px-2 py-1 shadow-none md:m-0"
           style={{ backgroundColor: '#0092B3', color: '#fff', padding: 7 }}
           onClick={() => window.open('https://myeq360.com/')}
         >
-          <span className="ml-2 font-normal text-['20px']">Attempt Free Assessment</span>
+          <span className="ml-2 font-normal text-['20px']">
+            {t('sys.freeIndividualAssessment.attemptFreeAssessment')}
+          </span>
         </button>
       </div>
     </div>

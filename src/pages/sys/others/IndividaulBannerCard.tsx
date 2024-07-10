@@ -1,5 +1,6 @@
 import { Col, Row } from 'antd';
 import Color from 'color';
+import { useTranslation } from 'react-i18next';
 
 import Character3 from '@/assets/images/characters/character_3.png';
 import { useUserInfo } from '@/store/userStore';
@@ -8,6 +9,7 @@ import { useThemeToken } from '@/theme/hooks';
 export default function IndividualBannerCard() {
   const { username } = useUserInfo();
   const themeToken = useThemeToken();
+  const { t } = useTranslation();
 
   const bg = `linear-gradient(135deg, ${Color(themeToken.colorPrimaryHover).alpha(0.2)}, ${Color(
     themeToken.colorPrimary,
@@ -22,18 +24,13 @@ export default function IndividualBannerCard() {
     >
       <Col span={24} md={12} xl={16} className="flex-1 text-center md:text-left">
         <h1 style={{ color: themeToken.colorPrimaryActive }} className="mt-3 text-xl font-bold">
-          What is Emotional Intelligence ?
+          {t('sys.EqDescription.whatIsEq')}
         </h1>
         <div
           style={{ color: themeToken.colorPrimaryTextActive }}
           className="mx-auto mb-6 mt-4 max-w-sm text-sm opacity-80 md:mx-0"
         >
-          Emotional Intelligence (EQ) means understanding and managing emotions in yourself and
-          others. It is important because it helps you communicate better, build stronger
-          relationships, and make smarter decisions. EQ also assists in handling challenges
-          effectively and creating a positive atmosphere, whether in academic, professional,
-          business, or personal life. Developing EQ involves knowing yourself better and maintaining
-          control over your emotions, which positions you for success both now and in the future.
+          {t('sys.EqDescription.EqDef')}
         </div>
       </Col>
 

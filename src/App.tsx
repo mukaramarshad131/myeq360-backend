@@ -1,7 +1,7 @@
 import { App as AntdApp } from 'antd';
 import { Helmet } from 'react-helmet-async';
 
-import Logo from '@/assets/images/eqsvg.png';
+import Logo from '@/assets/images/eqlogo (2).png';
 import Router from '@/router/index';
 import AntdConfig from '@/theme/antd';
 
