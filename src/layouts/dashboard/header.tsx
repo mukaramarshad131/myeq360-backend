@@ -2,7 +2,7 @@ import { Drawer } from 'antd';
 import Color from 'color';
 import { CSSProperties, useState } from 'react';
 
-import upgrade from '@/assets/icons/upgrade.png';
+import upgrade from '@/assets/icons/iconizer.svg';
 import { IconButton, SvgIcon } from '@/components/icon';
 import LocalePicker from '@/components/locale-picker';
 import Logo from '@/components/logo';
@@ -71,7 +71,13 @@ export default function Header({ className = '', offsetTop = false }: Props) {
 
           <div className="flex items-center gap-1">
             <button className="text-white flex h-8 flex-row items-center gap-2 rounded-xl bg-green px-4">
-              <img src={upgrade} alt="" width={22} height={22} />
+              <img
+                style={{ color: 'white', fontWeight: 800 }}
+                src={upgrade}
+                alt=""
+                width={20}
+                height={20}
+              />
               <p style={{ color: 'white' }}> Upgrade to Premium</p>
             </button>
 
