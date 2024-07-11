@@ -173,6 +173,16 @@ const OTHERS_PERMISSION = [
     route: 'individual_dashboard',
     component: '/sys/others/blank.tsx',
   },
+  {
+    id: '0941594969900756',
+    parentId: '',
+    label: 'sys.menu.packages',
+    name: 'Packages ',
+    icon: 'ic_blank',
+    type: PermissionType.MENU,
+    route: 'packages',
+    component: '/sys/others/packages.tsx',
+  },
 ];
 
 export const PERMISSION_LIST = [

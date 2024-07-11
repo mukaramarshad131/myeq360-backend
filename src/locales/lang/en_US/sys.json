@@ -124,18 +124,15 @@
           }
         }
       },
-      "disabled": "Item Disabled",
-      "label": "Item Label",
-      "frame": "Item External",
-      "external_link": "External Link",
-      "iframe": "Iframe",
+      
       "blank": "Individual Assessment",
       "error": {
         "index": "Error Page",
         "403": "403",
         "404": "404",
         "500": "500"
-      }
+      },
+      "packages":"Packages"
     },
     "individualDashboardStats":{
       "understandingEmotions":"Understanding Emotion",
