@@ -72,15 +72,15 @@ export default function Packages() {
         </Typography.Title>
 
         <Card className="mb-64 flex flex-col">
-          <Dropdown menu={{ items }}>
-            <a onClick={(e) => e.preventDefault()}>
+          <Dropdown menu={{ items }} placement="bottom">
+            <div onClick={(e) => e.preventDefault()}>
               <Space>
                 <Typography.Title level={4} style={{ color: '#469E76' }}>
                   Choose Packages to create your Team
                 </Typography.Title>
                 <DownOutlined />
               </Space>
-            </a>
+            </div>
           </Dropdown>
         </Card>
       </div>
