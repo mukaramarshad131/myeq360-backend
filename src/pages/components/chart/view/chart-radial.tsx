@@ -1,37 +1,47 @@
 import Chart from '@/components/chart/chart';
 import useChart from '@/components/chart/useChart';
-import { fNumber } from '@/utils/format-number';
 
-const series = [44, 55];
-export default function ChartRadial() {
+import { ChartConfig } from '#/entity';
+
+export default function ChartRadial({ series, dataLable, height, width }: ChartConfig) {
   const chartOptions = useChart({
     chart: {
       sparkline: {
         enabled: true,
       },
     },
-    labels: ['Apples', 'Oranges'],
+    labels: dataLable,
     legend: {
-      floating: true,
       position: 'bottom',
       horizontalAlign: 'center',
     },
     plotOptions: {
       radialBar: {
         hollow: {
-          size: '68%',
+          size: '40%',
         },
         dataLabels: {
+          show: true,
           value: {
-            offsetY: 16,
+            show: true,
+            fontSize: '14px',
           },
           total: {
-            formatter: () => fNumber(2324),
+            show: true,
+            fontSize: '14px',
           },
         },
       },
     },
   });
 
-  return <Chart type="radialBar" series={series} options={chartOptions} height={320} />;
+  return (
+    <Chart
+      type="radialBar"
+      series={series}
+      options={chartOptions}
+      height={height || 320}
+      width={width || '100%'}
+    />
+  );
 }

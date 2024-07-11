@@ -20,9 +20,6 @@ function DashboardLayout() {
 
   const mainEl = useRef(null);
   const { scrollY } = useScroll({ container: mainEl });
-  /**
-   * y轴是否滚动
-   */
   const [offsetTop, setOffsetTop] = useState(false);
   const onOffSetTop = useCallback(() => {
     scrollY.on('change', (scrollHeight) => {

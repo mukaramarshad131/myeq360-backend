@@ -108,7 +108,6 @@ export default function Nav(props: Props) {
       className="flex h-full flex-col transition-all duration-300 ease-in-out"
       style={{
         width: collapsed ? NAV_COLLAPSED_WIDTH : NAV_WIDTH,
-        marginLeft: collapsed ? '20px' : '',
       }}
     >
       <div className="relative flex h-20 items-center justify-center py-4">
