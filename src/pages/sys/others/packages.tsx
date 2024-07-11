@@ -1,5 +1,5 @@
-import { DownOutlined } from '@ant-design/icons';
-import { Dropdown, Space, Typography } from 'antd';
+import { CrownOutlined, DownOutlined } from '@ant-design/icons';
+import { Badge, Dropdown, Space, Typography } from 'antd';
 
 import Card from '@/components/card';
 
@@ -67,11 +67,11 @@ export default function Packages() {
   return (
     <Card>
       <div className="flex flex-col gap-7">
-        <Typography.Title level={2} style={{ color: '#469E76' }}>
-          Upgrade Your Account
-        </Typography.Title>
+        <div className="flex flex-row items-center gap-3">
+          <Typography.Title level={2} style={{ color: '#469E76' }}>
+            Upgrade Your Account
+          </Typography.Title>
 
-        <Card className="mb-64 flex flex-col">
           <Dropdown menu={{ items }} placement="bottom">
             <div onClick={(e) => e.preventDefault()}>
               <Space>
@@ -82,7 +82,29 @@ export default function Packages() {
               </Space>
             </div>
           </Dropdown>
-        </Card>
+        </div>
+        <Badge.Ribbon text="Sale (15% off)" color="red" style={{ insetInlineEnd: '380px' }}>
+          <Card style={{ padding: '0px', height: '400px', width: '300px' }}>
+            <div
+              style={{ borderTopLeftRadius: '10px', borderTopRightRadius: '10px' }}
+              className="flex h-[35%] w-full flex-col bg-[#F9D039] px-5 text-center"
+            >
+              <CrownOutlined style={{ fontSize: 50 }} />
+              <span className="text-xl"> Gold Business Package</span>
+
+              <span>
+                <del>$234:00</del> -$234:00
+              </span>
+            </div>
+
+            <div
+              style={{ borderBottomLeftRadius: '10px', borderBottomRightRadius: '10px' }}
+              className="h-[65%] bg-gray-300"
+            >
+              text part
+            </div>
+          </Card>
+        </Badge.Ribbon>
       </div>
     </Card>
   );
