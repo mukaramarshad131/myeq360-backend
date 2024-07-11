@@ -78,7 +78,7 @@ export default function Packages() {
                 <Typography.Title level={4} style={{ color: '#469E76' }}>
                   Choose Packages to create your Team
                 </Typography.Title>
-                <DownOutlined />
+                <DownOutlined style={{ color: 'green', fontSize: 20 }} />
               </Space>
             </div>
           </Dropdown>
