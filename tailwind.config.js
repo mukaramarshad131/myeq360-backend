@@ -14,6 +14,8 @@ export default {
       '2xl': '1600px',
     },
     colors: {
+      themeGreen: '#50a870',
+      themeBlue: '#3b4970',
       black: '#000000',
       green: '#00A76F',
       blue: '#1fb6ff',

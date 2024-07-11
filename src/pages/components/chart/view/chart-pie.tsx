@@ -1,10 +1,11 @@
 import Chart from '@/components/chart/chart';
 import useChart from '@/components/chart/useChart';
 
-const series = [44, 55, 13, 43];
-export default function ChartPie() {
+import { ChartConfig } from '#/entity';
+
+export default function ChartPie({ series, dataLable, height, width }: ChartConfig) {
   const chartOptions = useChart({
-    labels: ['America', 'Asia', 'Europe', 'Africa'],
+    labels: dataLable,
     legend: {
       horizontalAlign: 'center',
     },
@@ -31,5 +32,13 @@ export default function ChartPie() {
     },
   });
 
-  return <Chart type="pie" series={series} options={chartOptions} height={320} />;
+  return (
+    <Chart
+      type="pie"
+      series={series}
+      options={chartOptions}
+      height={height || 320}
+      width={width || 320}
+    />
+  );
 }

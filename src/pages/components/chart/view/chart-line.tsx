@@ -1,24 +1,28 @@
 import Chart from '@/components/chart/chart';
 import useChart from '@/components/chart/useChart';
 
-const series = [
-  {
-    name: 'Desktops',
-    data: [10, 41, 35, 51, 49, 62, 69, 91, 148],
-  },
-];
-export default function ChartLine() {
+import { ChartConfig } from '#/entity';
+
+export default function ChartLine({ series, dataLable, width, height }: ChartConfig) {
   const chartOptions = useChart({
     xaxis: {
-      categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep'],
+      categories: dataLable,
     },
     tooltip: {
       x: {
-        show: false,
+        show: true,
       },
-      marker: { show: false },
+      marker: { show: true },
     },
   });
 
-  return <Chart type="line" series={series} options={chartOptions} height={320} />;
+  return (
+    <Chart
+      type="line"
+      series={series}
+      options={chartOptions}
+      height={height || 220}
+      width={width || '100%'}
+    />
+  );
 }
