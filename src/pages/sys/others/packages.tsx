@@ -81,6 +81,7 @@ export default function Packages() {
                 <DownOutlined style={{ color: 'green', fontSize: 20 }} />
               </Space>
             </div>
+            <DownOutlined />
           </Dropdown>
         </Card>
       </div>
