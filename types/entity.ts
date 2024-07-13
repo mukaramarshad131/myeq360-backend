@@ -67,12 +67,15 @@ export interface ChartConfig {
 }
 
 export interface CardProps {
-  title: string | ReactNode;
+  title?: string | ReactNode;
   children: ReactNode;
-  titleBorderWidth?: string | number;
-  titleBorderColor?: string;
+  borderWidth?: string | number;
+  borderColor?: string;
   titleCenter?: boolean;
+  borderBottom?: boolean;
   titleSize?: string;
+  borderNone?: boolean;
+  bottomLine?: boolean;
 }
 export interface MappedComponentProps<T> {
   array: T[];

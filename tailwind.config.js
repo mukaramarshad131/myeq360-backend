@@ -16,6 +16,7 @@ export default {
     colors: {
       themeGreen: '#50a870',
       themeBlue: '#3b4970',
+      themeText: '#505050',
       black: '#000000',
       green: '#00A76F',
       blue: '#1fb6ff',

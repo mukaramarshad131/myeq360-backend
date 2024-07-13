@@ -1,5 +1,9 @@
 {
   "common": {
+    "singleResultTitle":"YOUR COMPETENCIES AT A GLACE",
+    "topCompitency":"TOP COMPETENCY",
+    "lowCompitency":"COMPETENCY TO TARGET",
+    "otherCompitency":"YOUR OTHER COMPETENCIES",
     "okText": "OK",
     "closeText": "Close",
     "cancelText": "Cancel",
