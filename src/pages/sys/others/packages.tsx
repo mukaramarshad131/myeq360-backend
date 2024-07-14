@@ -1,4 +1,4 @@
-import { pkjCard, businessLicense } from 'constants';
+import { businessLicense, packageCard } from 'constants';
 
 import { CrownOutlined, DownOutlined } from '@ant-design/icons';
 import { Badge, Button, Dropdown, Row, Space, Typography } from 'antd';
@@ -77,17 +77,17 @@ export default function Packages() {
           <Dropdown menu={{ items }} placement="bottom">
             <div onClick={(e) => e.preventDefault()}>
               <Space>
-                <Typography.Title level={2} style={{ color: '#0092B3' }}>
-                  Upgrade Your Account
+                <Typography.Title level={2} style={{ color: '#606B8C' }}>
+                  Select Your Account to Create a Business or Team
                 </Typography.Title>
-                <DownOutlined style={{ color: '#0092B3', fontSize: 20 }} />
+                <DownOutlined style={{ color: '#606B8C', fontSize: 20 }} />
               </Space>
             </div>
           </Dropdown>
         </div>
-        <h1 className="p-5 text-center text-4xl font-bold text-[#0092B3]">Business Packages</h1>
+        <h1 className="p-5 text-center text-3xl font-semibold text-[#606B8C]">Business Packages</h1>
         <div className="mb-5 flex flex-wrap items-center justify-around gap-5">
-          {pkjCard.map((data: any) => {
+          {packageCard.map((data: any) => {
             return (
               <Card
                 key={data.id}
@@ -95,7 +95,7 @@ export default function Packages() {
                 className="relative z-0 rounded bg-[#F3F4F5] shadow-[rgba(50,50,93,0.25)_0px_6px_12px_-2px,_rgba(0,0,0,0.3)_0px_3px_7px_-3px]"
               >
                 <Badge.Ribbon
-                  text="Sale (15% Off)"
+                  text={data.discount}
                   color="red"
                   style={{ padding: 8 }}
                   className="absolute top-[20px] z-10"
@@ -111,16 +111,16 @@ export default function Packages() {
                     borderTopLeftRadius: '10px',
                     borderTopRightRadius: '10px',
                     paddingBottom: '80px',
-                    background: data?.bg,
+                    background: data?.backgroundColor,
                     paddingTop: '25px',
                     clipPath: 'polygon(0 0,100% 0, 100% 71%, 0 100%)',
                   }}
                   className="flex w-full flex-col px-5 text-center"
                 >
                   <div className="mt-[37px] flex flex-col">
-                    <span className="bold-1 text-xl"> {data.pkjName}</span>
+                    <span className="bold-1 text-xl"> {data.packageName}</span>
                     <span>
-                      <del>{data.PkjActualPrice}</del> -{data.PkjDistPrice}
+                      <del>{data.originalPrice}</del> -$75.00
                     </span>
                   </div>
                 </div>
@@ -130,11 +130,11 @@ export default function Packages() {
                   className=" bg-[#F3F4F5] p-3 py-5"
                 >
                   <p>
-                    {data.pkjdesc}
+                    {data.description}
                     <ul className="mb-5 mt-5 text-[15px] font-semibold">
-                      <li>{data.executive}- Executive </li>
-                      <li>{data.manager}- Manager</li>
-                      <li>{data.staff}- Staff(Team Members )</li>
+                      <li>{data.executiveLicenses}- Executive </li>
+                      <li>{data.managerLicenses}- Manager</li>
+                      <li>{data.staffLicenses}- Staff(Team Members )</li>
                     </ul>
                   </p>
 
@@ -143,12 +143,12 @@ export default function Packages() {
                       <div className="flex flex-row gap-1">
                         <img src={goldExe} alt="" width={30} height={30} />
                         <p>
-                          {data.executive} × EQ360 Business &nbsp;
+                          {data.executiveLicenses} × EQ360 Business &nbsp;
                           <span className="font-bold">EXECUTIVE</span>&nbsp; License
                         </p>
                       </div>
                       <span className="text-right">
-                        <del>({data.exelicenseActualPrice}</del> -{data.exelicenseDiscPrice})
+                        <del>({data.executiveLicensePrice}</del> -$75.00 )
                       </span>
                     </li>
                     <li className="flex flex-col">
@@ -156,13 +156,12 @@ export default function Packages() {
                         <img src={goldExe} alt="" width={30} height={30} />
                         <p>
                           {' '}
-                          {data.manager} × EQ360 Business &nbsp;
+                          {data.managerLicenses} × EQ360 Business &nbsp;
                           <span className="font-bold">MANAGER</span>&nbsp; License
                         </p>
                       </div>
                       <span className="text-right">
-                        <del>({data.managerLicenseActualPrice}</del> -{data.managerLicenseDiscPrice}
-                        )
+                        <del>({data.managerLicensePrice}</del> -$75.00 )
                       </span>
                     </li>
 
@@ -170,12 +169,12 @@ export default function Packages() {
                       <div className="flex flex-row gap-1">
                         <img src={goldExe} alt="" width={30} height={30} />
                         <p>
-                          {data.staff} × EQ360 Business &nbsp;
+                          {data.staffLicenses} × EQ360 Business &nbsp;
                           <span className="font-bold">Team Member</span>&nbsp; License
                         </p>
                       </div>
                       <span className="text-right">
-                        <del>({data.stafLicenseActualPrice}</del> -{data.stafLicenseDiscPrice})
+                        <del>({data.staffLicensePrice}</del> -$75.00)
                       </span>
                     </li>
                   </ul>
@@ -184,7 +183,7 @@ export default function Packages() {
                   {' '}
                   <Button
                     style={{
-                      background: data?.bg,
+                      background: data?.backgroundColor,
                       borderRadius: 10,
                       color: 'white',
                       fontSize: '18px',
@@ -200,7 +199,7 @@ export default function Packages() {
           })}
         </div>
       </div>
-      <h1 className="mb-8 mt-8 p-5 text-center text-3xl font-bold text-[#0092B3]">
+      <h1 className="mb-8 mt-8 p-5 text-center text-3xl font-semibold text-[#606B8C]">
         Business Professionals & Teams
       </h1>
       <Row gutter={[32, 32]}>
