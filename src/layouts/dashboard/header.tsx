@@ -70,7 +70,7 @@ export default function Header({ className = '', offsetTop = false }: Props) {
           </div>
 
           <div className="flex items-center gap-1">
-            <button className="text-white flex h-8 flex-row items-center gap-2 rounded-xl bg-green px-4">
+            <button className="text-white flex h-8 flex-row items-center gap-2 rounded-lg bg-green px-4">
               <img src={upgrade} alt="" width={20} height={20} />
               <p style={{ color: 'white' }}> Upgrade to Premium</p>
             </button>

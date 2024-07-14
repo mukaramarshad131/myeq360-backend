@@ -83,3 +83,141 @@ export const IndFaqData: any[] = [
     color: '#008059',
   },
 ];
+
+export const packageCard: any[] = [
+  {
+    id: 1,
+    discount: '30% Off',
+    backgroundColor: '#A2D6E3',
+    packageName: 'Diamond Business Package',
+    originalPrice: '$2,050.00',
+    description:
+      'EQ360 (Social-Emotional Learning Diagnostic Assessment) Gold Business Package. Get 25% off on bulk purchases.',
+    executiveLicenses: '1',
+    managerLicenses: '10',
+    staffLicenses: '100',
+    executiveLicensePrice: '$100.00',
+    managerLicensePrice: '$75.00',
+    staffLicensePrice: '$30.00',
+  },
+  {
+    id: 2,
+    discount: '25% Off',
+    backgroundColor: '#BDC1E2',
+    packageName: 'Platinum Business Package',
+    originalPrice: '$2,050.00',
+    description:
+      'EQ360 (Social-Emotional Learning Diagnostic Assessment) Gold Business Package. Get 25% off on bulk purchases.',
+    executiveLicenses: '1',
+    managerLicenses: '6',
+    staffLicenses: '50',
+    executiveLicensePrice: '$100.00',
+    managerLicensePrice: '$75.00',
+    staffLicensePrice: '$30.00',
+  },
+  {
+    id: 3,
+    discount: '15% Off',
+    backgroundColor: '#FFB4AB',
+    packageName: 'Premium Business Package',
+    originalPrice: '$2,050.00',
+    description:
+      'EQ360 (Social-Emotional Learning Diagnostic Assessment) Gold Business Package. Get 25% off on bulk purchases.',
+    executiveLicenses: '1',
+    managerLicenses: '5',
+    staffLicenses: '80',
+    executiveLicensePrice: '$100.00',
+    managerLicensePrice: '$75.00',
+    staffLicensePrice: '$30.00',
+  },
+  {
+    id: 4,
+    discount: '20% Off',
+    backgroundColor: '#F9D44C',
+    packageName: 'Gold Business Package',
+    originalPrice: '$2,050.00',
+    description:
+      'EQ360 (Social-Emotional Learning Diagnostic Assessment) Gold Business Package. Get 25% off on bulk purchases.',
+    executiveLicenses: '1',
+    managerLicenses: '6',
+    staffLicenses: '50',
+    executiveLicensePrice: '$100.00',
+    managerLicensePrice: '$75.00',
+    staffLicensePrice: '$30.00',
+  },
+  {
+    id: 5,
+    discount: '25% Off',
+    backgroundColor: '#77518C',
+    packageName: 'Bronze Business Package',
+    originalPrice: '$2,050.00',
+    description:
+      'EQ360 (Social-Emotional Learning Diagnostic Assessment) Gold Business Package. Get 25% off on bulk purchases.',
+    executiveLicenses: '1',
+    managerLicenses: '6',
+    staffLicenses: '50',
+    executiveLicensePrice: '$100.00',
+    managerLicensePrice: '$75.00',
+    staffLicensePrice: '$30.00',
+  },
+  {
+    id: 6,
+    discount: '15% Off',
+    backgroundColor: '#CACE91',
+    packageName: 'Silver Business Package',
+    originalPrice: '$2,050.00',
+    description:
+      'EQ360 (Social-Emotional Learning Diagnostic Assessment) Gold Business Package. Get 25% off on bulk purchases.',
+    executiveLicenses: '1',
+    managerLicenses: '6',
+    staffLicenses: '50',
+    executiveLicensePrice: '$100.00',
+    managerLicensePrice: '$75.00',
+    staffLicensePrice: '$30.00',
+  },
+] as any;
+
+export const businessLicense: any[] = [
+  {
+    id: 1,
+    licenseTitle: 'EQ360 Business EXECUTIVE License',
+    licenseDesc:
+      'The EQ360 Business Executive License allows the user to establish a multi-team view of their department or company. The executive is able to see dashboards of the EQ competencies of each team that they manage and the scores of the members within each team. They have the ability to track both individual and team performance over time and view their areas of growth and areas of EQ that need additional development.',
+    licensePrice: '$100.00',
+  },
+  {
+    id: 2,
+    licenseTitle: 'EQ360 Business EXECUTIVE License',
+    licenseDesc:
+      'The EQ360 Business Executive License allows the user to establish a multi-team view of their department or company. The executive is able to see dashboards of the EQ competencies of each team that they manage and the scores of the members within each team. They have the ability to track both individual and team performance over time and view their areas of growth and areas of EQ that need additional development.',
+    licensePrice: '$100.00',
+  },
+  {
+    id: 3,
+    licenseTitle: 'EQ360 Business EXECUTIVE License',
+    licenseDesc:
+      'The EQ360 Business Executive License allows the user to establish a multi-team view of their department or company. The executive is able to see dashboards of the EQ competencies of each team that they manage and the scores of the members within each team. They have the ability to track both individual and team performance over time and view their areas of growth and areas of EQ that need additional development.',
+    licensePrice: '$100.00',
+  },
+  {
+    id: 4,
+    licenseTitle: 'EQ360 Business EXECUTIVE License',
+    licenseDesc:
+      'The EQ360 Business Executive License allows the user to establish a multi-team view of their department or company. The executive is able to see dashboards of the EQ competencies of each team that they manage and the scores of the members within each team. They have the ability to track both individual and team performance over time and view their areas of growth and areas of EQ that need additional development.',
+    licensePrice: '$100.00',
+  },
+  {
+    id: 5,
+    licenseTitle: 'EQ360 Business EXECUTIVE License',
+    licenseDesc:
+      'The EQ360 Business Executive License allows the user to establish a multi-team view of their department or company. The executive is able to see dashboards of the EQ competencies of each team that they manage and the scores of the members within each team. They have the ability to track both individual and team performance over time and view their areas of growth and areas of EQ that need additional development.',
+    licensePrice: '$100.00',
+  },
+  {
+    id: 6,
+    licenseTitle: 'EQ360 Business EXECUTIVE License',
+    licenseDesc:
+      'The EQ360 Business Executive License allows the user to establish a multi-team view of their department or company. The executive is able to see dashboards of the EQ competencies of each team that they manage and the scores of the members within each team. They have the ability to track both individual and team performance over time and view their areas of growth and areas of EQ that need additional development.',
+    licensePrice: '$100.00',
+  },
+] as any;
