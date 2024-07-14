@@ -1,10 +1,11 @@
-import { pkjCard } from 'constants';
+import { pkjCard, businessLicense } from 'constants';
 
 import { CrownOutlined, DownOutlined } from '@ant-design/icons';
-import { Badge, Button, Dropdown, Space, Typography } from 'antd';
+import { Badge, Button, Dropdown, Row, Space, Typography } from 'antd';
 
 import goldExe from '@/assets/images/packages/gold-exe.png';
 import Card from '@/components/card';
+import MappedComponent from '@/components/mapped-componet';
 
 import License from './license';
 
@@ -186,7 +187,7 @@ export default function Packages() {
                       background: data?.bg,
                       borderRadius: 10,
                       color: 'white',
-                      fontSize: '20px',
+                      fontSize: '18px',
                       padding: '20px 0px',
                     }}
                     className="w-3/4"
@@ -199,11 +200,12 @@ export default function Packages() {
           })}
         </div>
       </div>
-      <h1 className="mb-8 mt-8 p-5 text-center text-4xl font-bold text-[#0092B3]">
+      <h1 className="mb-8 mt-8 p-5 text-center text-3xl font-bold text-[#0092B3]">
         Business Professionals & Teams
       </h1>
-
-      <License />
+      <Row gutter={[32, 32]}>
+        <MappedComponent array={businessLicense} Component={License} />
+      </Row>
     </>
   );
 }
