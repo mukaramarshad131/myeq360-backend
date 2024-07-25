@@ -5,9 +5,9 @@ import { MappedComponentProps } from '#/entity';
 function MappedComponent<T>({ array, Component }: MappedComponentProps<T>) {
   return (
     <>
-      {array.map((item: any) => {
+      {array.map((item: any, idx: number) => {
         return (
-          <Fragment key={item.index}>
+          <Fragment key={item.id || idx}>
             <Component item={item} />
           </Fragment>
         );
