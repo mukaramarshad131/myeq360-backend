@@ -183,6 +183,16 @@ const OTHERS_PERMISSION = [
     route: 'packages',
     component: '/sys/others/packages.tsx',
   },
+  {
+    id: '0941594969900756',
+    parentId: '',
+    label: 'sys.menu.blank',
+    name: 'EQ Assessment Test',
+    icon: 'ic_blank',
+    type: PermissionType.MENU,
+    route: 'individual_assessment',
+    component: '/sys/others/IndividualAssessment.tsx',
+  },
 ];
 
 

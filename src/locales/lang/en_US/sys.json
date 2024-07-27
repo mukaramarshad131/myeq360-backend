@@ -196,7 +196,8 @@
         "404": "404",
         "500": "500"
       },
-      "packages": "Packages "
+      "packages": "Packages ",
+      "eqAssessmentTest":"EQ Assessment Test"
     },
     "individualDashboardStats": {
       "understandingEmotions": "Understanding Emotion",

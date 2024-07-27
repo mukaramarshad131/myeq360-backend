@@ -17,7 +17,7 @@ export default function License({ item }: Props) {
           span={24}
           md={12}
           xl={8}
-          className=" mx-auto flex flex-row flex-col items-center justify-center "
+          className=" mx-auto flex  flex-col items-center justify-center "
         >
           <img src={businessExe} alt="" />
           <p className="text-[15px]">{item.licensePrice}</p>

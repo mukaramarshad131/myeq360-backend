@@ -1,9 +1,6 @@
 import { useTranslation } from 'react-i18next';
 
-import { useUserInfo } from '@/store/userStore';
-
 export function TrialLinkCard() {
-  const { username } = useUserInfo();
   const { t } = useTranslation();
   return (
     <div

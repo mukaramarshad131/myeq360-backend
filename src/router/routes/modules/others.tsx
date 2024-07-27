@@ -1,5 +1,6 @@
 import { SvgIcon } from '@/components/icon';
 import IndividualDashboard from '@/pages/sys/others/blank';
+import EqAssessmentTest from '@/pages/sys/others/eqAssessmentTest';
 import Packages from '@/pages/sys/others/packages';
 
 import { AppRouteObject } from '#/router';
@@ -21,6 +22,15 @@ const others: AppRouteObject[] = [
       label: 'sys.menu.packages',
       icon: <SvgIcon icon="ic_blank" className="ant-menu-item-icon" size="24" />,
       key: '/packages',
+    },
+  },
+  {
+    path: 'eq_Assessment_test',
+    element: <EqAssessmentTest />,
+    meta: {
+      label: 'sys.menu.eqAssessmentTest',
+      icon: <SvgIcon icon="ic_blank" className="ant-menu-item-icon" size="24" />,
+      key: '/eqAssessmentTest',
     },
   },
 ];

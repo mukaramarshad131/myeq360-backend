@@ -3,3 +3,7 @@
 
 /* 第三方库样式 */
 @import './global.css';
+
+.ant-tabs-bar {
+  border-bottom: none !important;
+}

@@ -1,8 +1,7 @@
-import { IndStats } from 'constants';
-
 import { Col, Row } from 'antd';
 import Color from 'color';
 
+import { IndStats } from '@/constants';
 import AnalysisCard from '@/pages/dashboard/analysis/analysis-card';
 
 interface IndStatsItem {

@@ -5,7 +5,7 @@ import { useTranslation } from 'react-i18next';
 import Character3 from '@/assets/images/characters/character_3.png';
 import { useThemeToken } from '@/theme/hooks';
 
-export default function IndividualBannerCard() {
+export default function EqAssessmentTest() {
   const themeToken = useThemeToken();
   const { t } = useTranslation();
 

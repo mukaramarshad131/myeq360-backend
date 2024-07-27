@@ -1,8 +1,8 @@
-import { IndFaqData } from 'constants';
-
 import { MinusOutlined, PlusOutlined } from '@ant-design/icons';
 import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
+
+import { IndFaqData } from '@/constants';
 
 function Faq() {
   const { t } = useTranslation();
