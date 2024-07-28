@@ -37,7 +37,7 @@ export default function Packages() {
             }}
             className="flex flex-row gap-4 max-md:flex-col"
           >
-            <TabsButton handleFilter={handleFilter} filter={filter} />
+            <TabsButton value="1" handleFilter={handleFilter} filter={filter} />
           </div>
 
           <div>
@@ -60,7 +60,7 @@ export default function Packages() {
             }}
             className="flex flex-row gap-4 max-md:flex-col"
           >
-            <TabsButton handleFilter={handleFilter} filter={filter} />
+            <TabsButton value="2" handleFilter={handleFilter} filter={filter} />
           </div>
 
           <div>
@@ -83,7 +83,7 @@ export default function Packages() {
             }}
             className="flex flex-row gap-4 max-md:flex-col"
           >
-            <TabsButton handleFilter={handleFilter} filter={filter} />
+            <TabsButton value="3" handleFilter={handleFilter} filter={filter} />
           </div>
 
           <div>
@@ -96,9 +96,9 @@ export default function Packages() {
       ),
     },
   ];
-  console.log('coach and client', tabsData[1]);
-  const onChange = (key: any) => {
-    console.log(key);
+
+  const onChange = (e: any) => {
+    console.log(e);
   };
 
   return (
