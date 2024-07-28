@@ -78,58 +78,25 @@ export default function Packages() {
     {
       key: '3',
       label: 'Educational Institutions and Educators',
-      children: '',
-      // <div style={{ marginBottom: '20px' }}>
-      //   <button
-      //     style={{
-      //       marginRight: '10px',
-      //       padding: '8px 16px',
-      //       color: '#000',
-      //       border: '1px solid #D0D5D9',
-      //       borderRadius: '4px',
-      //       cursor: 'pointer',
-      //     }}
-      //   >
-      //     Educator
-      //   </button>
+      children: (
+        <>
+          <div
+            style={{
+              marginBottom: '20px',
+            }}
+            className="flex flex-row gap-4 max-md:flex-col"
+          >
+            <TabsButton handleFilter={handleFilter} filter={filter} />
+          </div>
 
-      //   <button
-      //     style={{
-      //       marginRight: '10px',
-      //       padding: '8px 16px',
-      //       color: '#000',
-      //       border: '1px solid #D0D5D9',
-      //       borderRadius: '4px',
-      //       cursor: 'pointer',
-      //     }}
-      //   >
-      //     District Staff
-      //   </button>
-      //   <button
-      //     style={{
-      //       marginRight: '10px',
-      //       padding: '8px 16px',
-      //       color: '#000',
-      //       border: '1px solid #D0D5D9',
-      //       borderRadius: '4px',
-      //       cursor: 'pointer',
-      //     }}
-      //   >
-      //     Principal
-      //   </button>
-      //   <button
-      //     style={{
-      //       marginRight: '10px',
-      //       padding: '8px 16px',
-      //       color: '#000',
-      //       border: '1px solid #D0D5D9',
-      //       borderRadius: '4px',
-      //       cursor: 'pointer',
-      //     }}
-      //   >
-      //     School
-      //   </button>
-      // </div>
+          <div>
+            {/* {showBusinessPackages && <BusinessPackages />}
+      {showBusinessLicense && <BusinessLicense />} */}
+            {filter?.packages && <BusinessPackages />}
+            {filter?.license && <BusinessLicense />}
+          </div>
+        </>
+      ),
     },
   ];
   console.log('coach and client', tabsData[1]);

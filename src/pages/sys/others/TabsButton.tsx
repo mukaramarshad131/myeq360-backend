@@ -8,7 +8,7 @@ interface Filter {
 }
 type FilterKey = keyof Filter;
 interface TabsButtonProps {
-  handleFilter: (value: string) => void;
+  handleFilter: (value: FilterKey) => void;
   filter: Filter;
 }
 
@@ -18,7 +18,7 @@ function TabsButton({ handleFilter, filter }: TabsButtonProps) {
     <>
       {TabsButtonData.map((item: any) => {
         const isActive = filter[item.type as FilterKey];
-        console.log('Item Type:', item.type);
+
         return (
           <>
             {' '}

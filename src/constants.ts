@@ -207,61 +207,58 @@ export const businessLicenses = buinessPackageLicense.filter((item) => item.type
 
 export const TabsButtonData = [
   {
-    bussiness: [
-      {
-        id: 1,
-        type: 'BusinessProfessionals',
-        titleButton: 'Business Packages',
-        buttonDesc: 'Leaders can create and assess teams, including their own evaluation',
-      },
-      {
-        id: 2,
-        type: 'BusinessProfessionals',
-        titleButton: 'Business Professionals & Teams',
-        buttonDesc: ' Team members can self-assess or assess their colleagues.',
-      },
-    ],
-    coach: [
-      {
-        id: 3,
-        type: 'CoachClients',
-        titleButton: 'Coach Packges',
-        buttonDesc: ' Coaches can create and assess groups or individuals.',
-      },
-      {
-        id: 4,
-        type: 'CoachClients',
-        titleButton: 'Coach Packges',
-        buttonDesc: ' Clients can self-assess and can also receive reviews from a third party.',
-      },
-    ],
-    education: [
-      {
-        id: 5,
-        type: 'EducationalInstitutions',
-        titleButton: 'Educator',
-        buttonDesc: 'Assess and review all students in your class/classes',
-      },
-      {
-        id: 6,
-        type: 'EducationalInstitutions',
-        titleButton: 'Principal',
-        buttonDesc:
-          'Review results of all students within your school (cannot take assessment on students)',
-      },
-      {
-        id: 7,
-        type: 'EducationalInstitutions',
-        titleButton: 'District Staff',
-        buttonDesc:
-          'Review results and assess students or classes created by educator in multiple schools (cannot create classes)',
-      },
-      {
-        id: 8,
-        type: 'EducationalInstitutions',
-        titleButton: 'School Package',
-        buttonDesc: 'Create in bulk Principal, District Staff, Educator and Student',
-      },
-    ],
+    id: 1,
+    type: 'packages',
+    titleButton: 'Business Packages',
+    buttonDesc: 'Leaders can create and assess teams, including their own evaluation',
   },
+  {
+    id: 2,
+    type: 'license',
+    titleButton: 'Business Professionals & Teams',
+    buttonDesc: ' Team members can self-assess or assess their colleagues.',
+  },
+
+  // coach: [
+  //   {
+  //     id: 3,
+  //     type: 'CoachClients',
+  //     titleButton: 'Coach Packges',
+  //     buttonDesc: ' Coaches can create and assess groups or individuals.',
+  //   },
+  //   {
+  //     id: 4,
+  //     type: 'CoachClients',
+  //     titleButton: 'Coach License',
+  //     buttonDesc: ' Clients can self-assess and can also receive reviews from a third party.',
+  //   },
+  // ],
+  // education: [
+  //   {
+  //     id: 5,
+  //     type: 'EducationalInstitutions',
+  //     titleButton: 'Educator',
+  //     buttonDesc: 'Assess and review all students in your class/classes',
+  //   },
+  //   {
+  //     id: 6,
+  //     type: 'EducationalInstitutions',
+  //     titleButton: 'Principal',
+  //     buttonDesc:
+  //       'Review results of all students within your school (cannot take assessment on students)',
+  //   },
+  //   {
+  //     id: 7,
+  //     type: 'EducationalInstitutions',
+  //     titleButton: 'District Staff',
+  //     buttonDesc:
+  //       'Review results and assess students or classes created by educator in multiple schools (cannot create classes)',
+  //   },
+  //   {
+  //     id: 8,
+  //     type: 'EducationalInstitutions',
+  //     titleButton: 'School Package',
+  //     buttonDesc: 'Create in bulk Principal, District Staff, Educator and Student',
+  //   },
+  // ],
 ];
