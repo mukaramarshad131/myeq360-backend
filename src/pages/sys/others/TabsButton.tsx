@@ -13,7 +13,6 @@ interface TabsButtonProps {
 }
 
 function TabsButton({ handleFilter, filter }: TabsButtonProps) {
-  console.log('Filter:', filter);
   return (
     <>
       {TabsButtonData.map((item: any) => {

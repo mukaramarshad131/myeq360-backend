@@ -1,14 +1,11 @@
 import { Tabs } from 'antd';
 import { useState } from 'react';
 
-import { useThemeToken } from '@/theme/hooks';
-
 import BusinessLicense from './BusinessLicense';
 import BusinessPackages from './BusinessPackages';
 import TabsButton from './TabsButton';
 
 export default function Packages() {
-  const themeToken = useThemeToken();
   // const [showBusinessPackages, setShowBusinessPackages] = useState(true);
   // const [showBusinessLicense, setShowBusinessLicense] = useState(true);
 
@@ -101,7 +98,7 @@ export default function Packages() {
   ];
   console.log('coach and client', tabsData[1]);
   const onChange = (key: any) => {
-    // Handle tab change if needed
+    console.log(key);
   };
 
   return (
