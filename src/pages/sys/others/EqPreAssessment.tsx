@@ -1,7 +1,8 @@
 import { ArrowRightOutlined } from '@ant-design/icons';
-import { Col, Input, Modal, Row, Select } from 'antd';
+import { Button, Col, Input, Modal, Row, Select } from 'antd';
 import Color from 'color';
 import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 import Card from '@/components/card';
 import { EqTestPreAssessment, EqTestPreAssessmentSelect } from '@/constants';
@@ -57,6 +58,7 @@ const selectCountry = (
 
 function EqPreAssessment() {
   const [modal2Open, setModal2Open] = useState(false);
+  const navigate = useNavigate();
   // const key = 'updatable';
   // const [api, contextHolder] = notification.useNotification();
   // const openNotification = () => {
@@ -68,6 +70,13 @@ function EqPreAssessment() {
 
   // };
 
+  const handleOk = () => {
+    setModal2Open(false);
+    navigate('/eqPostAssessment');
+  };
+  const handleCancel = () => {
+    setModal2Open(false);
+  };
   return (
     <div className="p-10">
       {' '}
@@ -148,9 +157,16 @@ function EqPreAssessment() {
           title="Pre-Assessment"
           centered
           open={modal2Open}
-          onOk={() => setModal2Open(false)}
-          onCancel={() => setModal2Open(false)}
-          keyboard
+          onOk={handleOk}
+          onCancel={handleCancel}
+          footer={
+            <>
+              <Button key="ok" type="primary" onClick={handleOk}>
+                Lets Start EQ Assessment
+              </Button>
+              {/* You can include other custom buttons here if needed */}
+            </>
+          }
         >
           {notificationContent}
         </Modal>

@@ -1,4 +1,4 @@
-import { faker } from '@faker-js/faker';
+import { faker, tr } from '@faker-js/faker';
 
 import { BasicStatus, PermissionType } from '#/enum';
 
@@ -157,6 +157,7 @@ const MANAGEMENT_PERMISSION = {
           component: '/management/system/user/detail.tsx',
           hide: true,
         },
+        
       ],
     },
   ],
@@ -182,6 +183,7 @@ const OTHERS_PERMISSION = [
     type: PermissionType.MENU,
     route: 'packages',
     component: '/sys/others/packages.tsx',
+    hide:true
   },
   {
     id: '0941594969900756',
@@ -202,6 +204,17 @@ const OTHERS_PERMISSION = [
     type: PermissionType.MENU,
     route: 'eqPreAssessment',
     component: '/sys/others/EqPreAssessment.tsx',
+    hide:true,
+  },
+  {
+    id: '0941594969900756',
+    parentId: '',
+    label: 'sys.eqPostAssessment',
+    name: 'EqPostAssessment',
+    icon: 'ic_blank',
+    type: PermissionType.MENU,
+    route: 'eqPostAssessment',
+    component: '/sys/others/EqPostAssessment.tsx',
     hide:true,
   },
 ];
