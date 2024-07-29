@@ -198,7 +198,9 @@
       },
       "packages": "Packages ",
       "eqAssessmentTest":"EQ Assessment Test"
+     
     },
+    "eqPreAssessment":"eqPreAssessment",
     "individualDashboardStats": {
       "understandingEmotions": "Understanding Emotion",
       "personalGrowth": "Personal Growth",

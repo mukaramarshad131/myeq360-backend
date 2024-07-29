@@ -186,12 +186,22 @@ const OTHERS_PERMISSION = [
   {
     id: '0941594969900756',
     parentId: '',
-    label: 'sys.menu.blank',
+    label: 'sys.menu.eqAssessmentTest',
     name: 'EQ Assessment Test',
     icon: 'ic_blank',
     type: PermissionType.MENU,
-    route: 'individual_assessment',
-    component: '/sys/others/IndividualAssessment.tsx',
+    route: 'eqAssessmentTest',
+    component: '/sys/others/eqAssessmentTest.tsx',
+  },
+  {
+    id: '0941594969900756',
+    parentId: '',
+    label: 'sys.eqPreAssessment',
+    name: 'EqPreAssessment',
+    icon: 'ic_blank',
+    type: PermissionType.MENU,
+    route: 'eqPreAssessment',
+    component: '/sys/others/EqPreAssessment.tsx',
   },
 ];
 

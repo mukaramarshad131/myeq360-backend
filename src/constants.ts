@@ -263,3 +263,142 @@ export const TabsButtonData = {
     },
   ],
 } as any;
+
+export const EqTestInstructions = () => {
+  const theme = useThemeToken();
+  return [
+    {
+      id: 1,
+      desc: 'Understand and manage emotions',
+      bg: theme.colorPrimaryActive,
+      bg_toString_color: theme.colorPrimary,
+      color: theme.colorPrimaryTextActive,
+    },
+    {
+      id: 2,
+      desc: 'Set and achieve positive goals',
+      bg: theme.colorInfoActive,
+      bg_toString_color: theme.colorInfo,
+      color: theme.colorInfoTextActive,
+    },
+    {
+      id: 3,
+      desc: ' Feel and show empathy for others',
+      bg: theme.colorWarningTextActive,
+      bg_toString_color: theme.colorWarningActive,
+      color: theme.colorWarning,
+    },
+    {
+      id: 4,
+      desc: 'Establish and maintain positive relationships',
+      bg: theme.colorWarningTextActive,
+      bg_toString_color: theme.colorWarningActive,
+      color: theme.colorWarning,
+    },
+    {
+      id: 5,
+      desc: 'Make responsible decisions',
+      bg: theme.colorPrimaryActive,
+      bg_toString_color: theme.colorPrimary,
+      color: theme.colorPrimaryTextActive,
+    },
+    {
+      id: 6,
+      desc: 'Are motivated and stay motivated',
+      bg: theme.colorInfoActive,
+      bg_toString_color: theme.colorInfo,
+      color: theme.colorInfoTextActive,
+    },
+  ];
+};
+
+export const EqTestPreAssessment = () => {
+  const theme = useThemeToken();
+  return [
+    {
+      id: 1,
+      desc: 'Which language is primarily spoken in your home?',
+      bg: theme.colorInfoActive,
+      bg_toString_color: theme.colorInfo,
+      color: theme.colorInfoTextActive,
+      options: [
+        { value: 'english', label: 'English' },
+        { value: 'arabic', label: 'Arabic' },
+        { value: 'chinese', label: 'Chinese' },
+        { value: 'french', label: 'French(/Creole)' },
+        { value: 'hindi', label: 'Hindi' },
+        { value: 'italian', label: 'Italian' },
+        { value: 'japanese', label: 'Japanese' },
+        { value: 'korean', label: 'Korean' },
+        { value: 'polish', label: 'Polish' },
+        { value: 'portugese', label: 'Portugese' },
+        { value: 'russian', label: 'Russian' },
+        { value: 'spanish', label: 'Spanish' },
+        { value: 'korean', label: 'Korean' },
+        { value: 'tagalog', label: 'Tagalog' },
+        { value: 'vietnamese', label: 'Vietnamese' },
+        { value: 'other', label: 'Other' },
+        { value: 'prefer-not-to-say', label: 'Prefer not to say' },
+      ],
+    },
+    {
+      id: 2,
+      desc: 'What is your marital status?',
+      bg: theme.colorInfoActive,
+      bg_toString_color: theme.colorInfo,
+      color: theme.colorInfoTextActive,
+      options: [
+        { value: 'single', label: 'Single or never married' },
+        { value: 'married', label: 'Married or domestic partnership' },
+        { value: 'divorced', label: 'Divorced' },
+        { value: 'widowed', label: 'Widowed' },
+        { value: 'separated', label: 'Separated' },
+        { value: 'prefer-not-to-say', label: 'Prefer not to say' },
+      ],
+    },
+  ];
+};
+
+export const EqTestPreAssessmentSelect = {
+  '1': [
+    { value: '10', label: '10' },
+    { value: '20', label: '20' },
+    { value: '30', label: '30' },
+    { value: '40', label: '40' },
+    { value: '50', label: '50' },
+    { value: '60', label: '60' },
+    { value: '70', label: '70' },
+    { value: '80', label: '80' },
+    { value: '90', label: '90' },
+    { value: '100', label: '100' },
+  ],
+  '2': [
+    { value: 'high_school', label: 'High School' },
+    { value: 'professional_certificate', label: 'Professional Certificate' },
+    { value: 'associate_degree', label: 'Associate Degree' },
+    { value: 'bachelor_degree', label: "Bachelor's Degree" },
+    { value: 'master_degree', label: "Master's Degree" },
+    { value: 'doctoral_degree', label: 'Doctoral Degree' },
+    { value: 'postdoctoral', label: 'Postdoctoral' },
+    { value: 'trade_school', label: 'Trade School' },
+    { value: 'some_college', label: 'Some College' },
+    { value: 'none', label: 'None' },
+  ],
+  '3': [
+    { value: 'united_states', label: 'United States' },
+    { value: 'canada', label: 'Canada' },
+    { value: 'mexico', label: 'Mexico' },
+    { value: 'united_kingdom', label: 'United Kingdom' },
+    { value: 'germany', label: 'Germany' },
+    { value: 'france', label: 'France' },
+    { value: 'italy', label: 'Italy' },
+    { value: 'spain', label: 'Spain' },
+    { value: 'australia', label: 'Australia' },
+    { value: 'japan', label: 'Japan' },
+    { value: 'china', label: 'China' },
+    { value: 'india', label: 'India' },
+    { value: 'brazil', label: 'Brazil' },
+    { value: 'south_africa', label: 'South Africa' },
+    { value: 'nigeria', label: 'Nigeria' },
+  ],
+} as any;

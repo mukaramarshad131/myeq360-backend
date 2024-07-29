@@ -25,7 +25,7 @@ const others: AppRouteObject[] = [
     },
   },
   {
-    path: 'eq_Assessment_test',
+    path: 'eqAssessmentTest',
     element: <EqAssessmentTest />,
     meta: {
       label: 'sys.menu.eqAssessmentTest',
