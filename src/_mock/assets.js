@@ -202,6 +202,7 @@ const OTHERS_PERMISSION = [
     type: PermissionType.MENU,
     route: 'eqPreAssessment',
     component: '/sys/others/EqPreAssessment.tsx',
+    hide:true,
   },
 ];
 

@@ -33,6 +33,15 @@ const others: AppRouteObject[] = [
       key: '/eqAssessmentTest',
     },
   },
+  {
+    path: 'eqPreAssessment',
+    element: <EqAssessmentTest />,
+    meta: {
+      label: 'sys.eqPreAssessment',
+      icon: <SvgIcon icon="ic_blank" className="ant-menu-item-icon" size="24" />,
+      key: '/eqPreAssessment',
+    },
+  },
 ];
 
 export default others;
