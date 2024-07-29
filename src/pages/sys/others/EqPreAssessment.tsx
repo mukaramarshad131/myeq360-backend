@@ -1,6 +1,7 @@
 import { ArrowRightOutlined } from '@ant-design/icons';
-import { Col, Input, Row, Select, notification } from 'antd';
+import { Col, Input, Modal, Row, Select } from 'antd';
 import Color from 'color';
+import { useState } from 'react';
 
 import Card from '@/components/card';
 import { EqTestPreAssessment, EqTestPreAssessmentSelect } from '@/constants';
@@ -55,22 +56,17 @@ const selectCountry = (
 );
 
 function EqPreAssessment() {
-  const key = 'updatable';
-  const [api, contextHolder] = notification.useNotification();
-  const openNotification = () => {
-    api.open({
-      key,
-      message: notificationContent,
-      style: { width: 850 },
-    });
+  const [modal2Open, setModal2Open] = useState(false);
+  // const key = 'updatable';
+  // const [api, contextHolder] = notification.useNotification();
+  // const openNotification = () => {
+  //   api.open({
+  //     key,
+  //     message: notificationContent,
+  //     style: { width: 850 },
+  //   });
 
-    setTimeout(() => {
-      api.open({
-        key,
-        message: notificationContent,
-      });
-    }, 6000);
-  };
+  // };
 
   return (
     <div className="p-10">
@@ -81,6 +77,7 @@ function EqPreAssessment() {
         className="mb-5 mt-4 "
         addonAfter={selectEducation}
         defaultValue="What is the highest degree or level of education you have completed?"
+        readOnly
       />
       <Row gutter={[16, 16]} justify="center" className="">
         {EqTestPreAssessment().map((data: EqTestPreAssessmentItem) => (
@@ -126,11 +123,15 @@ function EqPreAssessment() {
         className="mt-3 "
         addonAfter={selectCountry}
         defaultValue="What country is your ZIP code in?"
+        readOnly
       />
       <div className="mt-10 flex flex-row items-center justify-between">
         <p className=" text-xl">Demographic data is for research purposes only</p>
-        {contextHolder}
-        <div onClick={openNotification} className="relative h-12 w-12 rounded-full bg-green">
+
+        <div
+          onClick={() => setModal2Open(true)}
+          className="relative h-12 w-12 rounded-full bg-green"
+        >
           <ArrowRightOutlined
             style={{
               fontSize: '23px',
@@ -142,6 +143,17 @@ function EqPreAssessment() {
             }}
           />
         </div>
+        <Modal
+          width={720}
+          title="Pre-Assessment"
+          centered
+          open={modal2Open}
+          onOk={() => setModal2Open(false)}
+          onCancel={() => setModal2Open(false)}
+          keyboard
+        >
+          {notificationContent}
+        </Modal>
       </div>
     </div>
   );
