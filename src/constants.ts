@@ -411,6 +411,7 @@ export const EqQuestionRadioButton = [
     greenHeight: '30px',
     whiteWidth: '10px',
     whiteHeight: '10px',
+    label: ' Never',
   },
   {
     value: '2',
@@ -419,6 +420,7 @@ export const EqQuestionRadioButton = [
     greenHeight: '25px',
     whiteWidth: '9px',
     whiteHeight: '9px',
+    label: 'Rarely',
   },
   {
     value: '3',
@@ -427,6 +429,7 @@ export const EqQuestionRadioButton = [
     greenHeight: '20px',
     whiteWidth: '8px',
     whiteHeight: '8px',
+    label: 'Sometimes',
   },
   {
     value: '4',
@@ -435,6 +438,7 @@ export const EqQuestionRadioButton = [
     greenHeight: '25px',
     whiteWidth: '9px',
     whiteHeight: '9px',
+    label: 'Ofter',
   },
   {
     value: '5',
@@ -443,6 +447,7 @@ export const EqQuestionRadioButton = [
     greenHeight: '30px',
     whiteWidth: '10px',
     whiteHeight: '10px',
+    label: ' Always',
   },
 ];
 export const EqPostAssessmnetQuestions = [

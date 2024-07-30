@@ -59,16 +59,6 @@ const selectCountry = (
 function EqPreAssessment() {
   const [modalOpen, setModalOpen] = useState(false);
   const navigate = useNavigate();
-  // const key = 'updatable';
-  // const [api, contextHolder] = notification.useNotification();
-  // const openNotification = () => {
-  //   api.open({
-  //     key,
-  //     message: notificationContent,
-  //     style: { width: 850 },
-  //   });
-
-  // };
 
   const handleOk = () => {
     setModalOpen(false);
@@ -160,12 +150,9 @@ function EqPreAssessment() {
           onOk={handleOk}
           onCancel={handleCancel}
           footer={
-            <>
-              <Button key="ok" type="primary" onClick={handleOk}>
-                Lets Start EQ Assessment
-              </Button>
-              {/* You can include other custom buttons here if needed */}
-            </>
+            <Button key="ok" type="primary" onClick={handleOk}>
+              Lets Start EQ Assessment
+            </Button>
           }
         >
           {notificationContent}

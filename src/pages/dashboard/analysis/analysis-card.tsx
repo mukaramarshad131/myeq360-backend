@@ -2,7 +2,7 @@ import { CSSProperties, ReactNode } from 'react';
 
 type Props = {
   cover: string;
-  subtitle: string;
+  subtitle: any;
   title: ReactNode;
   style?: CSSProperties;
 };

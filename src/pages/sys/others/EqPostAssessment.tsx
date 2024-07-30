@@ -1,5 +1,5 @@
 import { ArrowLeftOutlined, ArrowRightOutlined } from '@ant-design/icons';
-import { Row, Col } from 'antd';
+import { Col, Row } from 'antd';
 import { useState } from 'react';
 
 import { EqPostAssessmnetQuestions } from '@/constants';
@@ -56,6 +56,7 @@ function EqPostAssessment() {
           );
         })}
       </div>
+
       <div className="flex flex-row items-center justify-around">
         <div className="relative h-12 w-12 rounded-full bg-green">
           <ArrowLeftOutlined
