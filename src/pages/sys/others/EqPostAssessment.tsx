@@ -13,7 +13,7 @@ function EqPostAssessment() {
       {},
     ),
   );
-  console.log(selectedOption);
+  console.log('selectedOpiton', selectedOption);
   const handleOptionChange = (questionIndex: any, value: any) => {
     const newOption = [...selectedOption];
     newOption[questionIndex] = value;
