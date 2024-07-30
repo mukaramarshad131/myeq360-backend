@@ -13,27 +13,27 @@ function EqPostAssessment() {
       {},
     ),
   );
-  console.log('selectedOpiton', selectedOption);
   const handleOptionChange = (questionIndex: any, value: any) => {
-    const newOption = [...selectedOption];
-    newOption[questionIndex] = value;
-    setSelectedOption(newOption);
+    setSelectedOption((prevSelectedOption: any) => ({
+      ...prevSelectedOption,
+      [questionIndex + 1]: value,
+    }));
   };
   return (
     <>
       <div className="flex flex-col gap-6 pb-8">
-        {EqPostAssessmnetQuestions.map((options, idx: any) => {
+        {EqPostAssessmnetQuestions?.map((options, idx: any) => {
           return (
             <div key={idx}>
               <Row justify="center">
                 <Col>
-                  <p className="text-center text-base">{options.question}</p>
+                  <p className="text-center text-base">{options?.question}</p>
                 </Col>
               </Row>
 
               <Row align="middle" className="flex flex-row justify-center gap-20">
                 <Col>
-                  <p className="text-sm">{options.never}</p>
+                  <p className="text-sm">{options?.never}</p>
                 </Col>
 
                 <Col>
@@ -41,7 +41,7 @@ function EqPostAssessment() {
                     <Col className=" p-0">
                       <CustomRadioButton
                         questionIndex={idx}
-                        selectedValue={selectedOption[idx]}
+                        selectedValue={selectedOption}
                         handleOptionChange={handleOptionChange}
                       />
                     </Col>
