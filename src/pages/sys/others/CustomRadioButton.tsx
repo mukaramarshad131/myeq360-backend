@@ -17,21 +17,16 @@ function CustomRadioButton({ questionIndex, selectedValue, handleOptionChange }:
       }, {}),
       [idx]: true,
     }));
+    console.log('setOptions', options);
   };
   return (
-    <div className="flex flex-row gap-16">
-      {EqQuestionRadioButton.map((option, index: number) => {
+    <div className=" flex flex-row justify-center gap-8 max-md:mt-8 max-md:gap-2">
+      {EqQuestionRadioButton?.map((option, index: number) => {
         return (
-          <label
-            key={option.value}
-            htmlFor={`radio-${option.value}-${questionIndex}`}
-            style={{
-              display: 'inline-flex',
-              alignItems: 'center',
-              cursor: 'pointer',
-              marginRight: '16px',
-            }}
-          >
+          <div className="flex flex-col items-center">
+            <label key={option?.value} htmlFor={`radio-${option.value}-${questionIndex}`}>
+              {option?.label}
+            </label>
             <input
               type="radio"
               id={`radio-${option.value}-${questionIndex}`}
@@ -84,7 +79,7 @@ function CustomRadioButton({ questionIndex, selectedValue, handleOptionChange }:
                 transform: options[index] ? 'scale(1.1)' : 'scale(1)',
               }}
             />
-          </label>
+          </div>
         );
       })}
     </div>

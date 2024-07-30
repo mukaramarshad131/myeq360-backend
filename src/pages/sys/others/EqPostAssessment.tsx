@@ -21,7 +21,7 @@ function EqPostAssessment() {
   };
   return (
     <>
-      <div className="flex flex-col gap-6 pb-8">
+      {/* <div className="flex flex-col gap-6 pb-8">
         {EqPostAssessmnetQuestions?.map((options, idx: any) => {
           return (
             <div key={idx}>
@@ -50,6 +50,42 @@ function EqPostAssessment() {
 
                 <Col>
                   <p className="text-sm">{options.always}</p>
+                </Col>
+              </Row>
+            </div>
+          );
+        })}
+      </div> */}
+
+      <div className=" p-10">
+        {EqPostAssessmnetQuestions?.map((options, idx: any) => {
+          return (
+            <div key={idx}>
+              <Row gutter={[16, 16]} justify="center" className="p-2">
+                <Col
+                  span={24}
+                  xl={24}
+                  lg={24}
+                  md={24}
+                  sm={24}
+                  className="flex flex-col rounded-2xl py-3 shadow-[rgba(17,_17,_26,_0.1)_0px_0px_16px]"
+                  style={{
+                    color: 'gray',
+                    fontSize: '18px',
+                    borderRadius: '10px',
+                    height: '100%',
+                    background: '##D1D6DA',
+                    display: 'flex',
+                    // padding: '40px',
+                  }}
+                >
+                  <p className="m-4">{options?.question}</p>
+
+                  <CustomRadioButton
+                    questionIndex={idx}
+                    selectedValue={selectedOption}
+                    handleOptionChange={handleOptionChange}
+                  />
                 </Col>
               </Row>
             </div>
