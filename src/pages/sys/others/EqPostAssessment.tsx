@@ -7,8 +7,13 @@ import { EqPostAssessmnetQuestions } from '@/constants';
 import CustomRadioButton from './CustomRadioButton';
 
 function EqPostAssessment() {
-  const [selectedOption, setSelectedOption] = useState(EqPostAssessmnetQuestions.map(() => ''));
-
+  const [selectedOption, setSelectedOption] = useState<any>(
+    EqPostAssessmnetQuestions.map((_, index) => [index, index === 0]).reduce(
+      (acc, [key, value]: any) => ({ ...acc, [key]: value }),
+      {},
+    ),
+  );
+  console.log(selectedOption);
   const handleOptionChange = (questionIndex: any, value: any) => {
     const newOption = [...selectedOption];
     newOption[questionIndex] = value;
