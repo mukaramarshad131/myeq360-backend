@@ -1,51 +1,83 @@
+import { ArrowLeftOutlined, ArrowRightOutlined } from '@ant-design/icons';
+import { Row, Col } from 'antd';
+import { useState } from 'react';
+
+import { EqPostAssessmnetQuestions } from '@/constants';
+
+import CustomRadioButton from './CustomRadioButton';
+
 function EqPostAssessment() {
+  const [selectedOption, setSelectedOption] = useState(EqPostAssessmnetQuestions.map(() => ''));
+
+  const handleOptionChange = (questionIndex: any, value: any) => {
+    const newOption = [...selectedOption];
+    newOption[questionIndex] = value;
+    setSelectedOption(newOption);
+  };
   return (
-    // <div className="flex flex-col justify-around">
-    //   <div className="flex flex-row items-center justify-around">
-    //     <p>Statement</p>
-    //     <div className="flex flex-row gap-3">
-    //       {' '}
-    //       <p>Rarely </p>
-    //       <p>Sometimes </p>
-    //       <p>Often </p>
-    //       <p>Always </p>
-    //     </div>
-    //   </div>
-    //   <div className="flex flex-row items-center justify-around">
-    //     <p>I can identify what emotions I am feeling at any given time.</p>
-    //     <div className="flex flex-row gap-5">
-    //       {' '}
-    //       <input type="radio" name="" id="" />
-    //       <input type="radio" name="" id="" />
-    //       <input type="radio" name="" id="" />
-    //       <input type="radio" name="" id="" />
-    //     </div>
-    //   </div>
-    // </div>
-    <div className="flex flex-row items-center justify-around">
-      <div className="flex flex-col items-start">
-        <p className="text-xl font-semibold">Statement</p>
-        <p>I can identify what emotions I am feeling at any given time.</p>
+    <>
+      <div className="flex flex-col gap-6 pb-8">
+        {EqPostAssessmnetQuestions.map((options, idx: any) => {
+          return (
+            <div key={idx}>
+              <Row justify="center">
+                <Col>
+                  <p className="text-center text-base">{options.question}</p>
+                </Col>
+              </Row>
+
+              <Row align="middle" className="flex flex-row justify-center gap-20">
+                <Col>
+                  <p className="text-sm">{options.never}</p>
+                </Col>
+
+                <Col>
+                  <Row gutter={16} justify="center" className="gap-x-20">
+                    <Col className=" p-0">
+                      <CustomRadioButton
+                        questionIndex={idx}
+                        selectedValue={selectedOption[idx]}
+                        handleOptionChange={handleOptionChange}
+                      />
+                    </Col>
+                  </Row>
+                </Col>
+
+                <Col>
+                  <p className="text-sm">{options.always}</p>
+                </Col>
+              </Row>
+            </div>
+          );
+        })}
       </div>
-      <div className="flex flex-row items-center justify-center gap-2">
-        <div>
-          <p className="text-base font-semibold">Never</p>
-          <input type="radio" name="" id="" />
+      <div className="flex flex-row items-center justify-around">
+        <div className="relative h-12 w-12 rounded-full bg-green">
+          <ArrowLeftOutlined
+            style={{
+              fontSize: '23px',
+              color: '#fff',
+              position: 'absolute',
+              top: '50%',
+              left: '50%',
+              transform: 'translate(-50%, -50%)',
+            }}
+          />
         </div>
-        <div>
-          <p className="text-base font-semibold">Rarely</p>
-          <input type="radio" name="" id="" />
-        </div>
-        <div>
-          <p className="text-base font-semibold">Sometimes</p>
-          <input type="radio" name="" id="" />
-        </div>
-        <div>
-          <p className="text-base font-semibold">Always</p>
-          <input type="radio" name="" id="" />
+        <div className="relative h-12 w-12 rounded-full bg-green">
+          <ArrowRightOutlined
+            style={{
+              fontSize: '23px',
+              color: '#fff',
+              position: 'absolute',
+              top: '50%',
+              left: '50%',
+              transform: 'translate(-50%, -50%)',
+            }}
+          />
         </div>
       </div>
-    </div>
+    </>
   );
 }
 

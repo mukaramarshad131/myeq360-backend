@@ -402,3 +402,85 @@ export const EqTestPreAssessmentSelect = {
     { value: 'nigeria', label: 'Nigeria' },
   ],
 } as any;
+
+export const EqQuestionRadioButton = [
+  {
+    value: '1',
+    key: 'never',
+    greenWidth: '30px',
+    greenHeight: '30px',
+    whiteWidth: '10px',
+    whiteHeight: '10px',
+  },
+  {
+    value: '2',
+    key: 'rarely',
+    greenWidth: '25px',
+    greenHeight: '25px',
+    whiteWidth: '9px',
+    whiteHeight: '9px',
+  },
+  {
+    value: '3',
+    key: 'sometimes',
+    greenWidth: '20px',
+    greenHeight: '20px',
+    whiteWidth: '8px',
+    whiteHeight: '8px',
+  },
+  {
+    value: '4',
+    key: 'often',
+    greenWidth: '25px',
+    greenHeight: '25px',
+    whiteWidth: '9px',
+    whiteHeight: '9px',
+  },
+  {
+    value: '5',
+    key: 'always',
+    greenWidth: '30px',
+    greenHeight: '30px',
+    whiteWidth: '10px',
+    whiteHeight: '10px',
+  },
+];
+export const EqPostAssessmnetQuestions = [
+  {
+    id: 1,
+    question: 'I can identify what emotions I am feeling at any given time.',
+    always: 'Almost Always',
+    never: 'Almost Never',
+  },
+  {
+    id: 2,
+    question: 'I communicate my thoughts clearly without misinterpretation.',
+    always: 'Almost Always',
+    never: 'Almost Never',
+  },
+  {
+    id: 3,
+    question: 'When dilemmas arise, I identify the source of the issue.',
+    always: 'Almost Always',
+    never: 'Almost Never',
+  },
+  {
+    id: 4,
+    question: 'I pursue things with passion.',
+    always: 'Almost Always',
+    never: 'Almost Never',
+  },
+  {
+    id: 5,
+    question: 'I disagree with what others say about what my personality is like.',
+    always: 'Almost Always',
+    never: 'Almost Never',
+  },
+  {
+    id: 6,
+    question:
+      'I have acted out of emotion or assumptions before thinking about the consequences of my behavior.',
+    always: 'Almost Always',
+    never: 'Almost Never',
+  },
+];

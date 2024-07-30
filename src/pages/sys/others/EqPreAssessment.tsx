@@ -57,7 +57,7 @@ const selectCountry = (
 );
 
 function EqPreAssessment() {
-  const [modal2Open, setModal2Open] = useState(false);
+  const [modalOpen, setModalOpen] = useState(false);
   const navigate = useNavigate();
   // const key = 'updatable';
   // const [api, contextHolder] = notification.useNotification();
@@ -71,11 +71,11 @@ function EqPreAssessment() {
   // };
 
   const handleOk = () => {
-    setModal2Open(false);
+    setModalOpen(false);
     navigate('/eqPostAssessment');
   };
   const handleCancel = () => {
-    setModal2Open(false);
+    setModalOpen(false);
   };
   return (
     <div className="p-10">
@@ -138,7 +138,7 @@ function EqPreAssessment() {
         <p className=" text-xl">Demographic data is for research purposes only</p>
 
         <div
-          onClick={() => setModal2Open(true)}
+          onClick={() => setModalOpen(true)}
           className="relative h-12 w-12 rounded-full bg-green"
         >
           <ArrowRightOutlined
@@ -156,7 +156,7 @@ function EqPreAssessment() {
           width={720}
           title="Pre-Assessment"
           centered
-          open={modal2Open}
+          open={modalOpen}
           onOk={handleOk}
           onCancel={handleCancel}
           footer={
