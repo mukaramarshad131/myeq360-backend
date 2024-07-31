@@ -7,58 +7,41 @@ import { EqPostAssessmnetQuestions } from '@/constants';
 import CustomRadioButton from './CustomRadioButton';
 
 function EqPostAssessment() {
+  const questionPerPage = 6;
   const [selectedOption, setSelectedOption] = useState<any>(
     EqPostAssessmnetQuestions.map((_, index) => [index, index === 0]).reduce(
       (acc, [key, value]: any) => ({ ...acc, [key]: value }),
       {},
     ),
   );
+  const [currentPage, setCurrentPage] = useState<any>(1);
+
   const handleOptionChange = (questionIndex: any, value: any) => {
     setSelectedOption((prevSelectedOption: any) => ({
       ...prevSelectedOption,
       [questionIndex + 1]: value,
     }));
   };
+  const lastQuestionIndex = currentPage * questionPerPage;
+  const firstQuestionIndex = lastQuestionIndex - questionPerPage;
+  const currentQuestions = EqPostAssessmnetQuestions?.slice(firstQuestionIndex, lastQuestionIndex);
+
+  const handleNextPage = () => {
+    if (currentPage < Math.ceil(EqPostAssessmnetQuestions.length / questionPerPage)) {
+      setCurrentPage(currentPage + 1);
+    }
+  };
+
+  const handlePreviousPage = () => {
+    if (currentPage > EqPostAssessmnetQuestions.length / questionPerPage) {
+      setCurrentPage(currentPage - 1);
+    }
+  };
+
   return (
     <>
-      {/* <div className="flex flex-col gap-6 pb-8">
-        {EqPostAssessmnetQuestions?.map((options, idx: any) => {
-          return (
-            <div key={idx}>
-              <Row justify="center">
-                <Col>
-                  <p className="text-center text-base">{options?.question}</p>
-                </Col>
-              </Row>
-
-              <Row align="middle" className="flex flex-row justify-center gap-20">
-                <Col>
-                  <p className="text-sm">{options?.never}</p>
-                </Col>
-
-                <Col>
-                  <Row gutter={16} justify="center" className="gap-x-20">
-                    <Col className=" p-0">
-                      <CustomRadioButton
-                        questionIndex={idx}
-                        selectedValue={selectedOption}
-                        handleOptionChange={handleOptionChange}
-                      />
-                    </Col>
-                  </Row>
-                </Col>
-
-                <Col>
-                  <p className="text-sm">{options.always}</p>
-                </Col>
-              </Row>
-            </div>
-          );
-        })}
-      </div> */}
-
       <div className=" p-10">
-        {EqPostAssessmnetQuestions?.map((options, idx: any) => {
+        {currentQuestions?.map((options, idx: any) => {
           return (
             <div key={idx}>
               <Row gutter={[16, 16]} justify="center" className="p-2">
@@ -79,7 +62,7 @@ function EqPostAssessment() {
                     // padding: '40px',
                   }}
                 >
-                  <p className="m-4">{options?.question}</p>
+                  <p className="m-4 ">{options?.question}</p>
 
                   <CustomRadioButton
                     questionIndex={idx}
@@ -92,33 +75,49 @@ function EqPostAssessment() {
           );
         })}
       </div>
-
-      <div className="flex flex-row items-center justify-around">
-        <div className="relative h-12 w-12 rounded-full bg-green">
-          <ArrowLeftOutlined
-            style={{
-              fontSize: '23px',
-              color: '#fff',
-              position: 'absolute',
-              top: '50%',
-              left: '50%',
-              transform: 'translate(-50%, -50%)',
-            }}
-          />
+      {currentPage === 1 ? (
+        <div className=" flex items-end justify-end">
+          <div onClick={handleNextPage} className="relative m-5 h-12 w-12 rounded-full bg-green">
+            <ArrowRightOutlined
+              style={{
+                fontSize: '23px',
+                color: '#fff',
+                position: 'absolute',
+                top: '50%',
+                left: '50%',
+                transform: 'translate(-50%, -50%)',
+              }}
+            />
+          </div>
         </div>
-        <div className="relative h-12 w-12 rounded-full bg-green">
-          <ArrowRightOutlined
-            style={{
-              fontSize: '23px',
-              color: '#fff',
-              position: 'absolute',
-              top: '50%',
-              left: '50%',
-              transform: 'translate(-50%, -50%)',
-            }}
-          />
+      ) : (
+        <div className="flex flex-row items-center justify-around">
+          <div onClick={handlePreviousPage} className="relative h-12 w-12 rounded-full bg-green">
+            <ArrowLeftOutlined
+              style={{
+                fontSize: '23px',
+                color: '#fff',
+                position: 'absolute',
+                top: '50%',
+                left: '50%',
+                transform: 'translate(-50%, -50%)',
+              }}
+            />
+          </div>
+          <div onClick={handleNextPage} className="relative h-12 w-12 rounded-full bg-green">
+            <ArrowRightOutlined
+              style={{
+                fontSize: '23px',
+                color: '#fff',
+                position: 'absolute',
+                top: '50%',
+                left: '50%',
+                transform: 'translate(-50%, -50%)',
+              }}
+            />
+          </div>
         </div>
-      </div>
+      )}
     </>
   );
 }

@@ -488,4 +488,306 @@ export const EqPostAssessmnetQuestions = [
     always: 'Almost Always',
     never: 'Almost Never',
   },
+  {
+    id: 7,
+    question: 'I understand what behaviors are appropriate based on the environment I am in.',
+    always: 'Almost Always',
+    never: 'Almost Never',
+  },
+  {
+    id: 8,
+    question: 'I evaluate the potential consequences of the actions I consider taking.',
+    always: 'Almost Always',
+    never: 'Almost Never',
+  },
+  {
+    id: 9,
+    question: 'I do things without needing to be reminded by others.',
+    always: 'Almost Always',
+    never: 'Almost Never',
+  },
+  {
+    id: 10,
+    question: 'I believe in myself, my abilities, and my value as a person.',
+    always: 'Almost Always',
+    never: 'Almost Never',
+  },
+  {
+    id: 11,
+    question:
+      'I find myself working or putting effort into things that do not have a clear purpose.',
+    always: 'Almost Always',
+    never: 'Almost Never',
+  },
+  {
+    id: 12,
+    question: 'I do not find friendships or relationships in general beneficial for me.',
+    always: 'Almost Always',
+    never: 'Almost Never',
+  },
+  {
+    id: 13,
+    question: 'I consider my well-being when I make decisions.',
+    always: 'Almost Always',
+    never: 'Almost Never',
+  },
+  {
+    id: 14,
+    question: 'I persevere in the face of obstacles to long-term and meaningful goals.',
+    always: 'Almost Always',
+    never: 'Almost Never',
+  },
+  {
+    id: 15,
+    question: 'I can identify and describe my automatic thoughts.',
+    always: 'Almost Always',
+    never: 'Almost Never',
+  },
+  {
+    id: 16,
+    question: 'I find myself getting distracted or tuning out when a person is speaking to me.',
+    always: 'Almost Always',
+    never: 'Almost Never',
+  },
+  {
+    id: 17,
+    question: 'When dilemmas arise, I hypothesize and analyze possible solutions to the issue.',
+    always: 'Almost Always',
+    never: 'Almost Never',
+  },
+  {
+    id: 18,
+    question: 'My work or personal life feel monotonous or uninspiring.',
+    always: 'Almost Always',
+    never: 'Almost Never',
+  },
+  {
+    id: 19,
+    question: 'I genuinely do well at what I believe I am good at.',
+    always: 'Almost Always',
+    never: 'Almost Never',
+  },
+  {
+    id: 20,
+    question: 'I feel too embarrassed or nervous to ask for help when I need it.',
+    always: 'Almost Always',
+    never: 'Almost Never',
+  },
+  {
+    id: 21,
+    question:
+      'I accept responsibility and the potential consequences of my actions before and after taking action.',
+    always: 'Almost Always',
+    never: 'Almost Never',
+  },
+  {
+    id: 22,
+    question: 'I step forward from the group to guide us in the direction of a common goal.',
+    always: 'Almost Always',
+    never: 'Almost Never',
+  },
+  {
+    id: 23,
+    question: 'I am uncertain about what the future holds for me.',
+    always: 'Almost Always',
+    never: 'Almost Never',
+  },
+  {
+    id: 24,
+    question: 'I appreciate the practice of pursuing goals, not just the outcomes of them.',
+    always: 'Almost Always',
+    never: 'Almost Never',
+  },
+
+  {
+    id: 25,
+    question: 'I work well with others.',
+    always: 'Almost Always',
+    never: 'Almost Never',
+  },
+  {
+    id: 26,
+    question: `I consider others' well-being when I make decisions.`,
+    always: 'Almost Always',
+    never: 'Almost Never',
+  },
+  {
+    id: 27,
+    question: 'I try again when unsuccessful.',
+    always: 'Almost Always',
+    never: 'Almost Never',
+  },
+  {
+    id: 28,
+    question: 'I know what I value or think is important.',
+    always: 'Almost Always',
+    never: 'Almost Never',
+  },
+  {
+    id: 29,
+    question: 'I speak up for myself.',
+    always: 'Almost Always',
+    never: 'Almost Never',
+  },
+  {
+    id: 30,
+    question: 'When dilemmas arise, I solve them constructively.',
+    always: 'Almost Always',
+    never: 'Almost Never',
+  },
+
+  {
+    id: 31,
+    question: 'I feel apathetic or indifferent when I begin most tasks at home or work',
+    always: 'Almost Always',
+    never: 'Almost Never',
+  },
+  {
+    id: 32,
+    question: 'I am aware of my limits and challenges in knowledge and ability.',
+    always: 'Almost Always',
+    never: 'Almost Never',
+  },
+  {
+    id: 33,
+    question: 'I help others when they are in need.',
+    always: 'Almost Always',
+    never: 'Almost Never',
+  },
+  {
+    id: 34,
+    question: 'I reflect on the consequences of my actions and how they affect myself and others.',
+    always: 'Almost Always',
+    never: 'Almost Never',
+  },
+  {
+    id: 35,
+    question:
+      'No matter how hard I work, I believe that I continue to be stuck and dissatisfied where I am.',
+    always: 'Almost Always',
+    never: 'Almost Never',
+  },
+  {
+    id: 36,
+    question: 'I have many unfinished projects or commitments.',
+    always: 'Almost Always',
+    never: 'Almost Never',
+  },
+  {
+    id: 37,
+    question: 'I find myself in situations where consensus or compromises are rarely reached.',
+    always: 'Almost Always',
+    never: 'Almost Never',
+  },
+  {
+    id: 38,
+    question: 'I consider ethical responsibilities when I make decisions',
+    always: 'Almost Always',
+    never: 'Almost Never',
+  },
+  {
+    id: 39,
+    question: 'I put in more effort when pursuing my goals becomes challenging.',
+    always: 'Almost Always',
+    never: 'Almost Never',
+  },
+  {
+    id: 40,
+    question: 'I am aware of how my automatic thoughts and emotions influence my behavior.',
+    always: 'Almost Always',
+    never: 'Almost Never',
+  },
+  {
+    id: 41,
+    question:
+      'I actively pursue learning new skills to help myself manage my thoughts and emotions.',
+    always: 'Almost Always',
+    never: 'Almost Never',
+  },
+  {
+    id: 42,
+    question:
+      'I encourage others to share their thoughts and feelings to contribute to discussions.',
+    always: 'Almost Always',
+    never: 'Almost Never',
+  },
+  // ------------------------------------------
+  {
+    id: 43,
+    question: 'I make constructive choices based on ethics, safety, and social context.',
+    always: 'Almost Always',
+    never: 'Almost Never',
+  },
+  {
+    id: 44,
+    question: 'I am motivated to do or create to a degree of extraordinary quality.',
+    always: 'Almost Always',
+    never: 'Almost Never',
+  },
+  {
+    id: 45,
+    question: 'My attitudes and preferences are reflected in my behaviors.',
+    always: 'Almost Always',
+    never: 'Almost Never',
+  },
+  {
+    id: 46,
+    question:
+      'I multi-task to a level that I get distracted and have difficulty finishing what I started.    ',
+    always: 'Almost Always',
+    never: 'Almost Never',
+  },
+  {
+    id: 47,
+    question:
+      'I avoid community involvement, professional gatherings, or other social activities even when they can benefit my personal and/ or career growth.',
+    always: 'Almost Always',
+    never: 'Almost Never',
+  },
+  {
+    id: 48,
+    question:
+      'I use the consequences of my actions from the past to guide my future decision-making.',
+    always: 'Almost Always',
+    never: 'Almost Never',
+  },
+
+  // ---------------------------------
+  {
+    id: 49,
+    question: 'I believe that there is little I can do to change my current situation.',
+    always: 'Almost Always',
+    never: 'Almost Never',
+  },
+  {
+    id: 50,
+    question: 'I organize, make arrangements, and plan in advance.',
+    always: 'Almost Always',
+    never: 'Almost Never',
+  },
+  {
+    id: 51,
+    question:
+      'I feel disrespected often, and as a result, I have a difficult time showing respect for others.',
+    always: 'Almost Always',
+    never: 'Almost Never',
+  },
+  {
+    id: 52,
+    question: 'I do not find teamwork useful in my career or personal development. ',
+    always: 'Almost Always',
+    never: 'Almost Never',
+  },
+  {
+    id: 53,
+    question: 'I respect my immediate environment, nature, and the planet when I make decisions.',
+    always: 'Almost Always',
+    never: 'Almost Never',
+  },
+  {
+    id: 54,
+    question: 'I adjust my goals and effort realistically when faced with insurmountable barriers.',
+    always: 'Almost Always',
+    never: 'Almost Never',
+  },
 ];
