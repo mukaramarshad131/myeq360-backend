@@ -45,6 +45,7 @@ function EqPostAssessment() {
       {currentPage <= questionPerPageEqPost ? (
         <div className=" p-10">
           {currentQuestions?.map((options, idx: any) => {
+            console.log('idx', options.id);
             return (
               <div key={idx}>
                 <Row gutter={[16, 16]} justify="center" className="p-2">
@@ -96,20 +97,19 @@ function EqPostAssessment() {
             />
           </div>
         )}
-        {currentPage < Math.ceil(EqPostAssessmnetQuestions.length / questionPerPageEqPost) && (
-          <div onClick={handleNextPage} className="relative h-12 w-12 rounded-full bg-green">
-            <ArrowRightOutlined
-              style={{
-                fontSize: '23px',
-                color: '#fff',
-                position: 'absolute',
-                top: '50%',
-                left: '50%',
-                transform: 'translate(-50%, -50%)',
-              }}
-            />
-          </div>
-        )}
+
+        <div onClick={handleNextPage} className="relative h-12 w-12 rounded-full bg-green">
+          <ArrowRightOutlined
+            style={{
+              fontSize: '23px',
+              color: '#fff',
+              position: 'absolute',
+              top: '50%',
+              left: '50%',
+              transform: 'translate(-50%, -50%)',
+            }}
+          />
+        </div>
       </div>
     </>
   );

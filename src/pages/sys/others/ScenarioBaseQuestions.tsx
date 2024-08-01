@@ -9,8 +9,8 @@ function ScenarioBaseQuestions({ currentPage }: { currentPage: number }) {
   const index = currentPage - 7;
   console.log('questionIndex', index);
 
-  // Check if the index is within bounds
   const currentQuestions = ScenarioBasedQuestions[index];
+  console.log('currentQuestions', ScenarioBasedQuestions);
   if (!currentQuestions) {
     return <div>No questions available for this page.</div>;
   }
