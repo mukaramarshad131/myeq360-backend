@@ -41,6 +41,7 @@ interface EqTestPreAssessmentItem {
   bg: any;
   color: string;
   bg_toString_color: string;
+  options: any;
 }
 
 const selectAge = <Select defaultValue="Select Age" options={EqTestPreAssessmentSelect['1']} />;
