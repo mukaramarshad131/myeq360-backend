@@ -17,7 +17,6 @@ function CustomRadioButton({ questionIndex, selectedValue, handleOptionChange }:
       }, {}),
       [idx]: true,
     }));
-    console.log('setOptions', options);
   };
   return (
     <div className=" flex flex-row justify-center gap-8 max-md:mt-8 max-md:gap-2">
@@ -33,11 +32,18 @@ function CustomRadioButton({ questionIndex, selectedValue, handleOptionChange }:
               name={option.key}
               checked={options[index]}
               onChange={(e) => {
-                handleOptionChange(questionIndex, e.target.checked);
                 handleRadioRow(index);
+                handleOptionChange(questionIndex, e.target.checked);
               }}
               disabled={!selectedValue[questionIndex]}
-              style={{ position: 'absolute', opacity: 0, width: 0, height: 0 }} // Hide default radio button but still functional
+              style={{
+                position: 'absolute',
+                bottom: '10px',
+                width: 40,
+                height: 40,
+                opacity: 0,
+                zIndex: 10,
+              }} // Hide default radio button but still functional
             />
             <span
               style={{
