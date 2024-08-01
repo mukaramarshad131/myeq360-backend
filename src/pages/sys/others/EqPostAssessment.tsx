@@ -14,6 +14,7 @@ interface EqTestPostAssessmentItem {
   color: string;
   bg_toString_color: string;
   type: string;
+  options?: any;
 }
 const selectCountry = (
   <Select defaultValue="Select Option">

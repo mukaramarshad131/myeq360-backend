@@ -225,8 +225,8 @@ const OTHERS_PERMISSION = [
     icon: 'ic_blank',
     type: PermissionType.MENU,
     route: 'singlePageReport',
-    component: '/component/single-page-report/index.tsx',
-    hide:true,
+    component: '/sys/others/OnePageReport.tsx',
+    hide:true
   },
 ];
 
