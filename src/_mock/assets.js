@@ -217,6 +217,17 @@ const OTHERS_PERMISSION = [
     component: '/sys/others/EqAssessment.tsx',
     hide:true,
   },
+  {
+    id: '0941594969900756',
+    parentId: '',
+    label: 'sys.singlePageReport',
+    name: 'singlePageReport',
+    icon: 'ic_blank',
+    type: PermissionType.MENU,
+    route: 'singlePageReport',
+    component: '/component/single-page-report/index.tsx',
+    hide:true,
+  },
 ];
 
 

@@ -1285,3 +1285,44 @@ What would you most likely do in this situation?`,
     ],
   },
 ];
+
+export const EqTestPostAssessment = () => {
+  const theme = useThemeToken();
+  return [
+    {
+      id: 1,
+      type: 'checkbox',
+      desc: 'What is your race?',
+      bg: theme.colorInfoActive,
+      bg_toString_color: theme.colorInfo,
+      color: theme.colorInfoTextActive,
+      options: [
+        { value: 'asian', label: 'Asian' },
+        { value: 'black-or-of-African-descent', label: 'Black or of African descent' },
+        { value: 'indigenous-Peoples', label: 'Indigenous Peoples' },
+        { value: 'latinx-or-Hispanic-American', label: 'Latinx or Hispanic American' },
+        {
+          value: 'native-Hawaiian-or-Other-Pacific-Islander',
+          label: 'Native Hawaiian or Other Pacific Islander',
+        },
+        { value: 'white', label: 'White' },
+        { value: 'other', label: 'Other' },
+        { value: 'prefer-not-to-say', label: 'Prefer not to say' },
+      ],
+    },
+    {
+      id: 2,
+      type: 'radio',
+      desc: 'What is your sex?',
+      bg: theme.colorInfoActive,
+      bg_toString_color: theme.colorInfo,
+      color: theme.colorInfoTextActive,
+      options: [
+        { value: 'male', label: 'Male' },
+        { value: 'female', label: 'Female' },
+        { value: 'other', label: 'Other' },
+        { value: 'prefer-not-to-say', label: 'Prefer not to say' },
+      ],
+    },
+  ];
+};

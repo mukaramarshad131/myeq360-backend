@@ -1,5 +1,4 @@
 import { Col, Row } from 'antd';
-import Color from 'color';
 import { useNavigate } from 'react-router-dom';
 
 import Card from '@/components/card';
@@ -22,6 +21,7 @@ function EqAssessmentTest() {
   };
   return (
     <div className="p-5">
+      {/* <EqAssessmentComplete /> */}
       <h1 className="mb-10 text-center text-2xl">Welcome to STRUT’s Emotional Intelligence 360</h1>
       <p className="mb-4 text-base">You’ll be asked a series of questions about how well you:</p>
       <Row gutter={[16, 16]} justify="center">
@@ -32,12 +32,8 @@ function EqAssessmentTest() {
                 height: '100%',
                 padding: 20,
                 borderRadius: '10px',
-                color: data.color,
-                background: `linear-gradient(135deg, ${Color(data.bg)
-                  .alpha(0.2)
-                  .toString()}, ${Color(data.bg_toString_color)
-                  .alpha(0.2)
-                  .toString()}) rgb(255, 255, 255)`,
+                color: '#595757',
+                background: '#ECF5FE',
               }}
             >
               <p>{data.desc}</p>

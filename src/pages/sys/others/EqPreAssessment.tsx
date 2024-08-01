@@ -1,6 +1,5 @@
 import { ArrowRightOutlined } from '@ant-design/icons';
 import { Button, Col, Input, Modal, Row, Select } from 'antd';
-import Color from 'color';
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
@@ -62,7 +61,7 @@ function EqPreAssessment() {
 
   const handleOk = () => {
     setModalOpen(false);
-    navigate('/eqPostAssessment');
+    navigate('/eqAssessment');
   };
   const handleCancel = () => {
     setModalOpen(false);
@@ -80,25 +79,21 @@ function EqPreAssessment() {
       />
       <Row gutter={[16, 16]} justify="center" className="">
         {EqTestPreAssessment().map((data: EqTestPreAssessmentItem) => (
-          <Col lg={12} md={24} span={24} key={data.id}>
+          <Col lg={24} md={24} span={24} key={data.id}>
             <Card
               style={{
                 height: '100%',
                 padding: 20,
                 borderRadius: '10px',
-                color: data.color,
-                background: `linear-gradient(135deg, ${Color(data.bg)
-                  .alpha(0.2)
-                  .toString()}, ${Color(data.bg_toString_color)
-                  .alpha(0.2)
-                  .toString()}) rgb(255, 255, 255)`,
+                color: '#595757',
+                background: '#ECF5FE',
               }}
             >
               <fieldset>
                 <legend>{data.desc}</legend>
                 <Row gutter={[16, 16]}>
                   {data.options.map((option: any) => (
-                    <Col lg={12} md={12} span={24} key={data.id}>
+                    <Col xl={6} lg={6} md={6} sm={12} xs={12} span={24} key={data.id}>
                       <div className=" flex flex-row items-center" key={option.value}>
                         <input
                           className="mr-4"

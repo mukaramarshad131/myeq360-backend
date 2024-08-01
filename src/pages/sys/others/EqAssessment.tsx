@@ -80,7 +80,7 @@ function EqAssessment() {
         <ScenarioBaseQuestions currentPage={currentPage} />
       )}
       <div className="flex items-end justify-end gap-2">
-        {currentPage > 1 && (
+        {currentPage > 1 && currentPage < 28 && (
           <div onClick={handlePreviousPage} className="relative h-12 w-12 rounded-full bg-green">
             <ArrowLeftOutlined
               style={{
@@ -94,7 +94,7 @@ function EqAssessment() {
             />
           </div>
         )}
-        {currentPage <= 27 && (
+        {currentPage >= 1 && currentPage < 28 && (
           <div onClick={handleNextPage} className="relative h-12 w-12 rounded-full bg-green">
             <ArrowRightOutlined
               style={{

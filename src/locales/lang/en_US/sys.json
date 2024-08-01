@@ -202,6 +202,7 @@
     },
     "eqPreAssessment":"eqPreAssessment",
     "eqAssessment":"eqAssessment",
+    "singlePageReport":"singlePageReport",
     "individualDashboardStats": {
       "understandingEmotions": "Understanding Emotion",
       "personalGrowth": "Personal Growth",
