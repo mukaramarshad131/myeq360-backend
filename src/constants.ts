@@ -901,57 +901,195 @@ export const ScenarioBasedQuestions = [
   },
   {
     id: 5,
-    scenario: `I was laid off and am having a difficult time paying my rent. I am in danger of being evicted. My family gives me a call, not knowing the situation.`,
+    scenario: `I am in a team project at work in the midst of the workday. A few of my coworkers who are not on my team but in the same workspace keep showing each other pictures on their phones of their weekend. My team has a deadline coming up.`,
     question: 'What would you most likely do in this situation?',
     options: [
       {
         id: 1,
-        option: ' Pretend like everything is okay and converse with them normally.',
+        option:
+          ' Try my best to focus on my task but look over a few times to see what they are looking at.',
       },
       {
         id: 2,
-        option: ' Lie to them about how great work is and how I will receive a promotion soon.',
+        option: '  Go over to my coworkers and ask them if I can see the pictures as well.',
       },
       {
         id: 3,
-        option:
-          ' Talk to a family member and explain my situation, hoping they volunteer any help or advice.',
+        option: '  Tell my manager that the coworkers are distracting my team from our task.',
       },
       {
         id: 4,
-        option: ` Tell them I was laid off but don't tell them that I will be evicted soon. I'd hate to worry them.`,
+        option: ` Try my best to focus on the task but eventually decide to move my team to a different location.`,
       },
       {
         id: 5,
-        option: ` Talk to a close family friend, and ask them to keep my situation a secret from my family so that they will not worry.`,
+        option: `  Ignore them and ask my team to stay focused so that we can finish our task.`,
       },
     ],
   },
   {
     id: 6,
-    scenario: `I was laid off and am having a difficult time paying my rent. I am in danger of being evicted. My family gives me a call, not knowing the situation.`,
+    scenario: `There is a new coworker at my workplace. Each morning they have been walking into the office looking upset and sitting by themself in the company cafeteria.`,
     question: 'What would you most likely do in this situation?',
     options: [
       {
         id: 1,
-        option: ' Pretend like everything is okay and converse with them normally.',
+        option: ' Ignore them.',
       },
       {
         id: 2,
-        option: ' Lie to them about how great work is and how I will receive a promotion soon.',
+        option: ' Make fun of them with my coworkers since they are always alone.',
+      },
+      {
+        id: 3,
+        option: '   Ask them to join us at our next happy hour.',
+      },
+      {
+        id: 4,
+        option: ` Introduce myself and start a private conversation about how they are adjusting to the new company.`,
+      },
+      {
+        id: 5,
+        option: ` Speak with our manager about my observations of the new coworker.`,
+      },
+    ],
+  },
+  {
+    id: 7,
+    scenario: `I am feeling anxious about a work deadline.`,
+    question: 'What would you most likely do in this situation?',
+    options: [
+      {
+        id: 1,
+        option: '  Decide to not think about it until the last minute because I will get it done.',
+      },
+      {
+        id: 2,
+        option: `Find ways to delegate my work to my coworkers so I don't have to do as much work.`,
+      },
+      {
+        id: 3,
+        option: ` Have trouble sleeping at night because I can't stop thinking about the tasks I need to complete.`,
+      },
+      {
+        id: 4,
+        option: ` Reach out to my manager or supervisor and share all of my worries about finishing the project.`,
+      },
+      {
+        id: 5,
+        option: ` Remain calm and find a strategy to keep me on track.`,
+      },
+    ],
+  },
+  {
+    id: 8,
+    scenario: `I have heard from my co-workers that it is possible to exaggerate on our overtime to receive greater compensation since our supervisors do not check our timesheets.`,
+    question: 'What would you most likely do in this situation?',
+    options: [
+      {
+        id: 1,
+        option: '  Decide that it is okay to add a few hours of overtime each pay period.',
+      },
+      {
+        id: 2,
+        option: ` Don't say anything and pretend like I didn't hear anything from my coworkers.`,
+      },
+      {
+        id: 3,
+        option: ` I would tell them they should reconsider, and that it's important to be honest with our work.`,
+      },
+      {
+        id: 4,
+        option: ` Consider adding a few more hours, but in the end, recognize it is not ethical.`,
+      },
+      {
+        id: 5,
+        option: `  Without implicating anyone, communicate with coworkers and higher-up the importance of accountability for our work and timesheets`,
+      },
+    ],
+  },
+  {
+    id: 9,
+    scenario: `I am moving to a new apartment, but I cannot afford to hire movers. I have some large furniture and several boxes, but I know I cannot move everything on my own. My friends have offered to help.
+What would you most likely do in this situation?`,
+    question: 'What would you most likely do in this situation?',
+    options: [
+      {
+        id: 1,
+        option: ' Refuse their offer because I do not want to burden them.',
+      },
+      {
+        id: 2,
+        option:
+          ' Tell them I really appreciate the offer and am happy to help them with anything they may need in the future.',
       },
       {
         id: 3,
         option:
-          '  Talk to a family member and explain my situation, hoping they volunteer any help or advice.',
+          ' Accept their offer to help me move all of my things and have them over for dinner once settled in.',
       },
       {
         id: 4,
-        option: `  Tell them I was laid off but don't tell them that I will be evicted soon. I'd hate to worry them.`,
+        option: `  Accept their offer but feel guilty for taking up their time.`,
       },
       {
         id: 5,
-        option: `Talk to a close family friend, and ask them to keep my situation a secret from my family so that they will not worry.`,
+        option: `  Tell them I have hired movers. I wouldn't want them to know about my financial situation.`,
+      },
+    ],
+  },
+  {
+    id: 10,
+    scenario: `The company I work for has laid off several people in my division. As a consequence, I am expected to complete tasks I am not familiar with and I am not paid to do. I am feeling stressed and demoralized.`,
+    question: 'What would you most likely do during this time?',
+    options: [
+      {
+        id: 1,
+        option: ' Find activities I enjoy and talk with a friend about how I have been feeling.',
+      },
+      {
+        id: 2,
+        option: ` Work as hard as I can knowing that I can't change the situation.`,
+      },
+      {
+        id: 3,
+        option: ' Call my friends to vent.',
+      },
+      {
+        id: 4,
+        option: ' Go to the gym everyday.',
+      },
+      {
+        id: 5,
+        option:
+          ' Drink every night so that I do not have to think about my job until the next morning.',
+      },
+    ],
+  },
+  {
+    id: 11,
+    scenario: `I am invited to my co-worker's home for a potluck. I am especially picky with my food, but I noticed there are a lot of foods I cannot recognize, especially the dishes that were brought by my coworker.`,
+    question: 'What would you most likely do in this situation?',
+    options: [
+      {
+        id: 1,
+        option: '  Show my disgust for different smells and only eat the foods I am familiar with.',
+      },
+      {
+        id: 2,
+        option: ` Tell them that I am allergic to certain foods so I only have to eat the food I brought.`,
+      },
+      {
+        id: 3,
+        option: `Try a little bit of everyone's dishes even though I normally don't like new foods.`,
+      },
+      {
+        id: 4,
+        option: ` Try a little bit of everyone's dishes, ask questions about the dishes, and ask for recipes.`,
+      },
+      {
+        id: 5,
+        option: ' Try 1 or 2 new dishes that look appetizing and the dish I brought.',
       },
     ],
   },
