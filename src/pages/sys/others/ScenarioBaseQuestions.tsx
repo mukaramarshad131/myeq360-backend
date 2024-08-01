@@ -3,12 +3,9 @@ import { Progress } from 'antd';
 import { ScenarioBasedQuestions } from '@/constants';
 
 function ScenarioBaseQuestions({ currentPage }: { currentPage: number }) {
-  // Calculate the index based on currentPage
   const index = currentPage - 10;
-  console.log(index);
-
+  console.log('Scenariocurrentpage', currentPage);
   const currentQuestions = ScenarioBasedQuestions[index];
-  console.log('currentQuestions', ScenarioBasedQuestions);
   if (!currentQuestions) {
     return <div>No questions available for this page.</div>;
   }

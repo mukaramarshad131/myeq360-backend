@@ -1,7 +1,7 @@
 import { SvgIcon } from '@/components/icon';
 import IndividualDashboard from '@/pages/sys/others/blank';
+import EqAssessment from '@/pages/sys/others/EqAssessment';
 import EqAssessmentTest from '@/pages/sys/others/eqAssessmentTest';
-import EqPostAssessment from '@/pages/sys/others/EqPostAssessment';
 import Packages from '@/pages/sys/others/packages';
 
 import { AppRouteObject } from '#/router';
@@ -44,12 +44,12 @@ const others: AppRouteObject[] = [
     },
   },
   {
-    path: 'eqPostAssessment',
-    element: <EqPostAssessment />,
+    path: 'eqAssessment',
+    element: <EqAssessment />,
     meta: {
-      label: 'sys.eqPostAssessment',
+      label: 'sys.eqAssessment',
       icon: <SvgIcon icon="ic_blank" className="ant-menu-item-icon" size="24" />,
-      key: '/eqPostAssessment',
+      key: '/eqAssessment',
     },
   },
 ];

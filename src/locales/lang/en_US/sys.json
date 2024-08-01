@@ -201,7 +201,7 @@
      
     },
     "eqPreAssessment":"eqPreAssessment",
-    "eqPostAssessment":"eqPostAssessment",
+    "eqAssessment":"eqAssessment",
     "individualDashboardStats": {
       "understandingEmotions": "Understanding Emotion",
       "personalGrowth": "Personal Growth",

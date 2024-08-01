@@ -2,19 +2,18 @@ import { ArrowLeftOutlined, ArrowRightOutlined } from '@ant-design/icons';
 import { Col, Row } from 'antd';
 import { useState } from 'react';
 
-import { EqPostAssessmnetQuestions } from '@/constants';
+import { eqRangeBasedQuestions } from '@/constants';
 
 import CustomRadioButton from './CustomRadioButton';
 import ScenarioBaseQuestions from './ScenarioBaseQuestions';
 
-function EqPostAssessment() {
+function EqAssessment() {
   const questionPerPageEqPost = 6;
 
   const [selectedOption, setSelectedOption] = useState<any>(
-    EqPostAssessmnetQuestions.map((_, index) => [index, index === 0]).reduce(
-      (acc, [key, value]: any) => ({ ...acc, [key]: value }),
-      {},
-    ),
+    eqRangeBasedQuestions
+      .map((_, index) => [index, index === 0])
+      .reduce((acc, [key, value]: any) => ({ ...acc, [key]: value }), {}),
   );
 
   const [currentPage, setCurrentPage] = useState<any>(1);
@@ -28,7 +27,7 @@ function EqPostAssessment() {
 
   const lastQuestionIndex = currentPage * questionPerPageEqPost;
   const firstQuestionIndex = lastQuestionIndex - questionPerPageEqPost;
-  const currentQuestions = EqPostAssessmnetQuestions?.slice(firstQuestionIndex, lastQuestionIndex);
+  const currentQuestions = eqRangeBasedQuestions?.slice(firstQuestionIndex, lastQuestionIndex);
 
   const handleNextPage = () => {
     setCurrentPage(currentPage + 1);
@@ -37,10 +36,10 @@ function EqPostAssessment() {
   const handlePreviousPage = () => {
     setCurrentPage(currentPage - 1);
   };
-  console.log(Math.ceil(EqPostAssessmnetQuestions.length / questionPerPageEqPost));
+  console.log(Math.ceil(eqRangeBasedQuestions.length / questionPerPageEqPost));
   return (
     <>
-      {currentPage <= Math.ceil(EqPostAssessmnetQuestions.length / questionPerPageEqPost) ? (
+      {currentPage <= Math.ceil(eqRangeBasedQuestions.length / questionPerPageEqPost) ? (
         <div className=" p-10">
           {currentQuestions?.map((options, idx: any) => {
             console.log('idx', options.id);
@@ -80,7 +79,7 @@ function EqPostAssessment() {
       ) : (
         <ScenarioBaseQuestions currentPage={currentPage} />
       )}
-      <div className="flex items-end justify-end">
+      <div className="flex items-end justify-end gap-2">
         {currentPage > 1 && (
           <div onClick={handlePreviousPage} className="relative h-12 w-12 rounded-full bg-green">
             <ArrowLeftOutlined
@@ -95,7 +94,7 @@ function EqPostAssessment() {
             />
           </div>
         )}
-        {currentPage <= 15 && (
+        {currentPage <= 27 && (
           <div onClick={handleNextPage} className="relative h-12 w-12 rounded-full bg-green">
             <ArrowRightOutlined
               style={{
@@ -114,4 +113,4 @@ function EqPostAssessment() {
   );
 }
 
-export default EqPostAssessment;
+export default EqAssessment;

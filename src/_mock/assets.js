@@ -209,12 +209,12 @@ const OTHERS_PERMISSION = [
   {
     id: '0941594969900756',
     parentId: '',
-    label: 'sys.eqPostAssessment',
-    name: 'EqPostAssessment',
+    label: 'sys.eqAssessment',
+    name: 'eqAssessment',
     icon: 'ic_blank',
     type: PermissionType.MENU,
-    route: 'eqPostAssessment',
-    component: '/sys/others/EqPostAssessment.tsx',
+    route: 'eqAssessment',
+    component: '/sys/others/EqAssessment.tsx',
     hide:true,
   },
 ];

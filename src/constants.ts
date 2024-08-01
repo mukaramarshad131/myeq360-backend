@@ -450,7 +450,7 @@ export const EqQuestionRadioButton = [
     label: ' Always',
   },
 ];
-export const EqPostAssessmnetQuestions = [
+export const eqRangeBasedQuestions = [
   {
     id: 1,
     question: 'I can identify what emotions I am feeling at any given time.',
@@ -1090,6 +1090,197 @@ What would you most likely do in this situation?`,
       {
         id: 5,
         option: ' Try 1 or 2 new dishes that look appetizing and the dish I brought.',
+      },
+    ],
+  },
+  {
+    id: 12,
+    scenario: `While seated at a restaurant, a server spills a glass of wine onto my lap. The server is shocked and immediately apologizes profusely. I am shocked and angry.`,
+    question: 'What would you most likely do in this situation?',
+    options: [
+      {
+        id: 1,
+        option:
+          ' Immediately get up and demand the server to pay for my dry cleaning and get the manager so that I can complain.',
+      },
+      {
+        id: 2,
+        option: ` Yell and throw my napkin at the server.`,
+      },
+      {
+        id: 3,
+        option: ` Remain calm and accept the apology. Although I am upset, I know that it was an accident.`,
+      },
+      {
+        id: 4,
+        option: ' Get up and walk out of the restaurant.',
+      },
+      {
+        id: 5,
+        option: ` Say it's okay, but give them horrible reviews online.`,
+      },
+    ],
+  },
+  {
+    id: 13,
+    scenario: `A group of friends and I decide to go on a hike. We decide to pick a path that has the best view. After a long hike up, we realize that the entrance to the viewpoint is closed, and there is a sign warning of unsafe conditions due to inclimate weather the week before. All of my friends want to continue going down the path, despite the warning. They say that those signs are always present but nothing to worry about.`,
+    question: 'What would you most likely do in this situation?',
+    options: [
+      {
+        id: 1,
+        option: ' Tell them I will wait for them to come back.',
+      },
+      {
+        id: 2,
+        option: ` Be worried about my safety but I would keep going with my friends.`,
+      },
+      {
+        id: 3,
+        option: ` Search for another route that would also have a nice view and share that it's not worth risking our safety.`,
+      },
+      {
+        id: 4,
+        option: ' Feel excited for the challenge and go for it.',
+      },
+      {
+        id: 5,
+        option: `  Start going down the path with them, and then if I see that it is too dangerous to continue, I would turn back.`,
+      },
+    ],
+  },
+  {
+    id: 14,
+    scenario: `My manager has given me a bad evaluation even though I feel like I have put in extra hours and worked really hard this year. I also helped the company improve their sales. My poor evaluation will prevent me from getting a bonus I feel I deserve.`,
+    question: 'What would you most likely do in this situation?',
+    options: [
+      {
+        id: 1,
+        option: ' Go home and cry.',
+      },
+      {
+        id: 2,
+        option: ` Ignore the evaluation and decide to work harder so that the manager cannot ignore my hard work when it comes time for the next evaluation.`,
+      },
+      {
+        id: 3,
+        option: ` Ask my co-worker to speak with the manager and ask them why I was evaluated poorly.`,
+      },
+      {
+        id: 4,
+        option: '  Speak with my manager and ask why I was marked down on my evaluation.',
+      },
+      {
+        id: 5,
+        option: `Go to the CEO of the company and complain about my manager and the unfair evaluation.`,
+      },
+    ],
+  },
+  {
+    id: 15,
+    scenario: `I notice a person at the park that appears to be exhibiting extreme emotional and mental distress.`,
+    question: 'What would you most likely do in this situation?',
+    options: [
+      {
+        id: 1,
+        option: ' Call the Crisis Hotline for my area and ask what should be done.',
+      },
+      {
+        id: 2,
+        option: ` Walk over to the distressed person and handle the situation on my own.`,
+      },
+      {
+        id: 3,
+        option: ` Call the police and stick around to ensure it is handled properly.`,
+      },
+      {
+        id: 4,
+        option: ' Call my friend who is a social worker and ask her what I should do.',
+      },
+      {
+        id: 5,
+        option: ` Call the police and leave the park, knowing that they will handle the situation.`,
+      },
+    ],
+  },
+  {
+    id: 16,
+    scenario: `I am on a crowded train after work. Some people are sleeping, and some people are working next to me. I get a call from a friend who I haven't talked to in a while and have had trouble setting up a time to chat with.`,
+    question: 'What would you most likely do in this situation?',
+    options: [
+      {
+        id: 1,
+        option: '  Talk to them since it will be difficult to find another time to chat.',
+      },
+      {
+        id: 2,
+        option: ` Let them know I will call back as soon as I get home since I am on the train with other people.`,
+      },
+      {
+        id: 3,
+        option: ` Talk to them really quietly while glancing at the other passengers to make sure I am not bothering them.`,
+      },
+      {
+        id: 4,
+        option: ' Try to find another section of the train that is not as crowded.',
+      },
+      {
+        id: 5,
+        option: `  Talk loudly while laughing at my friend's stories.`,
+      },
+    ],
+  },
+  {
+    id: 17,
+    scenario: `On my commute back home from work on the train, I see a group of adults harassing another person on the train. There are many bystanders but everyone ignores what is happening to the victim. I am feeling uncomfortable with the situation.`,
+    question: 'What would you most likely do in this situation?',
+    options: [
+      {
+        id: 1,
+        option: 'Step in and start to fight the group of adults.',
+      },
+      {
+        id: 2,
+        option: ` Ignore it and continue to look at my phone.`,
+      },
+      {
+        id: 3,
+        option: ` Move to another train car. `,
+      },
+      {
+        id: 4,
+        option: ' Ask the group to stop and ask others to help.',
+      },
+      {
+        id: 5,
+        option: ` Call the police or security on the train.`,
+      },
+    ],
+  },
+  {
+    id: 18,
+    scenario: `I witnessed a coworker being verbally harassed by others because of the color of their skin. The coworker complains to the manager about what is happening to them. The manager does not do anything about it.`,
+    question: 'What would you most likely do in this situation?',
+    options: [
+      {
+        id: 1,
+        option: ` Stay quiet since I don't want to put myself in trouble and lose my job.`,
+      },
+      {
+        id: 2,
+        option: ` Talk to my manager and express my disappointment in them for not helping.`,
+      },
+      {
+        id: 3,
+        option: ` Ask the co-worker to consider leaving the company so that they don't experience bullying by the other co-workers. `,
+      },
+      {
+        id: 4,
+        option:
+          '  Speak to those who are verbally harassing the co-worker about how inappropriate their actions are.',
+      },
+      {
+        id: 5,
+        option: `  Advise the bullied employee to speak to HR and offer to be a witness to the bullying.`,
       },
     ],
   },
