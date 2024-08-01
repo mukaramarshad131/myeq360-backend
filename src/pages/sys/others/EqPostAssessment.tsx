@@ -31,18 +31,16 @@ function EqPostAssessment() {
   const currentQuestions = EqPostAssessmnetQuestions?.slice(firstQuestionIndex, lastQuestionIndex);
 
   const handleNextPage = () => {
-    if (currentPage < Math.ceil(EqPostAssessmnetQuestions.length / questionPerPageEqPost)) {
-      setCurrentPage(currentPage + 1);
-    }
+    setCurrentPage(currentPage + 1);
   };
 
   const handlePreviousPage = () => {
     setCurrentPage(currentPage - 1);
   };
-
+  console.log(Math.ceil(EqPostAssessmnetQuestions.length / questionPerPageEqPost));
   return (
     <>
-      {currentPage <= questionPerPageEqPost ? (
+      {currentPage <= Math.ceil(EqPostAssessmnetQuestions.length / questionPerPageEqPost) ? (
         <div className=" p-10">
           {currentQuestions?.map((options, idx: any) => {
             console.log('idx', options.id);
@@ -97,19 +95,20 @@ function EqPostAssessment() {
             />
           </div>
         )}
-
-        <div onClick={handleNextPage} className="relative h-12 w-12 rounded-full bg-green">
-          <ArrowRightOutlined
-            style={{
-              fontSize: '23px',
-              color: '#fff',
-              position: 'absolute',
-              top: '50%',
-              left: '50%',
-              transform: 'translate(-50%, -50%)',
-            }}
-          />
-        </div>
+        {currentPage <= 15 && (
+          <div onClick={handleNextPage} className="relative h-12 w-12 rounded-full bg-green">
+            <ArrowRightOutlined
+              style={{
+                fontSize: '23px',
+                color: '#fff',
+                position: 'absolute',
+                top: '50%',
+                left: '50%',
+                transform: 'translate(-50%, -50%)',
+              }}
+            />
+          </div>
+        )}
       </div>
     </>
   );
