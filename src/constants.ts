@@ -711,7 +711,6 @@ export const EqPostAssessmnetQuestions = [
     always: 'Almost Always',
     never: 'Almost Never',
   },
-  // ------------------------------------------
   {
     id: 43,
     question: 'I make constructive choices based on ethics, safety, and social context.',
@@ -751,8 +750,6 @@ export const EqPostAssessmnetQuestions = [
     always: 'Almost Always',
     never: 'Almost Never',
   },
-
-  // ---------------------------------
   {
     id: 49,
     question: 'I believe that there is little I can do to change my current situation.',
@@ -789,5 +786,173 @@ export const EqPostAssessmnetQuestions = [
     question: 'I adjust my goals and effort realistically when faced with insurmountable barriers.',
     always: 'Almost Always',
     never: 'Almost Never',
+  },
+];
+
+export const ScenarioBasedQuestions = [
+  {
+    id: 1,
+    scenario: `I am at a social gathering that is somewhat crowded. A guest seems to be intoxicated and has walked by my chair twice, shoving me each time. They say, "I'm sorry", each time but shove me more forcefully the next time and keep walking.`,
+    question: 'What would you most likely do in this situation?',
+    options: [
+      {
+        id: 1,
+        option: 'Feel angry and push them back.',
+      },
+      {
+        id: 2,
+        option: 'Feel angry and yell at them.',
+      },
+      {
+        id: 3,
+        option: 'Feel angry but decide to help them since they are intoxicated.',
+      },
+      {
+        id: 4,
+        option: 'Feel angry and go to the host for assistance.',
+      },
+      {
+        id: 5,
+        option: 'Feel angry and say nothing.',
+      },
+    ],
+  },
+  {
+    id: 2,
+    scenario: `My new neighbor moved in next door, and I noticed that they use a wheelchair. However, I also noticed that their home does not have a ramp by the front door. One day as I am taking the groceries out of my car, I notice them struggling to get in the doorway.`,
+    question: 'What would you most likely do in this situation?',
+    options: [
+      {
+        id: 1,
+        option: ' Surprise them by building a ramp the next day.',
+      },
+      {
+        id: 2,
+        option: ' Introduce myself, ask them if I can help them enter and help them make a ramp.',
+      },
+      {
+        id: 3,
+        option: ' Ignore them and enter my home.',
+      },
+      {
+        id: 4,
+        option: ' Help them enter their house.',
+      },
+      {
+        id: 5,
+        option: 'Go home and research how I can support someone in a wheelchair.',
+      },
+    ],
+  },
+  {
+    id: 3,
+    scenario: `One afternoon, one of my coworkers has an idea to play a prank on one of the new interns. All of the coworkers agree with the plan, and I am asked to do something that I know will embarrass the intern.`,
+    question: 'What would you most likely do in this situation?',
+    options: [
+      {
+        id: 1,
+        option: '  Go along with the prank even though I am uncomfortable with it.',
+      },
+      {
+        id: 2,
+        option: ' Tell them no and ignore what they are going to do.',
+      },
+      {
+        id: 3,
+        option: '  Go and quietly tell the office manager.',
+      },
+      {
+        id: 4,
+        option: '  Do what my coworkers ask of me and ignore the feelings of the intern.',
+      },
+      {
+        id: 5,
+        option: `Tell them no and also try to convince them that it's wrong to pick on the intern.`,
+      },
+    ],
+  },
+  {
+    id: 4,
+    scenario: `I was laid off and am having a difficult time paying my rent. I am in danger of being evicted. My family gives me a call, not knowing the situation.`,
+    question: 'What would you most likely do in this situation?',
+    options: [
+      {
+        id: 1,
+        option: ' Pretend like everything is okay and converse with them normally.',
+      },
+      {
+        id: 2,
+        option: ' Lie to them about how great work is and how I will receive a promotion soon.',
+      },
+      {
+        id: 3,
+        option:
+          ' Talk to a family member and explain my situation, hoping they volunteer any help or advice.',
+      },
+      {
+        id: 4,
+        option: ` Tell them I was laid off but don't tell them that I will be evicted soon. I'd hate to worry them.`,
+      },
+      {
+        id: 5,
+        option: ` Talk to a close family friend, and ask them to keep my situation a secret from my family so that they will not worry.`,
+      },
+    ],
+  },
+  {
+    id: 5,
+    scenario: `I was laid off and am having a difficult time paying my rent. I am in danger of being evicted. My family gives me a call, not knowing the situation.`,
+    question: 'What would you most likely do in this situation?',
+    options: [
+      {
+        id: 1,
+        option: ' Pretend like everything is okay and converse with them normally.',
+      },
+      {
+        id: 2,
+        option: ' Lie to them about how great work is and how I will receive a promotion soon.',
+      },
+      {
+        id: 3,
+        option:
+          ' Talk to a family member and explain my situation, hoping they volunteer any help or advice.',
+      },
+      {
+        id: 4,
+        option: ` Tell them I was laid off but don't tell them that I will be evicted soon. I'd hate to worry them.`,
+      },
+      {
+        id: 5,
+        option: ` Talk to a close family friend, and ask them to keep my situation a secret from my family so that they will not worry.`,
+      },
+    ],
+  },
+  {
+    id: 6,
+    scenario: `I was laid off and am having a difficult time paying my rent. I am in danger of being evicted. My family gives me a call, not knowing the situation.`,
+    question: 'What would you most likely do in this situation?',
+    options: [
+      {
+        id: 1,
+        option: ' Pretend like everything is okay and converse with them normally.',
+      },
+      {
+        id: 2,
+        option: ' Lie to them about how great work is and how I will receive a promotion soon.',
+      },
+      {
+        id: 3,
+        option:
+          '  Talk to a family member and explain my situation, hoping they volunteer any help or advice.',
+      },
+      {
+        id: 4,
+        option: `  Tell them I was laid off but don't tell them that I will be evicted soon. I'd hate to worry them.`,
+      },
+      {
+        id: 5,
+        option: `Talk to a close family friend, and ask them to keep my situation a secret from my family so that they will not worry.`,
+      },
+    ],
   },
 ];
