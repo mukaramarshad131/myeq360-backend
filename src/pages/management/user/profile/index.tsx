@@ -6,10 +6,7 @@ import { Iconify } from '@/components/icon';
 import { useUserInfo } from '@/store/userStore';
 import { useThemeToken } from '@/theme/hooks';
 
-import ConnectionsTab from './connections-tab';
 import ProfileTab from './profile-tab';
-import ProjectsTab from './projects-tab';
-import TeamsTab from './teams-tab';
 
 function UserProfile() {
   const { avatar, username } = useUserInfo();
@@ -28,20 +25,27 @@ function UserProfile() {
       title: 'Profile',
       content: <ProfileTab />,
     },
+
     {
       icon: <Iconify icon="mingcute:profile-fill" size={24} className="mr-2" />,
-      title: 'Teams',
-      content: <TeamsTab />,
+      title: 'All Assessments',
+      content: (
+        <div className="mt-10 text-center text-5xl font-bold text-themeGreen">Stay Tuned</div>
+      ),
     },
     {
       icon: <Iconify icon="mingcute:profile-fill" size={24} className="mr-2" />,
-      title: 'Projects',
-      content: <ProjectsTab />,
+      title: 'Completed Assessments',
+      content: (
+        <div className="mt-10 text-center text-5xl font-bold text-themeGreen">Stay Tuned</div>
+      ),
     },
     {
       icon: <Iconify icon="mingcute:profile-fill" size={24} className="mr-2" />,
-      title: 'Connections',
-      content: <ConnectionsTab />,
+      title: 'In Process Assessments',
+      content: (
+        <div className="mt-10 text-center text-5xl font-bold text-themeGreen">Stay Tuned</div>
+      ),
     },
   ];
 
@@ -56,7 +60,7 @@ function UserProfile() {
               style={{ color: '#fff' }}
             >
               <span className="mb-2 text-2xl font-medium">{username}</span>
-              <span className="text-center opacity-50 md:text-left">TS FullStack</span>
+              <span className="text-center opacity-50 md:text-left">Executive</span>
             </div>
           </div>
         </div>

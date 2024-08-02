@@ -18,14 +18,14 @@ export default function IndividualBannerCard() {
       className="!mx-0 rounded-2xl p-7 "
       gutter={[16, 16]}
       justify="space-between"
-      style={{ background: bg }}
+      style={{ background: '#ECF5FE' }}
     >
       <Col span={24} md={12} xl={16} className="flex-1 text-center md:text-left">
-        <h1 style={{ color: themeToken.colorPrimaryActive }} className="mt-3 text-xl font-bold">
+        <h1 style={{ color: '#ABB3BB' }} className="font-base mt-3 text-xl">
           {t('sys.EqDescription.whatIsEq')}
         </h1>
         <div
-          style={{ color: themeToken.colorPrimaryTextActive }}
+          style={{ color: 'gray' }}
           className="mx-auto mb-6 mt-4 max-w-sm text-sm opacity-80 md:mx-0"
         >
           {t('sys.EqDescription.EqDef')}

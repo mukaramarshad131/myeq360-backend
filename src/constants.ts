@@ -1,6 +1,3 @@
-import glass_bag from '@/assets/images/glass/ic_glass_bag.png';
-import glass_buy from '@/assets/images/glass/ic_glass_buy.png';
-import glass_message from '@/assets/images/glass/ic_glass_message.png';
 import glass_users from '@/assets/images/glass/ic_glass_users.png';
 import { useThemeToken } from '@/theme/hooks';
 
@@ -9,12 +6,12 @@ export const IndStats = () => {
   return [
     {
       id: 1,
-      cover: glass_bag,
+      cover: glass_users,
       title: 'Understanding Emotions',
       des: ' Gain insight into emotions for better self-awareness and decision-making.',
       bg: theme.colorPrimaryActive,
       bg_toString_color: theme.colorPrimary,
-      color: theme.colorPrimaryTextActive,
+      color: theme.colorInfoTextActive,
     },
     {
       id: 2,
@@ -27,21 +24,21 @@ export const IndStats = () => {
     },
     {
       id: 3,
-      cover: glass_buy,
+      cover: glass_users,
       title: 'Effective Communication',
       des: ' Enhance interpersonal skills for clearer and more meaningful interactions.',
       bg: theme.colorWarningTextActive,
       bg_toString_color: theme.colorWarningActive,
-      color: theme.colorWarning,
+      color: theme.colorInfoTextActive,
     },
     {
       id: 4,
-      cover: glass_message,
+      cover: glass_users,
       title: 'Positive Relationships',
       des: ' Promote supportive environments and teamwork for greater success.',
       bg: theme.colorErrorTextActive,
       bg_toString_color: theme.colorErrorActive,
-      color: theme.colorError,
+      color: theme.colorInfoTextActive,
     },
   ];
 };
@@ -51,8 +48,8 @@ export const IndFaqData: any[] = [
     id: 1,
     Q: 'q1',
     Ans: 'a1',
-    bg: '#CCEBE1',
-    color: '#008059',
+    bg: '#CCF0F7',
+    color: '#08979C',
   },
   {
     id: 2,
@@ -65,8 +62,8 @@ export const IndFaqData: any[] = [
     id: 3,
     Q: 'q3',
     Ans: 'a3',
-    bg: '#CCEBE1',
-    color: '#008059',
+    bg: '#CCF0F7',
+    color: '#08979C',
   },
   {
     id: 4,
@@ -79,8 +76,8 @@ export const IndFaqData: any[] = [
     id: 5,
     Q: 'q5',
     Ans: 'a5',
-    bg: '#CCEBE1',
-    color: '#008059',
+    bg: '#CCF0F7',
+    color: '#08979C',
   },
 ];
 
