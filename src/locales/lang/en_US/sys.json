@@ -147,21 +147,11 @@
     "menu": {
       "dashboard": "Dashboard",
       "workbench": "Self Assessment",
-      "analysis": "Take Assessment",
-      "management": "Management",
-      "user": {
-        "index": "Manage User",
-        "profile": "Profile",
-        "account": "Account"
-      },
-      "system": {
-        "index": "Manage User",
-        "organization": "Organization",
-        "permission": "Permission",
-        "role": "Role",
-        "user": "User",
-        "user_detail": "User Detail"
-      },
+      "management": "User",
+      "profile": "Profile",
+      "account": "Account",
+    
+     
       "blog": "Blog",
       "components": "Components",
       "icon": "Icon",
@@ -196,8 +186,13 @@
         "404": "404",
         "500": "500"
       },
-      "packages": "Packages "
+      "packages": "Packages ",
+      "eqAssessmentTest":"EQ Assessment Test"
+     
     },
+    "eqPreAssessment":"eqPreAssessment",
+    "eqAssessment":"eqAssessment",
+    "singlePageReport":"singlePageReport",
     "individualDashboardStats": {
       "understandingEmotions": "Understanding Emotion",
       "personalGrowth": "Personal Growth",

@@ -29,3 +29,36 @@
   border: none;
   border-radius: 0;
 }
+
+.modal {
+  :global(.ant-modal-footer) {
+    display: none !important;
+  }
+
+  & h2 {
+    width: 100%;
+    padding: 20px 0;
+    color: #576999;
+    font-weight: 600;
+    font-size: 20px;
+    text-align: center;
+  }
+
+  & p {
+    color: #444;
+    font-size: 16px;
+  }
+
+  & h5 {
+    width: 100%;
+    color: #576999;
+    font-weight: 600;
+    font-size: 36px;
+    text-align: center;
+  }
+}
+
+.modalTitle {
+  color: #6c757d;
+  font-size: 20px;
+}

@@ -1,6 +1,7 @@
 import { Drawer } from 'antd';
 import Color from 'color';
 import { CSSProperties, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 import upgrade from '@/assets/icons/upgrade.svg';
 import { IconButton, SvgIcon } from '@/components/icon';
@@ -27,6 +28,7 @@ export default function Header({ className = '', offsetTop = false }: Props) {
   const { themeLayout } = useSettings();
   const { colorBgElevated, colorBorder } = useThemeToken();
   const { screenMap } = useResponsive();
+  const navigate = useNavigate();
 
   const headerStyle: CSSProperties = {
     position: themeLayout === ThemeLayout.Horizontal ? 'relative' : 'fixed',
@@ -49,6 +51,9 @@ export default function Header({ className = '', offsetTop = false }: Props) {
     headerStyle.width = '100vw';
   }
 
+  const handlePremium = () => {
+    navigate('/packages');
+  };
   return (
     <>
       <header className={`z-20  w-full ${className}`} style={headerStyle}>
@@ -70,7 +75,11 @@ export default function Header({ className = '', offsetTop = false }: Props) {
           </div>
 
           <div className="flex items-center gap-1">
-            <button className="text-white flex h-8 flex-row items-center gap-2 rounded-lg bg-green px-4">
+            <button
+              onClick={handlePremium}
+              style={{ background: 'linear-gradient(135deg, #009663, #66CAA8)' }}
+              className="text-white flex h-8 flex-row items-center gap-2 rounded-lg px-4"
+            >
               <img src={upgrade} alt="" width={20} height={20} />
               <p style={{ color: 'white' }}> Upgrade to Premium</p>
             </button>

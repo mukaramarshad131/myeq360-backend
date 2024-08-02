@@ -1,5 +1,6 @@
 import { Col, Row } from 'antd';
 import Color from 'color';
+import { useNavigate } from 'react-router-dom';
 
 import Character3 from '@/assets/images/characters/character_3.png';
 import { useUserInfo } from '@/store/userStore';
@@ -8,6 +9,11 @@ import { useThemeToken } from '@/theme/hooks';
 export default function BannerCard() {
   const { username } = useUserInfo();
   const themeToken = useThemeToken();
+  const navigate = useNavigate();
+
+  const handleAssessmnet = () => {
+    navigate('/eqAssessmentTest');
+  };
 
   const bg = `linear-gradient(135deg, ${Color(themeToken.colorPrimaryHover).alpha(0.2)}, ${Color(
     themeToken.colorPrimary,
@@ -50,7 +56,7 @@ export default function BannerCard() {
         <button
           className="font-mediumtext-black m-auto flex items-center justify-center rounded-lg px-2 py-1 shadow-none md:m-0"
           style={{ backgroundColor: themeToken.colorPrimary, color: '#fff' }}
-          onClick={() => window.open('https://discord.gg/fXemAXVNDa')}
+          onClick={handleAssessmnet}
         >
           <span className="ml-2  font-normal">Attempt Free Assessment</span>
         </button>

@@ -81,21 +81,13 @@
     "menu": {
       "dashboard": "仪表",
       "workbench": "工作台",
-      "analysis": "分析",
       "management": "管理",
       "user": {
         "index": "用户",
         "profile": "个人资料",
         "account": "账户"
       },
-      "system": {
-        "index": "系统",
-        "organization": "组织",
-        "permission": "权限",
-        "role": "角色",
-        "user": "用户",
-        "user_detail": "用户详情"
-      },
+      
       "blog": "博客",
       "components": "组件",
       "icon": "图标",

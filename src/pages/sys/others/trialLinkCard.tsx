@@ -1,20 +1,23 @@
 import { useTranslation } from 'react-i18next';
-
-import { useUserInfo } from '@/store/userStore';
+import { useNavigate } from 'react-router-dom';
 
 export function TrialLinkCard() {
-  const { username } = useUserInfo();
+  const navigate = useNavigate();
+
+  const handleAssessmnet = () => {
+    navigate('/eqAssessmentTest');
+  };
   const { t } = useTranslation();
   return (
     <div
       className=" flex  flex-col items-center justify-between rounded-2xl p-6 py-12 max-lg:w-full"
-      style={{ background: '#92d6e5', color: 'white' }}
+      style={{ background: '#ECF5FE', color: 'gray' }}
     >
-      <h1 className=" text-'#D9DDE0' text-2xl font-semibold">
+      <h1 className=" font-base  text-2xl text-[#ABB3BB]">
         {t('sys.freeIndividualAssessment.freeAssessment')}
       </h1>
       <div
-        style={{ color: '#F3F4F5', fontSize: '13px' }}
+        style={{ color: 'gray', fontSize: '13px' }}
         className="mx-auto mb-6 mt-4 max-w-sm  text-sm  md:mx-0"
       >
         {t('sys.freeIndividualAssessment.freeAssessmentDes')}
@@ -24,7 +27,7 @@ export function TrialLinkCard() {
           href="https://myeq360.com/"
           target="_blank"
           className=" text-base font-normal"
-          style={{ color: 'white' }}
+          style={{ color: 'gray' }}
           rel="noreferrer"
         >
           {t('sys.freeIndividualAssessment.yourEq')}
@@ -32,7 +35,7 @@ export function TrialLinkCard() {
         <button
           className="font-mediumtext-black flex items-center justify-center rounded-lg px-2 py-1 shadow-none md:m-0"
           style={{ backgroundColor: '#0092B3', color: '#fff', padding: 7 }}
-          onClick={() => window.open('https://myeq360.com/')}
+          onClick={handleAssessmnet}
         >
           <span className="ml-2 font-normal text-['20px']">
             {t('sys.freeIndividualAssessment.attemptFreeAssessment')}

@@ -1,8 +1,6 @@
-import { IndStats } from 'constants';
-
 import { Col, Row } from 'antd';
-import Color from 'color';
 
+import { IndStats } from '@/constants';
 import AnalysisCard from '@/pages/dashboard/analysis/analysis-card';
 
 interface IndStatsItem {
@@ -27,12 +25,8 @@ function IndStatCard() {
               subtitle={data.des}
               style={{
                 textAlign: 'center',
-                color: data.color,
-                background: `linear-gradient(135deg, ${Color(data.bg)
-                  .alpha(0.2)
-                  .toString()}, ${Color(data.bg_toString_color)
-                  .alpha(0.2)
-                  .toString()}) rgb(255, 255, 255)`,
+                color: '#808080',
+                background: '#ECF5FE',
               }}
             />
           </Col>

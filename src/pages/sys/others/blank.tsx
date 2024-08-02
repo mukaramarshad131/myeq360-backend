@@ -3,7 +3,7 @@ import Card from '@/components/card';
 import Faq from './Faq';
 import IndividualBannerCard from './IndividaulBannerCard';
 import IndStatCard from './IndStatCards';
-import { TrialLinkCard } from './TrialLinkCard';
+import { TrialLinkCard } from './trialLinkCard';
 
 export default function IndividualDashboard() {
   return (
