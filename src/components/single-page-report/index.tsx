@@ -51,13 +51,15 @@ function SinglePageReport() {
       </h1>
       <Row gutter={[16, 16]} style={{ marginBottom: 20 }}>
         <Col lg={10} md={12} sm={24} xs={24}>
-          <ChartCard title={t(rd?.title)} bottomLine borderNone titleCenter titleSize="20px">
+          <ChartCard title={t(rd?.title) || ''} bottomLine borderNone titleCenter titleSize="20px">
             <ChartLine series={rd?.series} dataLable={rd?.dataLable} height={150} />
           </ChartCard>
         </Col>
         <Col lg={14} md={12} sm={24} xs={24}>
-          {/* eslint-disable-next-line */}
-          {rd?.info && <div className="text-[15px]" dangerouslySetInnerHTML={{ __html: rd?.info }} />}
+          {rd?.info && (
+            // eslint-disable-next-line
+            <div className="text-[15px]" dangerouslySetInnerHTML={{ __html: rd?.info }} />
+          )}
         </Col>
       </Row>
       <h1 className="text-[22px] font-semibold text-themeText">
@@ -68,7 +70,7 @@ function SinglePageReport() {
       </h1>
       <Row gutter={[16, 16]} style={{ marginBottom: 20 }}>
         <Col lg={10} md={12} sm={24} xs={24}>
-          <ChartCard title={t(rd.title)} borderNone bottomLine titleCenter titleSize="20px">
+          <ChartCard title={t(rd.title) || ''} borderNone bottomLine titleCenter titleSize="20px">
             <ChartLine series={sm?.series} dataLable={sm?.dataLable} height={150} />
           </ChartCard>
         </Col>
