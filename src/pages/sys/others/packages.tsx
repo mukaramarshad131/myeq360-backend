@@ -3,6 +3,8 @@ import { useState } from 'react';
 
 import BusinessLicense from './BusinessLicense';
 import BusinessPackages from './BusinessPackages';
+import CoachLicense from './CoachLicense';
+import CoachPackages from './CoachPackages';
 import TabsButton from './TabsButton';
 
 export default function Packages() {
@@ -19,7 +21,12 @@ export default function Packages() {
   //   setShowBusinessLicense(true);
   // };
 
-  const [filter, setFilter] = useState<any>({ license: true, packages: true });
+  const [filter, setFilter] = useState<any>({
+    license: true,
+    packages: true,
+    coachpackages: true,
+    coachlicense: true,
+  });
   const handleFilter = (value: string) => {
     const newFilter = { ...filter, [value]: !filter[value] } as any;
     setFilter(newFilter);
@@ -66,8 +73,8 @@ export default function Packages() {
           <div>
             {/* {showBusinessPackages && <BusinessPackages />}
           {showBusinessLicense && <BusinessLicense />} */}
-            {filter?.packages && <BusinessPackages />}
-            {filter?.license && <BusinessLicense />}
+            {filter?.coachpackages && <CoachPackages />}
+            {filter?.coachlicense && <CoachLicense />}
           </div>
         </>
       ),

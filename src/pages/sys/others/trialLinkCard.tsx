@@ -11,13 +11,13 @@ export function TrialLinkCard() {
   return (
     <div
       className=" flex  flex-col items-center justify-between rounded-2xl p-6 py-12 max-lg:w-full"
-      style={{ background: '#ECF5FE', color: 'gray' }}
+      style={{ background: '#ECF5FE', color: '#3B4970' }}
     >
-      <h1 className=" font-base  text-2xl text-[#ABB3BB]">
+      <h1 className=" font-base  text-2xl text-[#3B4970]">
         {t('sys.freeIndividualAssessment.freeAssessment')}
       </h1>
       <div
-        style={{ color: 'gray', fontSize: '13px' }}
+        style={{ color: '#3B4970', fontSize: '13px' }}
         className="mx-auto mb-6 mt-4 max-w-sm  text-sm  md:mx-0"
       >
         {t('sys.freeIndividualAssessment.freeAssessmentDes')}
@@ -27,14 +27,14 @@ export function TrialLinkCard() {
           href="https://myeq360.com/"
           target="_blank"
           className=" text-base font-normal"
-          style={{ color: 'gray' }}
+          style={{ color: '#3B4970' }}
           rel="noreferrer"
         >
           {t('sys.freeIndividualAssessment.yourEq')}
         </a>
         <button
           className="font-mediumtext-black flex items-center justify-center rounded-lg px-2 py-1 shadow-none md:m-0"
-          style={{ backgroundColor: '#0092B3', color: '#fff', padding: 7 }}
+          style={{ backgroundColor: '#3B4970', color: '#fff', padding: 7 }}
           onClick={handleAssessmnet}
         >
           <span className="ml-2 font-normal text-['20px']">

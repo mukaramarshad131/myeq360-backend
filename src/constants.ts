@@ -11,7 +11,7 @@ export const IndStats = () => {
       des: ' Gain insight into emotions for better self-awareness and decision-making.',
       bg: theme.colorPrimaryActive,
       bg_toString_color: theme.colorPrimary,
-      color: theme.colorInfoTextActive,
+      color: '#3B4970',
     },
     {
       id: 2,
@@ -20,7 +20,7 @@ export const IndStats = () => {
       des: ' Develop resilience and adaptability to thrive in various life situations.',
       bg: theme.colorInfoActive,
       bg_toString_color: theme.colorInfo,
-      color: theme.colorInfoTextActive,
+      color: '#3B4970',
     },
     {
       id: 3,
@@ -48,36 +48,36 @@ export const IndFaqData: any[] = [
     id: 1,
     Q: 'q1',
     Ans: 'a1',
-    bg: '#CCF0F7',
-    color: '#08979C',
+    bg: '#F0F4F8',
+    color: '#3B4970',
   },
   {
     id: 2,
     Q: 'q2',
     Ans: 'a2',
-    bg: '#CCF0F7',
-    color: '#08979C',
+    bg: '#F0F4F8',
+    color: '#3B4970',
   },
   {
     id: 3,
     Q: 'q3',
     Ans: 'a3',
-    bg: '#CCF0F7',
-    color: '#08979C',
+    bg: '#F0F4F8',
+    color: '#3B4970',
   },
   {
     id: 4,
     Q: 'q4',
     Ans: 'a4',
-    bg: '#CCF0F7',
-    color: '#08979C',
+    bg: '#F0F4F8',
+    color: '#3B4970',
   },
   {
     id: 5,
     Q: 'q5',
     Ans: 'a5',
-    bg: '#CCF0F7',
-    color: '#08979C',
+    bg: '#F0F4F8',
+    color: '#3B4970',
   },
 ];
 
@@ -201,6 +201,101 @@ export const buinessPackageLicense: any[] = [
 export const businessPackages = buinessPackageLicense.filter((item) => item.type === 'packages');
 export const businessLicenses = buinessPackageLicense.filter((item) => item.type === 'license');
 // export const combinedResults = [...businessPackages, ...businessLicenses];
+export const coachPackageLicense: any[] = [
+  // Business Packages
+  {
+    id: 1,
+    type: 'coachpackages',
+    discount: '30% Off',
+    backgroundColor: '#A2D6E3',
+    packageName: 'Diamond Coaching Package',
+    originalPrice: '$2,050.00',
+    description:
+      'EQ360 (Social-Emotional Learning Diagnostic Assessment) Gold Business Package. Get 25% off on bulk purchases.',
+    executiveLicenses: '1',
+    managerLicenses: '10',
+    staffLicenses: '100',
+    executiveLicensePrice: '$100.00',
+    managerLicensePrice: '$75.00',
+    staffLicensePrice: '$30.00',
+  },
+  {
+    id: 2,
+    type: 'coachpackages',
+    discount: '25% Off',
+    backgroundColor: '#BDC1E2',
+    packageName: 'Platinum Coaching Package',
+    originalPrice: '$2,050.00',
+    description:
+      'EQ360 (Social-Emotional Learning Diagnostic Assessment) Gold Business Package. Get 25% off on bulk purchases.',
+    executiveLicenses: '1',
+    managerLicenses: '6',
+    staffLicenses: '50',
+    executiveLicensePrice: '$100.00',
+    managerLicensePrice: '$75.00',
+    staffLicensePrice: '$30.00',
+  },
+  {
+    id: 3,
+    type: 'coachpackages',
+    discount: '15% Off',
+    backgroundColor: '#FFB4AB',
+    packageName: 'Premium Coaching Package',
+    originalPrice: '$2,050.00',
+    description:
+      'EQ360 (Social-Emotional Learning Diagnostic Assessment) Gold Business Package. Get 25% off on bulk purchases.',
+    executiveLicenses: '1',
+    managerLicenses: '5',
+    staffLicenses: '80',
+    executiveLicensePrice: '$100.00',
+    managerLicensePrice: '$75.00',
+    staffLicensePrice: '$30.00',
+  },
+  {
+    id: 4,
+    type: 'coachpackages',
+    discount: '20% Off',
+    backgroundColor: '#F9D44C',
+    packageName: 'Gold Coaching Package',
+    originalPrice: '$2,050.00',
+    description:
+      'EQ360 (Social-Emotional Learning Diagnostic Assessment) Gold Business Package. Get 25% off on bulk purchases.',
+    executiveLicenses: '1',
+    managerLicenses: '6',
+    staffLicenses: '50',
+    executiveLicensePrice: '$100.00',
+    managerLicensePrice: '$75.00',
+    staffLicensePrice: '$30.00',
+  },
+
+  // Licenses
+  {
+    id: 101,
+    type: 'coachlicense',
+    licenseTitle: 'EQ360 Professional CLIENT License with Team Code',
+    licenseDesc:
+      'The EQ360 Business Executive License allows the user to establish a multi-team view of their department or company. The executive is able to see dashboards of the EQ competencies of each team that they manage and the scores of the members within each team. They have the ability to track both individual and team performance over time and view their areas of growth and areas of EQ that need additional development.',
+    licensePrice: '$100.00',
+  },
+  {
+    id: 102,
+    type: 'coachlicense',
+    licenseTitle: 'EQ360 Professional CLIENT License',
+    licenseDesc:
+      'The EQ360 Business Executive License allows the user to establish a multi-team view of their department or company. The executive is able to see dashboards of the EQ competencies of each team that they manage and the scores of the members within each team. They have the ability to track both individual and team performance over time and view their areas of growth and areas of EQ that need additional development.',
+    licensePrice: '$100.00',
+  },
+  {
+    id: 103,
+    type: 'coachlicense',
+    licenseTitle: 'EQ360 Professional COACH License',
+    licenseDesc:
+      'The EQ360 Business Executive License allows the user to establish a multi-team view of their department or company. The executive is able to see dashboards of the EQ competencies of each team that they manage and the scores of the members within each team. They have the ability to track both individual and team performance over time and view their areas of growth and areas of EQ that need additional development.',
+    licensePrice: '$100.00',
+  },
+] as any;
+export const coachPackages = coachPackageLicense.filter((item) => item.type === 'coachpackages');
+export const coachLicenses = coachPackageLicense.filter((item) => item.type === 'coachlicense');
 
 export const TabsButtonData = {
   '1': [

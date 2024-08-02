@@ -17,7 +17,7 @@ function Faq() {
   };
   return (
     <div className="mt-10 w-[100%]">
-      <h1 className="mb-3 text-center text-2xl font-bold text-[#008059]">
+      <h1 className="mb-3 text-center text-2xl font-semibold text-[#3B4970]">
         {t('sys.individualFaq.eqFaq')}
       </h1>
       {IndFaqData.map((data: any) => (

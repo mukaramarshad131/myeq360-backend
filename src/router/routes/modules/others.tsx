@@ -14,7 +14,7 @@ const others: AppRouteObject[] = [
     meta: {
       label: 'sys.menu.blank',
       icon: <SvgIcon icon="ic_blank" className="ant-menu-item-icon" size="24" />,
-      key: '/individual_dashboard',
+      key: '/blank',
     },
   },
   {

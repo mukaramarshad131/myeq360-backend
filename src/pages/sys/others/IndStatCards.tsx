@@ -20,12 +20,11 @@ function IndStatCard() {
         {IndStats().map((data: IndStatsItem) => (
           <Col lg={6} md={12} span={24} key={data.id}>
             <AnalysisCard
-              cover={data.cover}
               title={<h3 style={{ fontSize: '17px' }}>{data.title}</h3>}
               subtitle={data.des}
               style={{
                 textAlign: 'center',
-                color: '#808080',
+                color: '#3B4970',
                 background: '#ECF5FE',
               }}
             />

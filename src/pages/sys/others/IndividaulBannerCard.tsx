@@ -21,11 +21,11 @@ export default function IndividualBannerCard() {
       style={{ background: '#ECF5FE' }}
     >
       <Col span={24} md={12} xl={16} className="flex-1 text-center md:text-left">
-        <h1 style={{ color: '#ABB3BB' }} className="font-base mt-3 text-xl">
+        <h1 style={{ color: '#3B4970' }} className="font-base mt-3 text-xl">
           {t('sys.EqDescription.whatIsEq')}
         </h1>
         <div
-          style={{ color: 'gray' }}
+          style={{ color: '#3B4970' }}
           className="mx-auto mb-6 mt-4 max-w-sm text-sm opacity-80 md:mx-0"
         >
           {t('sys.EqDescription.EqDef')}
