@@ -1,7 +1,7 @@
 import { Col, Row } from 'antd';
 
 import businessExe from '@/assets/images/license/businessExe.png';
-import { coachLicenses } from '@/constants';
+import { coachLicenses } from '@/projectData';
 import { useThemeToken } from '@/theme/hooks';
 
 export default function CoachLicense() {
@@ -35,7 +35,8 @@ export default function CoachLicense() {
                     style={{ color: themeToken.colorPrimaryTextActive }}
                     rel="noreferrer"
                   >
-                    <span className="text-black"> Category:</span> Business Professionals & Teams
+                    <span className="text-black"> Category: </span>
+                    {item.category}
                   </a>
                 </div>
                 <button

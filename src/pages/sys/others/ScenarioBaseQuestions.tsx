@@ -1,6 +1,6 @@
 import { Progress } from 'antd';
 
-import { ScenarioBasedQuestions } from '@/constants';
+import { ScenarioBasedQuestions } from '@/projectData';
 
 import EqPostAssessment from './EqPostAssessment';
 

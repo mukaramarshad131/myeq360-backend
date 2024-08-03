@@ -2,7 +2,7 @@ import { MinusOutlined, PlusOutlined } from '@ant-design/icons';
 import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 
-import { IndFaqData } from '@/constants';
+import { IndividualDashboardFaqData } from '@/projectData';
 
 function Faq() {
   const { t } = useTranslation();
@@ -20,11 +20,11 @@ function Faq() {
       <h1 className="mb-3 text-center text-2xl font-semibold text-[#3B4970]">
         {t('sys.individualFaq.eqFaq')}
       </h1>
-      {IndFaqData.map((data: any) => (
+      {IndividualDashboardFaqData.map((data: any) => (
         <div key={data.id} style={{ marginBottom: 10 }}>
           <button
             className="font-mediumtext-black flex w-full justify-between rounded-lg px-2 py-1 shadow-none md:m-0"
-            style={{ backgroundColor: data.bg, color: data.color, padding: 12 }}
+            style={{ backgroundColor: '#ECF5FE', color: '#3B4970', padding: 12 }}
             onClick={() => toggleAnswer(data.id)}
           >
             <span>{t(`sys.individualFaq.${data.Q}`)}</span>

@@ -1,10 +1,11 @@
 import { ArrowRightOutlined } from '@ant-design/icons';
 import { Button, Col, Input, Modal, Row, Select } from 'antd';
+import { t } from 'i18next';
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
 import Card from '@/components/card';
-import { EqTestPreAssessment, EqTestPreAssessmentSelect } from '@/constants';
+import { EqTestPreAssessment, EqTestPreAssessmentSelect } from '@/projectData';
 
 const notificationContent = (
   <div>
@@ -17,21 +18,16 @@ const notificationContent = (
         textAlign: 'center',
       }}
     >
-      Pre-Assessment Completed!
+      {t('sys.preAssessmentComplete.preAssessmentCompleted')}
     </p>
     <p className="p-3">
-      You are about to be presented with a series of statements; you’ll just need to select the
-      response corresponding to how frequently you believe that applies to you{' '}
+      {t('sys.preAssessmentComplete.preCompletedAssessmentDescription')}
       <span className="text-base font-semibold">
-        (“Almost Never”, “Rarely”, “Sometimes”, “Often”, or “Almost Always”)
+        {t('sys.preAssessmentComplete.rangeDescription')}
       </span>
-      . There’s no time limit to complete the assessment but give yourself about 20 minutes to
-      finish. If you need to take a break, you can resume at a later time but we suggest completing
-      the assessment in one sitting.
+      {t('sys.preAssessmentComplete.assessmentTimeLimitDescription')}
     </p>
-    <p className="p-3 text-base text-[crimson]">
-      Upon finishing, you’ll receive a snapshot of your current SEL abilities
-    </p>
+    <p className="p-3 text-base text-[crimson]">{t('sys.preAssessmentComplete.uponFinishing')}</p>
   </div>
 );
 
@@ -44,16 +40,24 @@ interface EqTestPreAssessmentItem {
   options: any;
 }
 
-const selectAge = <Select defaultValue="Select Age" options={EqTestPreAssessmentSelect['1']} />;
+const selectAge = (
+  <Select
+    defaultValue={t('sys.preAssessmentQuestions.selectAge')}
+    options={EqTestPreAssessmentSelect['1']}
+  />
+);
 const selectEducation = (
   <Select
-    defaultValue="Professional Certificate / License"
+    defaultValue={t('sys.preAssessmentQuestions.selectDegree')}
     options={EqTestPreAssessmentSelect['2']}
   />
 );
 
 const selectCountry = (
-  <Select defaultValue="select Counrty" options={EqTestPreAssessmentSelect['3']} />
+  <Select
+    defaultValue={t('sys.preAssessmentQuestions.selectCountry')}
+    options={EqTestPreAssessmentSelect['3']}
+  />
 );
 
 function EqPreAssessment() {
@@ -70,12 +74,17 @@ function EqPreAssessment() {
   return (
     <div className="p-10">
       {' '}
-      <Input size="large" addonAfter={selectAge} defaultValue="What is your age?" readOnly />
+      <Input
+        size="large"
+        addonAfter={selectAge}
+        defaultValue={t('sys.preAssessmentQuestions.yourAge')}
+        readOnly
+      />
       <Input
         size="large"
         className="mb-5 mt-4 "
         addonAfter={selectEducation}
-        defaultValue="What is the highest degree or level of education you have completed?"
+        defaultValue={t('sys.preAssessmentQuestions.yourDegree')}
         readOnly
       />
       <Row gutter={[16, 16]} justify="center" className="">
@@ -101,7 +110,7 @@ function EqPreAssessment() {
                           type="radio"
                           id={option.value}
                           name={`question-${data.id}`}
-                          value={option.value}
+                          value={t(option.value)}
                         />
                         <label htmlFor={option.value}>{option.label}</label>
                       </div>
@@ -117,11 +126,11 @@ function EqPreAssessment() {
         size="large"
         className="mt-3 "
         addonAfter={selectCountry}
-        defaultValue="What country is your ZIP code in?"
+        defaultValue={t('sys.preAssessmentQuestions.yourCountryCode')}
         readOnly
       />
       <div className="mt-10 flex flex-row items-center justify-between">
-        <p className=" text-xl">Demographic data is for research purposes only</p>
+        <p className=" text-xl">{t('sys.preAssessmentQuestions.demographicData')}</p>
 
         <div
           onClick={() => setModalOpen(true)}
@@ -140,14 +149,14 @@ function EqPreAssessment() {
         </div>
         <Modal
           width={720}
-          title="Pre-Assessment"
+          title={t('sys.preAssessmentComplete.preAssessment')}
           centered
           open={modalOpen}
           onOk={handleOk}
           onCancel={handleCancel}
           footer={
             <Button key="ok" type="primary" onClick={handleOk}>
-              Lets Start EQ Assessment
+              {t('sys.preAssessmentComplete.letStartEqAssessment')}
             </Button>
           }
         >

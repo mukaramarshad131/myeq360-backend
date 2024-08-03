@@ -3,7 +3,7 @@ import { Badge, Button } from 'antd';
 
 import goldExecutive from '@/assets/images/packages/gold-exe.png';
 import Card from '@/components/card';
-import { businessPackages } from '@/constants';
+import { businessPackages } from '@/projectData';
 
 function BusinessPackages() {
   return (

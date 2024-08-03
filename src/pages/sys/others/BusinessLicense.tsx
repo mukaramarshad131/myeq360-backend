@@ -1,7 +1,7 @@
 import { Row } from 'antd';
 
 import MappedComponent from '@/components/mapped-componet';
-import { businessLicenses } from '@/constants';
+import { businessLicenses } from '@/projectData';
 
 import License from './license';
 

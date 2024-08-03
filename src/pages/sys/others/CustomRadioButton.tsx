@@ -1,6 +1,6 @@
 import { useState } from 'react';
 
-import { EqQuestionRadioButton } from '@/constants';
+import { EqQuestionRadioButton } from '@/projectData';
 
 function CustomRadioButton({ questionIndex, selectedValue, handleOptionChange }: any) {
   const [options, setOptions] = useState<any>(

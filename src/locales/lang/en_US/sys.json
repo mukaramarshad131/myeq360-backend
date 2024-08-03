@@ -146,7 +146,7 @@
 
     "menu": {
       "dashboard": "Dashboard",
-      "workbench": "Self Assessment",
+      "workbench": "Individual Dashboard",
       "management": "User",
       "profile": "Profile",
       "account": "Account",
@@ -222,6 +222,64 @@
       "q5": "Q. IS THIS PERSONALITY TEST REALLY FREE?",
       "a5": "You do not need to purchase or register to take this test or view your results."
     },
+    "assessmentInstructions":{
+      "welocmeText":"Welcome to STRUT’s Emotional Intelligence 360",
+      "questionsAsked":"You’ll be asked a series of questions about how well you:",
+      "understandEmotions":"Understand and manage emotions",
+      "setGoals":"Set and achieve positive goals",
+      "feelEmpathy":"Feel and show empathy for others",
+      "maintainRelationship":"Establish and maintain positive relationships",
+      "makeDescision":"Make responsible decisions",
+      "stayMotivated":"Are motivated and stay motivated",
+      "rightAnswer":"There are no right answers and this is the first step on your journey to understanding your EQ at your own pace.",
+      "begin":"Begin"
+     },
+     "preAssessmentQuestions":{
+     "selectAge":"Select Age",
+     "yourAge":"What is your age?",
+     "selectDegree":"Professional Certificate / License",
+     "yourDegree":"What is the highest degree or level of education you have completed?",
+     "yourLanguage":"Which language is primarily spoken in your home?",
+     "maritalStatus":"What is your marital status?",
+     "selectCountry":"Select Counrty",
+     "yourCountryCode":"What country is your ZIP / Country code in?",
+     "demographicData":"Demographic data is for research purposes only"
+     },
+     "preAssessmentComplete":{
+      "preAssessment":"Pre-Assessment",
+     "preAssessmentCompleted":"Pre-Assessment Completed!",
+     "preCompletedAssessmentDescription":"You are about to be presented with a series of statements; you’ll just need to select the response corresponding to how frequently you believe that applies to you (“Almost Never”, “Rarely”, “Sometimes”, “Often”, or “Almost Always”). There’s no time limit to complete the assessment but give yourself about 20 minutes to finish. If you need to take a break, you can resume at a later time but we suggest completing the assessment in one sitting.",
+     "rangeDescription":"“Almost Never”, “Rarely”, “Sometimes”, “Often”, or “Almost Always”",
+     "assessmentTimeLimitDescription":". There’s no time limit to complete the assessment but give yourself about 20 minutes to finish. If you need to take a break, you can resume at a later time but we suggest completing the assessment in one sitting.",
+     "uponFinishing":"Upon finishing, you’ll receive a snapshot of your current SEL abilities",
+     "letStartEqAssessment":"Lets Start EQ Assessment"
+     },
+     "selectLanguage":{
+      "english": "English (US)",
+    "arabic": "Arabic",
+    "chinese": "Chinese",
+    "french": "French(/Creole)",
+    "hindi": "Hindi",
+    "italian": "Italian",
+    "japanese": "Japanese",
+    "korean": "Korean",
+    "polish": "Polish",
+    "portuguese": "Portuguese",
+    "russian": "Russian",
+    "spanish": "Spanish",
+    "tagalog": "Tagalog",
+    "vietnamese": "Vietnamese",
+    "other": "Other",
+    "prefer-not-to-say": "Prefer not to say"
+     },
+     "selectMaritalStatus":{
+      "single": "Single or never married",
+      "married": "Married or domestic partnership",
+      "divorced": "Divorced",
+      "widowed": "Widowed",
+      "separated": "Separated",
+      "prefer-not-to-say": "Prefer not to say"
+     },
     "docs": "Document"
   }
 }

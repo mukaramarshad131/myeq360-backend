@@ -2,7 +2,7 @@ import { ArrowLeftOutlined, ArrowRightOutlined } from '@ant-design/icons';
 import { Col, Row } from 'antd';
 import { useState } from 'react';
 
-import { eqRangeBasedQuestions } from '@/constants';
+import { eqRangeBasedQuestions } from '@/projectData';
 
 import CustomRadioButton from './CustomRadioButton';
 import ScenarioBaseQuestions from './ScenarioBaseQuestions';

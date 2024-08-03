@@ -49,20 +49,12 @@ const DASHBOARD_PERMISSION = {
       id: '8426999229400979',
       parentId: '9100714781927703',
       label: 'sys.menu.workbench',
-      name: 'Workbench',
+      name: 'workbench',
       type: PermissionType.MENU,
       route: 'workbench',
       component: '/dashboard/workbench/index.tsx',
     },
-    {
-      id: '9710971640510357',
-      parentId: '9100714781927703',
-      label: 'sys.menu.blank',
-      name: 'Individual Dashboard',
-      type: PermissionType.MENU,
-      route: 'individual_dashboard',
-      component: '/sys/others/blank.tsx',
-    },
+   
   ],
 };
 const MANAGEMENT_PERMISSION = {
