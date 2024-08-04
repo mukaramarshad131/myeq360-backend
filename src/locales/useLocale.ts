@@ -23,7 +23,7 @@ export const LANGUAGE_MAP: Record<Locale, Language> = {
   [LocalEnum.en_US]: {
     locale: LocalEnum.en_US,
     label: 'English',
-    icon: 'ic-US-Flag',
+    icon: 'ic-locale_en_US',
     antdLocal: en_US,
   },
 };

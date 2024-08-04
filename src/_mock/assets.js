@@ -48,11 +48,11 @@ const DASHBOARD_PERMISSION = {
     {
       id: '8426999229400979',
       parentId: '9100714781927703',
-      label: 'sys.menu.workbench',
-      name: 'workbench',
+      label: 'sys.menu.individual-dashboard',
+      name: 'Individual Dashboard',
       type: PermissionType.MENU,
-      route: 'workbench',
-      component: '/dashboard/workbench/index.tsx',
+      route: 'individual-dashboard',
+      component: '/dashboard/individual-dashboard/index.tsx',
     },
    
   ],

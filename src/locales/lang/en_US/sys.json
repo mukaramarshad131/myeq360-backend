@@ -146,7 +146,7 @@
 
     "menu": {
       "dashboard": "Dashboard",
-      "workbench": "Individual Dashboard",
+      "individual-dashboard": "Individual Dashboard",
       "management": "User",
       "profile": "Profile",
       "account": "Account",
