@@ -1,4 +1,6 @@
-function EqAssessmentComplete() {
+import React from 'react';
+
+function AssessmentSurvey() {
   return (
     <div className="flex flex-col gap-3" style={{ marginBottom: '500px', textAlign: 'center' }}>
       {' '}
@@ -22,4 +24,4 @@ function EqAssessmentComplete() {
   );
 }
 
-export default EqAssessmentComplete;
+export default AssessmentSurvey;

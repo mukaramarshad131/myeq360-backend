@@ -178,21 +178,13 @@
           }
         }
       },
-
-      "blank": "Individual Assessment",
-      "error": {
-        "index": "Error Page",
-        "403": "403",
-        "404": "404",
-        "500": "500"
-      },
       "packages": "Packages ",
       "eqAssessmentTest":"EQ Assessment Test"
-     
     },
     "eqPreAssessment":"eqPreAssessment",
     "eqAssessment":"eqAssessment",
     "singlePageReport":"singlePageReport",
+    "assessmentSurvey":"Assessment Survey",
     "individualDashboardStats": {
       "understandingEmotions": "Understanding Emotion",
       "personalGrowth": "Personal Growth",

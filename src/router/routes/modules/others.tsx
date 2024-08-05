@@ -1,6 +1,6 @@
 import { SvgIcon } from '@/components/icon';
 import SinglePageReport from '@/components/single-page-report';
-// import IndividualDashboard from '@/pages/sys/others/blank';
+import AssessmentSurvey from '@/pages/sys/others/AssessmentSurvey';
 import EqAssessment from '@/pages/sys/others/EqAssessment';
 import EqAssessmentTest from '@/pages/sys/others/eqAssessmentTest';
 import Packages from '@/pages/sys/others/packages';
@@ -51,6 +51,15 @@ const others: AppRouteObject[] = [
       label: 'sys.singlePageReport',
       icon: <SvgIcon icon="ic_blank" className="ant-menu-item-icon" size="24" />,
       key: '/singlePageReport',
+    },
+  },
+  {
+    path: 'assessmentSurvey',
+    element: <AssessmentSurvey />,
+    meta: {
+      label: 'sys.assessment-survey',
+      icon: <SvgIcon icon="ic_blank" className="ant-menu-item-icon" size="24" />,
+      key: '/assessmentSurvey',
     },
   },
 ];

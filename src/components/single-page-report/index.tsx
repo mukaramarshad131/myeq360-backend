@@ -5,7 +5,7 @@ import logo2 from '@/assets/images/eqlogo (2).png';
 import logo from '@/assets/images/eqlogo.png';
 import ChartDonut from '@/pages/components/chart/view/chart-donut';
 import ChartLine from '@/pages/components/chart/view/chart-line';
-import { skillAssessmentData, skillLevels, skills } from '@/projectData';
+import { reportButtonsItems, skillAssessmentData, skillLevels, skills } from '@/projectData';
 
 import MappedComponent from '../mapped-componet';
 import ChartCard from '../skill-assessment-result/chart-card';
@@ -16,8 +16,49 @@ import OtherCompetency from './other-competency';
 function SinglePageReport() {
   const rd = skillAssessmentData[4];
   const sm = skillAssessmentData[1];
+
+  // const modifiedSkillAssessmentData = [...skillAssessmentData];  // shallow copy of original array
+  const modifiedSkillAssessmentData = JSON.parse(JSON.stringify(skillAssessmentData)); // deep copy
+  modifiedSkillAssessmentData.splice(1, 1);
+  modifiedSkillAssessmentData.splice(2, 1);
+  const renderSingleButton = (button: any) => (
+    <button
+      key={button.id}
+      className="flex w-1/4 items-center justify-center rounded-xl px-4 py-2 font-medium text-black shadow-none md:m-0"
+      style={{
+        backgroundColor: '#3D9176',
+        color: '#fff',
+        margin: 'auto',
+        marginTop: 20,
+        padding: '10px 15px ',
+      }}
+      // onClick={handleResult}
+    >
+      <span className="ml-2 text-base font-normal">{button.title}</span>
+    </button>
+  );
+
+  const renderFlexButtons = (buttonsArray: any) => {
+    return buttonsArray.map((button: any) => (
+      <button
+        key={button.id}
+        className="flex w-1/4 items-center justify-center rounded-xl px-4 py-2 font-medium text-black shadow-none md:m-0"
+        style={{
+          backgroundColor: '#3D9176',
+          color: '#fff',
+          margin: 'auto',
+          marginTop: 20,
+          padding: '10px 15px ',
+        }}
+
+        // onClick={handleResult}
+      >
+        <span className="ml-2 text-base font-normal">{button.title}</span>
+      </button>
+    ));
+  };
   return (
-    <div style={{ width: '80%', maxWidth: '1200px', margin: '0 auto' }}>
+    <div style={{ width: '80%', maxWidth: '1200px', margin: '0 auto', marginBottom: 20 }}>
       <Row>
         <Col lg={12} md={12} sm={24} xs={24}>
           <div className="flex gap-4">
@@ -77,7 +118,14 @@ function SinglePageReport() {
           {sm.info && <div className="text-[15px]" dangerouslySetInnerHTML={{ __html: sm.info }} />}
         </Col>
       </Row>
-      <OtherCompetency />
+      <OtherCompetency data={modifiedSkillAssessmentData} />
+      {renderSingleButton(reportButtonsItems['1'][0])}
+      {renderSingleButton(reportButtonsItems['1'][1])}
+
+      {/* Render remaining buttons inside a flex container */}
+      <div className=" flex flex-row items-center justify-center">
+        {renderFlexButtons(reportButtonsItems['2'])}
+      </div>
     </div>
   );
 }

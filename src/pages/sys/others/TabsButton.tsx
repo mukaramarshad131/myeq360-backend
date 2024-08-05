@@ -16,7 +16,7 @@ interface TabsButtonProps {
 
 function TabsButton({ handleFilter, filter, value }: TabsButtonProps) {
   const data = TabsButtonData[value];
-  console.log('TabsButtonData[value]', TabsButtonData[(value = '1')]);
+  // console.log('TabsButtonData[value]', TabsButtonData[(value = '1')]);
 
   return (
     <Row gutter={16} style={{ width: '100%', marginBottom: '10px' }}>

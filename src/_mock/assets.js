@@ -145,6 +145,17 @@ const OTHERS_PERMISSION = [
     component: '/sys/others/OnePageReport.tsx',
     hide:true
   },
+  {
+    id: '0941594969900756',
+    parentId: '',
+    label: 'sys.assessmentSurvey',
+    name: 'assessment-survey',
+    icon: 'ic_blank',
+    type: PermissionType.MENU,
+    route: 'assessmentSurvey',
+    component: '/sys/others/AssessmentSurvey.tsx',
+    hide:true
+  },
 ];
 
 

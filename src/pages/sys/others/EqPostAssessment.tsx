@@ -29,7 +29,7 @@ function EqPostAssessment() {
   const navigate = useNavigate();
 
   const handleResult = () => {
-    navigate('/singlePageReport');
+    navigate('/assessmentSurvey');
   };
   return (
     <div className="p-10">

@@ -102,6 +102,42 @@ export const skillAssessmentData = [
   },
 ];
 
+// export const skillAssessmentData2 = {
+//   key: '2',
+//   title: 'sys.skillCategories.selfManagement',
+//   abbrevation: 'sys.skillCategoriesAbb.sm',
+//   skillabrevation: 'sys.skillAbbrevation.d',
+//   skillLevel: 'sys.skillLevels.developing',
+//   series: [{ name: '', data: [50] }],
+//   dataLable: ['25-06-2024'],
+//   percent: 50,
+//   children: [
+//     { key: '13', title: 'sys.selfManagement.internalRegulation', status: 'developing' },
+//     { key: '14', title: 'sys.selfManagement.behaviorControl', status: 'developing' },
+//     { key: '15', title: 'sys.selfManagement.goalPursuance', status: 'developing' },
+//   ],
+//   info: '<b>You are Beginning to Develop Self-Management.</b> There is room for improvement for these skills that are coming into view.<br/> To Improve: Self-management can help you manage stress, motivate yourself, and set and work towards personal, academic, and professional goals. Self-management is important because it can help you manage the stress that is associated with a new workplace, dealing with problems with your coworkers, and coming up with solutions to different problems that you may face.<br/> <b>Sub-competencies of Self-Management</b>: Internal Regulation, Behavior Control, and Goal Pursuance',
+// } as any;
+// export const skillAssessmentData5 = {
+//   key: '5',
+//   title: 'sys.skillCategories.responsibleDecisionMaking',
+//   abbrevation: 'sys.skillCategoriesAbb.rd',
+//   skillabrevation: 'sys.skillAbbrevation.m',
+//   skillLevel: 'sys.skillLevels.meeting',
+//   series: [{ name: '', data: [76.67, 25.9] }],
+//   dataLable: ['25-06-2024', '09-07-2024'],
+//   percent: 75,
+//   children: [
+//     { key: '22', title: 'sys.responsibleDecisionMaking.constructiveThinking', status: 'meeting' },
+//     {
+//       key: '23',
+//       title: 'sys.responsibleDecisionMaking.consequenceEvaluation',
+//       status: 'exceeding',
+//     },
+//     { key: '24', title: 'sys.responsibleDecisionMaking.respectForSelf', status: 'meeting' },
+//   ],
+//   info: '<b>You are Beginning to Meet Responsible Decision-Making.</b> This means that you have a knack for understanding yourself on a deeper level.<br/> Responsible decision making is important because you need to learn how to identify a problem, think of a solution, and understand the consequences for yourself and for others. Our words, actions, and decisions have an impact, so we need to be able to make responsible decisions. Otherwise, we could potentially hurt ourselves or others.<br/> <b>Sub-competencies of Responsible Decision-Making</b> : Constructive Thinking, Consequence Evaluation, and Respect for Self & Others',
+// } as any;
 export const skillLevels = [
   t('sys.skillLevels.meeting'),
   t('sys.skillLevels.developing'),
@@ -210,8 +246,8 @@ export const buinessPackageLicense: any[] = [
     id: 1,
     type: 'packages',
     discount: '30% Off',
-    backgroundColor: '#A2D6E3',
-    packageName: 'Diamond Business Package',
+    backgroundColor: '#F9CA3D',
+    packageName: 'Gold Business Package',
     originalPrice: '$2,050.00',
     description:
       'EQ360 (Social-Emotional Learning Diagnostic Assessment) Gold Business Package. Get 25% off on bulk purchases.',
@@ -226,8 +262,8 @@ export const buinessPackageLicense: any[] = [
     id: 2,
     type: 'packages',
     discount: '25% Off',
-    backgroundColor: '#BDC1E2',
-    packageName: 'Platinum Business Package',
+    backgroundColor: '#EDEDED',
+    packageName: 'Silver Business Package',
     originalPrice: '$2,050.00',
     description:
       'EQ360 (Social-Emotional Learning Diagnostic Assessment) Gold Business Package. Get 25% off on bulk purchases.',
@@ -242,8 +278,8 @@ export const buinessPackageLicense: any[] = [
     id: 3,
     type: 'packages',
     discount: '15% Off',
-    backgroundColor: '#FFB4AB',
-    packageName: 'Premium Business Package',
+    backgroundColor: '#EBA52A',
+    packageName: 'Bronze Business Package',
     originalPrice: '$2,050.00',
     description:
       'EQ360 (Social-Emotional Learning Diagnostic Assessment) Gold Business Package. Get 25% off on bulk purchases.',
@@ -258,8 +294,8 @@ export const buinessPackageLicense: any[] = [
     id: 4,
     type: 'packages',
     discount: '20% Off',
-    backgroundColor: '#F9D44C',
-    packageName: 'Gold Business Package',
+    backgroundColor: '#E1E2E3',
+    packageName: 'Platinum Business Package',
     originalPrice: '$2,050.00',
     description:
       'EQ360 (Social-Emotional Learning Diagnostic Assessment) Gold Business Package. Get 25% off on bulk purchases.',
@@ -330,11 +366,11 @@ export const coachPackageLicense: any[] = [
     id: 1,
     type: 'coachpackages',
     discount: '30% Off',
-    backgroundColor: '#A2D6E3',
+    backgroundColor: '#E4E5EB',
     packageName: 'Diamond Coaching Package',
     originalPrice: '$2,050.00',
     description:
-      'EQ360 (Social-Emotional Learning Diagnostic Assessment) Gold Business Package. Get 25% off on bulk purchases.',
+      'EQ360 (Social-Emotional Learning Diagnostic Assessment) Diamond Coaching Package. In which you could able to get 30% off on these products if you buy in bulk',
     executiveLicenses: '1',
     managerLicenses: '10',
     staffLicenses: '100',
@@ -346,11 +382,11 @@ export const coachPackageLicense: any[] = [
     id: 2,
     type: 'coachpackages',
     discount: '25% Off',
-    backgroundColor: '#BDC1E2',
-    packageName: 'Platinum Coaching Package',
+    backgroundColor: '#F0CD95',
+    packageName: 'Gold Coaching Package',
     originalPrice: '$2,050.00',
     description:
-      'EQ360 (Social-Emotional Learning Diagnostic Assessment) Gold Business Package. Get 25% off on bulk purchases.',
+      'EQ360 (Social-Emotional Learning Diagnostic Assessment) Diamond Coaching Package. In which you could able to get 30% off on these products if you buy in bulk',
     executiveLicenses: '1',
     managerLicenses: '6',
     staffLicenses: '50',
@@ -362,11 +398,11 @@ export const coachPackageLicense: any[] = [
     id: 3,
     type: 'coachpackages',
     discount: '15% Off',
-    backgroundColor: '#FFB4AB',
-    packageName: 'Premium Coaching Package',
+    backgroundColor: '#D6D8E2',
+    packageName: 'Silver Coaching Package',
     originalPrice: '$2,050.00',
     description:
-      'EQ360 (Social-Emotional Learning Diagnostic Assessment) Gold Business Package. Get 25% off on bulk purchases.',
+      'EQ360 (Social-Emotional Learning Diagnostic Assessment) Diamond Coaching Package. In which you could able to get 30% off on these products if you buy in bulk',
     executiveLicenses: '1',
     managerLicenses: '5',
     staffLicenses: '80',
@@ -378,11 +414,11 @@ export const coachPackageLicense: any[] = [
     id: 4,
     type: 'coachpackages',
     discount: '20% Off',
-    backgroundColor: '#F9D44C',
-    packageName: 'Gold Coaching Package',
+    backgroundColor: '#FEDDA3',
+    packageName: 'Bronze Coaching Package',
     originalPrice: '$2,050.00',
     description:
-      'EQ360 (Social-Emotional Learning Diagnostic Assessment) Gold Business Package. Get 25% off on bulk purchases.',
+      'EQ360 (Social-Emotional Learning Diagnostic Assessment) Diamond Coaching Package. In which you could able to get 30% off on these products if you buy in bulk',
     executiveLicenses: '1',
     managerLicenses: '6',
     staffLicenses: '50',
@@ -1543,4 +1579,65 @@ export const EqTestPostAssessment = () => {
       ],
     },
   ];
+};
+
+export const assessmentSurvey = [
+  {
+    id: 1,
+    areas: 'Areas of ',
+    areasfrequency: 'Strength',
+    emotions: ' Optimistic Outlook',
+  },
+  {
+    id: 2,
+    emotions: ' Social Engagement',
+  },
+  {
+    id: 3,
+    emotions: ' Enthusiasm',
+  },
+  {
+    id: 4,
+    areas: 'Area that needs ',
+    areasfrequency: 'IMPROVEMENT',
+    emotions: ' Internal Regulation',
+  },
+];
+
+export const eqAssessmentSurveyItems = {
+  '1': [
+    { value: 'do-you-agree', label: 'Do you agree' },
+    { value: 'disagree', label: 'Disagree' },
+    { value: 'somewhat-disagree', label: 'Somewhat Disagree' },
+    { value: 'neutral', label: 'Neutral' },
+    { value: 'somewhat-agree', label: 'Somewhat Agree' },
+    { value: 'agree', label: 'Agree' },
+  ],
+};
+
+export const reportButtonsItems = {
+  '1': [
+    {
+      id: 1,
+      title: 'ONE PAGER REPORT',
+    },
+    {
+      id: 2,
+      title: 'FULL REPORT',
+    },
+  ],
+  '2': [
+    {
+      id: 3,
+      title: 'Help',
+    },
+    {
+      id: 4,
+      title: 'Refer a Friend',
+    },
+    {
+      id: 5,
+      title: 'Dashboard',
+    },
+  ],
 };
