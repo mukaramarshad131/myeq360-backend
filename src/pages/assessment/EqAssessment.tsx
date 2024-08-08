@@ -36,13 +36,12 @@ function EqAssessment() {
   const handlePreviousPage = () => {
     setCurrentPage(currentPage - 1);
   };
-  console.log(Math.ceil(eqRangeBasedQuestions.length / questionPerPageEqPost));
+
   return (
     <>
       {currentPage <= Math.ceil(eqRangeBasedQuestions.length / questionPerPageEqPost) ? (
         <div className=" p-10">
           {currentQuestions?.map((options, idx: any) => {
-            console.log('idx', options.id);
             return (
               <div key={idx}>
                 <Row gutter={[16, 16]} justify="center" className="p-2">
@@ -60,7 +59,6 @@ function EqAssessment() {
                       height: '100%',
                       background: '##D1D6DA',
                       display: 'flex',
-                      // padding: '40px',
                     }}
                   >
                     <p className="m-4 ">{options?.question}</p>

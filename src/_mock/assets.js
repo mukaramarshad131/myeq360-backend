@@ -109,7 +109,7 @@ const OTHERS_PERMISSION = [
     icon: 'ic_blank',
     type: PermissionType.MENU,
     route: 'eqAssessmentTest',
-    component: '/sys/others/eqAssessmentTest.tsx',
+    component: '/assessment/EqAssessmentTest.tsx',
     hide:true
   },
   {
@@ -120,7 +120,7 @@ const OTHERS_PERMISSION = [
     icon: 'ic_blank',
     type: PermissionType.MENU,
     route: 'eqPreAssessment',
-    component: '/sys/others/EqPreAssessment.tsx',
+    component: '/assessment/EqPreAssessment.tsx',
     hide:true,
   },
   {
@@ -131,7 +131,7 @@ const OTHERS_PERMISSION = [
     icon: 'ic_blank',
     type: PermissionType.MENU,
     route: 'eqAssessment',
-    component: '/sys/others/EqAssessment.tsx',
+    component: '/assessment/EqAssessment.tsx',
     hide:true,
   },
   {
@@ -142,7 +142,7 @@ const OTHERS_PERMISSION = [
     icon: 'ic_blank',
     type: PermissionType.MENU,
     route: 'singlePageReport',
-    component: '/sys/others/OnePageReport.tsx',
+    component: '/single-page-report/index.tsx',
     hide:true
   },
   {
@@ -153,8 +153,18 @@ const OTHERS_PERMISSION = [
     icon: 'ic_blank',
     type: PermissionType.MENU,
     route: 'assessmentSurvey',
-    component: '/sys/others/AssessmentSurvey.tsx',
+    component: '/assessment/AssessmentSurvey.tsx',
     hide:true
+  },
+  {
+    id: '0941594969900756',
+    parentId: '',
+    label: 'sys.addToCart',
+    name: 'add-to-cart',
+    icon: 'ic_blank',
+    type: PermissionType.MENU,
+    route: 'addToCart',
+    component: '/cart/AddToCart.tsx',
   },
 ];
 

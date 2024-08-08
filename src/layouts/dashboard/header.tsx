@@ -1,4 +1,5 @@
-import { Drawer } from 'antd';
+import { ShoppingCartOutlined } from '@ant-design/icons';
+import { Badge, Drawer } from 'antd';
 import Color from 'color';
 import { CSSProperties, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
@@ -74,7 +75,7 @@ export default function Header({ className = '', offsetTop = false }: Props) {
             )}
           </div>
 
-          <div className="flex items-center gap-1">
+          <div className="flex items-center gap-2">
             <button
               onClick={handlePremium}
               style={{ background: 'linear-gradient(135deg, #009663, #66CAA8)' }}
@@ -83,7 +84,10 @@ export default function Header({ className = '', offsetTop = false }: Props) {
               <img src={upgrade} alt="" width={20} height={20} />
               <p style={{ color: 'white' }}> Upgrade to Premium</p>
             </button>
-
+            <Badge count={1}>
+              {' '}
+              <ShoppingCartOutlined style={{ fontSize: 30, color: '#D1D6DA' }} />
+            </Badge>
             <SearchBar />
             <LocalePicker />
             <NoticeButton />

@@ -23,7 +23,6 @@ function EqAssessmentTest() {
   };
   return (
     <div className="p-5">
-      {/* <EqAssessmentComplete /> */}
       <h1 className="mb-10 text-center text-2xl">{t('sys.assessmentInstructions.welocmeText')}</h1>
       <p className="mb-4 text-base">{t('sys.assessmentInstructions.questionsAsked')}</p>
       <Row gutter={[16, 16]} justify="center">

@@ -3,7 +3,7 @@ import { Row } from 'antd';
 import MappedComponent from '@/components/mapped-componet';
 import { businessLicenses } from '@/projectData';
 
-import License from './license';
+import License from '../license/license';
 
 function BusinessLicense() {
   return (

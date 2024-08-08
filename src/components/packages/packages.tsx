@@ -1,26 +1,14 @@
 import { Tabs } from 'antd';
 import { useState } from 'react';
 
-import BusinessLicense from './BusinessLicense';
-import BusinessPackages from './BusinessPackages';
-import CoachLicense from './CoachLicense';
-import CoachPackages from './CoachPackages';
-import TabsButton from './TabsButton';
+import BusinessLicense from '@/components/business-professional/BusinessLicense';
+import BusinessPackages from '@/components/business-professional/BusinessPackages';
+import CoachLicense from '@/components/coach-client/CoachLicense';
+import CoachPackages from '@/components/coach-client/CoachPackages';
+
+import TabsButton from '../../pages/sys/others/TabsButton';
 
 export default function Packages() {
-  // const [showBusinessPackages, setShowBusinessPackages] = useState(true);
-  // const [showBusinessLicense, setShowBusinessLicense] = useState(true);
-
-  // const handleShowPackages = () => {
-  //   setShowBusinessPackages(true);
-  //   setShowBusinessLicense(false);
-  // };
-
-  // const handleShowLicense = () => {
-  //   setShowBusinessPackages(false);
-  //   setShowBusinessLicense(true);
-  // };
-
   const [filter, setFilter] = useState<any>({
     license: true,
     packages: true,
@@ -48,8 +36,6 @@ export default function Packages() {
           </div>
 
           <div>
-            {/* {showBusinessPackages && <BusinessPackages />}
-            {showBusinessLicense && <BusinessLicense />} */}
             {filter?.packages && <BusinessPackages />}
             {filter?.license && <BusinessLicense />}
           </div>
@@ -71,8 +57,6 @@ export default function Packages() {
           </div>
 
           <div>
-            {/* {showBusinessPackages && <BusinessPackages />}
-          {showBusinessLicense && <BusinessLicense />} */}
             {filter?.coachpackages && <CoachPackages />}
             {filter?.coachlicense && <CoachLicense />}
           </div>
@@ -94,8 +78,6 @@ export default function Packages() {
           </div>
 
           <div>
-            {/* {showBusinessPackages && <BusinessPackages />}
-      {showBusinessLicense && <BusinessLicense />} */}
             {filter?.packages && <BusinessPackages />}
             {filter?.license && <BusinessLicense />}
           </div>
@@ -104,9 +86,7 @@ export default function Packages() {
     },
   ];
 
-  const onChange = (e: any) => {
-    console.log(e);
-  };
+  const onChange = (e: any) => {};
 
   return (
     <div style={{ width: '90%', maxWidth: '1200px', margin: '0 auto' }}>

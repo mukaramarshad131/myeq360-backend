@@ -1,17 +1,11 @@
 import { Col, Row } from 'antd';
-import Color from 'color';
 import { useTranslation } from 'react-i18next';
 
 import Character3 from '@/assets/images/characters/character_3.png';
 import { useThemeToken } from '@/theme/hooks';
 
 export default function IndividualBannerCard() {
-  const themeToken = useThemeToken();
   const { t } = useTranslation();
-
-  const bg = `linear-gradient(135deg, ${Color(themeToken.colorPrimaryHover).alpha(0.2)}, ${Color(
-    themeToken.colorPrimary,
-  ).alpha(0.2)}) rgb(255, 255, 255)`;
 
   return (
     <Row

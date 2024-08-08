@@ -6,7 +6,6 @@ import EqPostAssessment from './EqPostAssessment';
 
 function ScenarioBaseQuestions({ currentPage }: { currentPage: number }) {
   const index = currentPage - 10;
-  console.log('Scenariocurrentpage', currentPage);
   const currentQuestions = ScenarioBasedQuestions[index];
 
   return (

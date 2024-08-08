@@ -114,7 +114,7 @@ function BusinessPackages() {
                   }}
                   className="w-3/4"
                 >
-                  Buy Now
+                  Add to Cart
                 </Button>
               </div>
             </Card>

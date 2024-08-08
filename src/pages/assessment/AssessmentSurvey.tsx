@@ -4,11 +4,7 @@ import { useNavigate } from 'react-router-dom';
 
 import { assessmentSurvey, eqAssessmentSurveyItems } from '@/projectData';
 
-// const selectAge = <Select defaultValue="Do you Agree?" options={eqAssessmentSurveyItems['1']} />;
-
-const handleChange = (value: string) => {
-  console.log(`selected ${value}`);
-};
+const handleChange = (value: string) => {};
 function AssessmentSurvey() {
   const navigate = useNavigate();
 

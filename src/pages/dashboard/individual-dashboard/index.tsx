@@ -1,8 +1,9 @@
 import Card from '@/components/card';
-import Faq from '@/pages/sys/others/Faq';
-import IndividualBannerCard from '@/pages/sys/others/IndividaulBannerCard';
-import IndStatCard from '@/pages/sys/others/IndStatCards';
-import { TrialLinkCard } from '@/pages/sys/others/trialLinkCard';
+import IndividualBannerCard from '@/pages/dashboard/individual-dashboard/IndividaulBannerCard';
+
+import Faq from './Faq';
+import IndStatCard from './IndStatCards';
+import { TrialLinkCard } from './TrialLinkCard';
 
 export default function IndividualDashboard() {
   return (

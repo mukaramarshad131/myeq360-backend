@@ -17,8 +17,7 @@ function SinglePageReport() {
   const rd = skillAssessmentData[4];
   const sm = skillAssessmentData[1];
 
-  // const modifiedSkillAssessmentData = [...skillAssessmentData];  // shallow copy of original array
-  const modifiedSkillAssessmentData = JSON.parse(JSON.stringify(skillAssessmentData)); // deep copy
+  const modifiedSkillAssessmentData = JSON.parse(JSON.stringify(skillAssessmentData));
   modifiedSkillAssessmentData.splice(1, 1);
   modifiedSkillAssessmentData.splice(2, 1);
   const renderSingleButton = (button: any) => (
@@ -32,7 +31,6 @@ function SinglePageReport() {
         marginTop: 20,
         padding: '10px 15px ',
       }}
-      // onClick={handleResult}
     >
       <span className="ml-2 text-base font-normal">{button.title}</span>
     </button>
@@ -50,15 +48,13 @@ function SinglePageReport() {
           marginTop: 20,
           padding: '10px 15px ',
         }}
-
-        // onClick={handleResult}
       >
         <span className="ml-2 text-base font-normal">{button.title}</span>
       </button>
     ));
   };
   return (
-    <div style={{ width: '80%', maxWidth: '1200px', margin: '0 auto', marginBottom: 20 }}>
+    <div style={{ width: '80%', maxWidth: '1200px', margin: ' auto', marginBottom: 30 }}>
       <Row>
         <Col lg={12} md={12} sm={24} xs={24}>
           <div className="flex gap-4">
@@ -97,8 +93,9 @@ function SinglePageReport() {
           </ChartCard>
         </Col>
         <Col lg={14} md={12} sm={24} xs={24}>
-          {/* eslint-disable-next-line */}
-          {rd?.info && <div className="text-[15px]" dangerouslySetInnerHTML={{ __html: rd?.info }} />}
+          {rd?.info && (
+            <div className="text-[15px]" dangerouslySetInnerHTML={{ __html: rd?.info }} />
+          )}
         </Col>
       </Row>
       <h1 className="text-[22px] font-semibold text-themeText">
@@ -122,7 +119,6 @@ function SinglePageReport() {
       {renderSingleButton(reportButtonsItems['1'][0])}
       {renderSingleButton(reportButtonsItems['1'][1])}
 
-      {/* Render remaining buttons inside a flex container */}
       <div className=" flex flex-row items-center justify-center">
         {renderFlexButtons(reportButtonsItems['2'])}
       </div>

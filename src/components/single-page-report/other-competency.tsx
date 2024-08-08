@@ -6,8 +6,7 @@ import ChartCard from '../skill-assessment-result/chart-card';
 
 import Compitency from './compitency';
 
-function OtherCompetency({ data }) {
-  console.log('data', data);
+function OtherCompetency({ data }: any) {
   return (
     <ChartCard borderNone borderWidth="12px" borderBottom borderColor="#3b4970">
       <div className="bg-[#d6dbe3] px-[20px] py-3">

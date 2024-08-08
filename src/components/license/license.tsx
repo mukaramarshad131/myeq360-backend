@@ -37,7 +37,7 @@ export default function License({ item }: Props) {
             style={{ backgroundColor: themeToken.colorPrimary, color: '#fff' }}
             onClick={() => window.open('https://discord.gg/fXemAXVNDa')}
           >
-            <span className="ml-2  font-normal">Buy Now</span>
+            <span className="ml-2  font-normal">Add to Cart</span>
           </button>
         </Col>
 

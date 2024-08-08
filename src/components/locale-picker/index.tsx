@@ -14,7 +14,6 @@ type Locale = keyof typeof LocalEnum;
  */
 export default function LocalePicker() {
   const { setLocale, locale } = useLocale();
-  console.log('locale', locale);
 
   const localeList: MenuProps['items'] = Object.values(LANGUAGE_MAP).map((item) => {
     return {

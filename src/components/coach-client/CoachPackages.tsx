@@ -11,7 +11,6 @@ function CoachPackages() {
       <h1 className="p-5 text-center text-3xl font-semibold text-[#0092B3]">Coach Packages</h1>
       <div className="mb-5 flex flex-wrap items-center justify-around gap-5">
         {coachPackages.map((data: any) => {
-          console.log('coachPackages', coachPackages);
           return (
             <Card
               key={data.id}

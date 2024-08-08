@@ -10,8 +10,8 @@ import { EqTestPreAssessment, EqTestPreAssessmentSelect } from '@/projectData';
 const notificationContent = (
   <div>
     <p
+      className="bg-buttonBlue"
       style={{
-        backgroundColor: '#00A76F',
         color: 'white',
         padding: '7px',
         borderRadius: '4px',
@@ -27,7 +27,7 @@ const notificationContent = (
       </span>
       {t('sys.preAssessmentComplete.assessmentTimeLimitDescription')}
     </p>
-    <p className="p-3 text-base text-[crimson]">{t('sys.preAssessmentComplete.uponFinishing')}</p>
+    <p className="p-3 text-base text-textRed">{t('sys.preAssessmentComplete.uponFinishing')}</p>
   </div>
 );
 
@@ -155,7 +155,7 @@ function EqPreAssessment() {
           onOk={handleOk}
           onCancel={handleCancel}
           footer={
-            <Button key="ok" type="primary" onClick={handleOk}>
+            <Button style={{ background: '#3B4970' }} type="primary" key="ok" onClick={handleOk}>
               {t('sys.preAssessmentComplete.letStartEqAssessment')}
             </Button>
           }
