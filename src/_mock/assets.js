@@ -142,7 +142,7 @@ const OTHERS_PERMISSION = [
     icon: 'ic_blank',
     type: PermissionType.MENU,
     route: 'singlePageReport',
-    component: '/single-page-report/index.tsx',
+    component: '/sys/others/OnePageReport.tsx',
     hide:true
   },
   {
