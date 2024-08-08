@@ -1,4 +1,4 @@
-import { Props } from '../skill-assessment-result/progress-indicator';
+import { Props } from '../../components/skill-assessment-result/progress-indicator';
 
 function CompitencyLevels({ item }: Props) {
   return (

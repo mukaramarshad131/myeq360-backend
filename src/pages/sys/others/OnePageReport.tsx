@@ -1,6 +1,6 @@
 // import SinglePageReport from './index';
 
-import SinglePageReport from '@/components/single-page-report';
+import SinglePageReport from '@/pages/single-page-report';
 
 function OnePageReport() {
   return (

@@ -7,8 +7,8 @@ import ChartDonut from '@/pages/components/chart/view/chart-donut';
 import ChartLine from '@/pages/components/chart/view/chart-line';
 import { reportButtonsItems, skillAssessmentData, skillLevels, skills } from '@/projectData';
 
-import MappedComponent from '../mapped-componet';
-import ChartCard from '../skill-assessment-result/chart-card';
+import MappedComponent from '../../components/mapped-componet';
+import ChartCard from '../../components/skill-assessment-result/chart-card';
 
 import CompitencyLevels from './compitency-levels';
 import OtherCompetency from './other-competency';

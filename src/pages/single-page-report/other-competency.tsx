@@ -1,8 +1,8 @@
 import { Row } from 'antd';
 import { t } from 'i18next';
 
-import MappedComponent from '../mapped-componet';
-import ChartCard from '../skill-assessment-result/chart-card';
+import MappedComponent from '../../components/mapped-componet';
+import ChartCard from '../../components/skill-assessment-result/chart-card';
 
 import Compitency from './compitency';
 

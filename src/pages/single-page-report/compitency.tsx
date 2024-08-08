@@ -1,7 +1,7 @@
 import { Col, Progress } from 'antd';
 import { t } from 'i18next';
 
-import { Props } from '../skill-assessment-result/progress-indicator';
+import { Props } from '../../components/skill-assessment-result/progress-indicator';
 
 function Compitency({ item }: Props) {
   return (

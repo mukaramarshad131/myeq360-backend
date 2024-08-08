@@ -5,8 +5,7 @@ import BusinessLicense from '@/components/business-professional/BusinessLicense'
 import BusinessPackages from '@/components/business-professional/BusinessPackages';
 import CoachLicense from '@/components/coach-client/CoachLicense';
 import CoachPackages from '@/components/coach-client/CoachPackages';
-
-import TabsButton from '../../pages/sys/others/TabsButton';
+import TabsButton from '@/pages/sys/others/TabsButton';
 
 export default function Packages() {
   const [filter, setFilter] = useState<any>({

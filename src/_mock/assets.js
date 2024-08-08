@@ -98,7 +98,7 @@ const OTHERS_PERMISSION = [
     icon: 'ic_blank',
     type: PermissionType.MENU,
     route: 'packages',
-    component: '/sys/others/packages.tsx',
+    component: '/packages/packages.tsx',
     hide:true
   },
   {

@@ -1,12 +1,12 @@
 import { SvgIcon } from '@/components/icon';
-import Packages from '@/components/packages/packages';
 // import SinglePageReport from '@/components/single-page-report';
-import SinglePageReport from '@/components/single-page-report';
 import AssessmentSurvey from '@/pages/assessment/AssessmentSurvey';
 import EqAssessment from '@/pages/assessment/EqAssessment';
 import EqAssessmentTest from '@/pages/assessment/EqAssessmentTest';
 import EqPreAssessment from '@/pages/assessment/EqPreAssessment';
 import AddToCart from '@/pages/cart/AddToCart';
+import Packages from '@/pages/packages/packages';
+import SinglePageReport from '@/pages/single-page-report';
 
 import { AppRouteObject } from '#/router';
 
