@@ -258,13 +258,6 @@ function AddToCart() {
           <Button
             type="primary"
             className="mt-1 w-[80%] text-center"
-            style={{ background: '#FFC439', borderRadius: '20px', fontSize: 15 }}
-          >
-            Pay Later
-          </Button>
-          <Button
-            type="primary"
-            className="mt-1 w-[80%] text-center"
             style={{ background: 'black', borderRadius: '20px', fontSize: 15 }}
           >
             Debit or Credit Card

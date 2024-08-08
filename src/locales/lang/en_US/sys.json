@@ -150,34 +150,7 @@
       "management": "User",
       "profile": "Profile",
       "account": "Account",
-    
-     
-      "blog": "Blog",
-      "components": "Components",
-      "icon": "Icon",
-      "animate": "Animate",
-      "scroll": "Scroll",
-      "markdown": "Markdown",
-      "editor": "Editor",
-      "i18n": "Multi Language",
-      "upload": "Upload",
-      "chart": "Chart",
-      "functions": "Functions",
-      "clipboard": "Clipboard",
-      "token_expired": "Token Expired",
-      "menulevel": {
-        "index": "Menu Level",
-        "1a": "Menu Level 1a",
-        "1b": {
-          "index": "Menu Level 1b",
-          "2a": "Menu Level 2a",
-          "2b": {
-            "index": "Menu Level 2b",
-            "3a": "Menu Level 3a",
-            "3b": "Menu Level 3b"
-          }
-        }
-      },
+
       "packages": "Packages ",
       "eqAssessmentTest":"EQ Assessment Test"
     },

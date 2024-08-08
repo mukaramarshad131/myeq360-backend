@@ -29,7 +29,7 @@ export default function CoachLicense() {
                 <p className="text-[15px]">{item.licensePrice}</p>
                 <div>
                   <a
-                    href="https://blog.slashspaces.com"
+                    href="https://myeq360.com/"
                     target="_blank"
                     className="mt-5 text-base font-semibold opacity-80"
                     style={{ color: themeToken.colorPrimaryTextActive }}
@@ -42,7 +42,7 @@ export default function CoachLicense() {
                 <button
                   className=" font-mediumtext-black m-auto flex w-4/5 items-center justify-center rounded-lg px-2 py-1 shadow-none md:m-0"
                   style={{ backgroundColor: themeToken.colorPrimary, color: '#fff' }}
-                  onClick={() => window.open('https://discord.gg/fXemAXVNDa')}
+                  onClick={() => window.open('https://myeq360.com/')}
                 >
                   <span className="ml-2  font-normal">Buy Now</span>
                 </button>
