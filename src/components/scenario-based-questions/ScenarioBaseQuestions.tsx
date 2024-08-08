@@ -1,8 +1,7 @@
 import { Progress } from 'antd';
 
+import EqPostAssessment from '@/pages/assessment/EqPostAssessment';
 import { scenarioBasedQuestions } from '@/projectData';
-
-import EqPostAssessment from './EqPostAssessment';
 
 function ScenarioBaseQuestions({ currentPage }: { currentPage: number }) {
   const index = currentPage - 10;

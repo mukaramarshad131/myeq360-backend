@@ -20,7 +20,7 @@ function AddToCart() {
   return (
     <Row gutter={16}>
       <Col lg={14} md={24} sm={24} className="">
-        <div className="bg-white mx-auto max-w-lg rounded-lg p-4 shadow-md">
+        <div className="bg-white mx-auto max-w-lg rounded-lg p-4">
           <h2 className="mb-4 text-xl font-bold">User Details</h2>
           <Form layout="vertical" onFinish={handleFinish}>
             <Form.Item
@@ -113,74 +113,73 @@ function AddToCart() {
       </Col>
 
       <Col lg={10} md={24} sm={24}>
-        <Card className=" flex w-full flex-col">
-          <h1 className="mb-5 w-full text-left text-xl font-bold">Cart Items</h1>
-          <Row className="w-full py-4">
-            {/* First Row: Labels */}
-            <Row className="w-full">
-              <Col span={6} className="text-center">
-                <p className="font-bold">Product</p>
-              </Col>
-              <Col span={6} className="text-center">
-                <p className="font-bold">Price</p>
-              </Col>
-              <Col span={6} className="text-center">
-                <p className="font-bold">Quantity</p>
-              </Col>
-              <Col span={6} className="text-center">
-                <p className="font-bold">Total Price</p>
-              </Col>
-            </Row>
+        <Card className="flex flex-col gap-3">
+          <Card className=" flex w-full flex-col" style={{ boxShadow: 'none' }}>
+            <h1 className="mb-5 w-full text-left text-xl font-bold">Cart Items</h1>
+            <Row className="w-full py-4">
+              {/* First Row: Labels */}
+              <Row className="w-full">
+                <Col span={6} className="text-center">
+                  <p className="font-bold">Product</p>
+                </Col>
+                <Col span={6} className="text-center">
+                  <p className="font-bold">Price</p>
+                </Col>
+                <Col span={6} className="text-center">
+                  <p className="font-bold">Quantity</p>
+                </Col>
+                <Col span={6} className="text-center">
+                  <p className="font-bold">Total Price</p>
+                </Col>
+              </Row>
 
-            {/* Second Row: Values */}
-            <Row className="w-full items-center ">
-              <Col span={6} className=" text-center">
-                <img src={cartImg} alt="Product" className="mx-auto" style={{ width: 210 }} />
-              </Col>
-              <Col span={6} className="text-center">
-                <p>$20.50</p>
-              </Col>
-              <Col span={6} className="text-center">
-                <div className="flex items-center justify-center gap-2">
-                  <button className="rounded border p-1">
-                    <MinusOutlined />
-                  </button>
-                  <p>2</p>
-                  <button className="rounded border p-1">
-                    <PlusOutlined />
-                  </button>
-                </div>
-              </Col>
-              <Col span={6} className="text-center">
-                <p className="text-orange-500 text-orange">$41.00</p>
-              </Col>
+              {/* Second Row: Values */}
+              <Row className="w-full items-center ">
+                <Col span={6} className=" text-center">
+                  <img src={cartImg} alt="Product" className="mx-auto" style={{ width: 210 }} />
+                </Col>
+                <Col span={6} className="text-center">
+                  <p>$20.50</p>
+                </Col>
+                <Col span={6} className="text-center">
+                  <div className="flex items-center justify-center gap-2">
+                    <button className="rounded border p-1">
+                      <MinusOutlined />
+                    </button>
+                    <p>2</p>
+                    <button className="rounded border p-1">
+                      <PlusOutlined />
+                    </button>
+                  </div>
+                </Col>
+                <Col span={6} className="text-center">
+                  <p className="text-orange-500 text-orange">$41.00</p>
+                </Col>
+              </Row>
+              <Row className="w-full items-center">
+                <Col span={6} className="text-center">
+                  <img src={cartImg} alt="Product" className="mx-auto" style={{ width: 210 }} />
+                </Col>
+                <Col span={6} className="text-center">
+                  <p>$20.50</p>
+                </Col>
+                <Col span={6} className="text-center">
+                  <div className="flex items-center justify-center gap-2">
+                    <button className="rounded border p-1">
+                      <MinusOutlined />
+                    </button>
+                    <p>2</p>
+                    <button className="rounded border p-1">
+                      <PlusOutlined />
+                    </button>
+                  </div>
+                </Col>
+                <Col span={6} className="text-center">
+                  <p className="text-orange-500 text-orange">$41.00</p>
+                </Col>
+              </Row>
             </Row>
-            <Row className="w-full items-center">
-              <Col span={6} className="text-center">
-                <img src={cartImg} alt="Product" className="mx-auto" style={{ width: 210 }} />
-              </Col>
-              <Col span={6} className="text-center">
-                <p>$20.50</p>
-              </Col>
-              <Col span={6} className="text-center">
-                <div className="flex items-center justify-center gap-2">
-                  <button className="rounded border p-1">
-                    <MinusOutlined />
-                  </button>
-                  <p>2</p>
-                  <button className="rounded border p-1">
-                    <PlusOutlined />
-                  </button>
-                </div>
-              </Col>
-              <Col span={6} className="text-center">
-                <p className="text-orange-500 text-orange">$41.00</p>
-              </Col>
-            </Row>
-          </Row>
-        </Card>
-        <Card className="flex flex-col">
-          {' '}
+          </Card>{' '}
           <div className="mb-2 flex w-full flex-col gap-3 ">
             <div className="relative flex w-full flex-row gap-1">
               <Tooltip placement="top" title={text} color="white">
@@ -210,7 +209,7 @@ function AddToCart() {
               </Button>
             </div>
           </div>
-          <div className="h-[1px] w-full bg-gray" />
+          <div className="h-[1px] w-full bg-[#D9D9D9]" />
           <Card
             className="mt-7 flex w-[80%] flex-col rounded-lg bg-[#ffd28d] p-5 py-7"
             style={{ alignItems: 'start' }}

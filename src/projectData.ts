@@ -102,42 +102,6 @@ export const skillAssessmentData = [
   },
 ];
 
-// export const skillAssessmentData2 = {
-//   key: '2',
-//   title: 'sys.skillCategories.selfManagement',
-//   abbrevation: 'sys.skillCategoriesAbb.sm',
-//   skillabrevation: 'sys.skillAbbrevation.d',
-//   skillLevel: 'sys.skillLevels.developing',
-//   series: [{ name: '', data: [50] }],
-//   dataLable: ['25-06-2024'],
-//   percent: 50,
-//   children: [
-//     { key: '13', title: 'sys.selfManagement.internalRegulation', status: 'developing' },
-//     { key: '14', title: 'sys.selfManagement.behaviorControl', status: 'developing' },
-//     { key: '15', title: 'sys.selfManagement.goalPursuance', status: 'developing' },
-//   ],
-//   info: '<b>You are Beginning to Develop Self-Management.</b> There is room for improvement for these skills that are coming into view.<br/> To Improve: Self-management can help you manage stress, motivate yourself, and set and work towards personal, academic, and professional goals. Self-management is important because it can help you manage the stress that is associated with a new workplace, dealing with problems with your coworkers, and coming up with solutions to different problems that you may face.<br/> <b>Sub-competencies of Self-Management</b>: Internal Regulation, Behavior Control, and Goal Pursuance',
-// } as any;
-// export const skillAssessmentData5 = {
-//   key: '5',
-//   title: 'sys.skillCategories.responsibleDecisionMaking',
-//   abbrevation: 'sys.skillCategoriesAbb.rd',
-//   skillabrevation: 'sys.skillAbbrevation.m',
-//   skillLevel: 'sys.skillLevels.meeting',
-//   series: [{ name: '', data: [76.67, 25.9] }],
-//   dataLable: ['25-06-2024', '09-07-2024'],
-//   percent: 75,
-//   children: [
-//     { key: '22', title: 'sys.responsibleDecisionMaking.constructiveThinking', status: 'meeting' },
-//     {
-//       key: '23',
-//       title: 'sys.responsibleDecisionMaking.consequenceEvaluation',
-//       status: 'exceeding',
-//     },
-//     { key: '24', title: 'sys.responsibleDecisionMaking.respectForSelf', status: 'meeting' },
-//   ],
-//   info: '<b>You are Beginning to Meet Responsible Decision-Making.</b> This means that you have a knack for understanding yourself on a deeper level.<br/> Responsible decision making is important because you need to learn how to identify a problem, think of a solution, and understand the consequences for yourself and for others. Our words, actions, and decisions have an impact, so we need to be able to make responsible decisions. Otherwise, we could potentially hurt ourselves or others.<br/> <b>Sub-competencies of Responsible Decision-Making</b> : Constructive Thinking, Consequence Evaluation, and Respect for Self & Others',
-// } as any;
 export const skillLevels = [
   t('sys.skillLevels.meeting'),
   t('sys.skillLevels.developing'),
@@ -212,7 +176,7 @@ export const IndividualDashboardStatsCard = () => {
   ];
 };
 
-export const IndividualDashboardFaqData: any[] = [
+export const individualDashboardFaqData: any[] = [
   {
     id: 1,
     Q: 'q1',
@@ -459,7 +423,7 @@ export const coachPackageLicense: any[] = [
 export const coachPackages = coachPackageLicense.filter((item) => item.type === 'coachpackages');
 export const coachLicenses = coachPackageLicense.filter((item) => item.type === 'coachlicense');
 
-export const TabsButtonData = {
+export const tabsButtonData = {
   '1': [
     {
       id: '1',
@@ -612,7 +576,7 @@ export const EqTestPreAssessment = () => {
   ];
 };
 
-export const EqTestPreAssessmentSelect = {
+export const eqTestPreAssessmentSelect = {
   '1': [
     { value: '10', label: '10' },
     { value: '20', label: '20' },
@@ -656,7 +620,7 @@ export const EqTestPreAssessmentSelect = {
   ],
 } as any;
 
-export const EqQuestionRadioButton = [
+export const eqQuestionRadioButton = [
   {
     value: '1',
     key: 'never',
@@ -1043,7 +1007,7 @@ export const eqRangeBasedQuestions = [
   },
 ];
 
-export const ScenarioBasedQuestions = [
+export const scenarioBasedQuestions = [
   {
     id: 1,
     scenario: `I am at a social gathering that is somewhat crowded. A guest seems to be intoxicated and has walked by my chair twice, shoving me each time. They say, "I'm sorry", each time but shove me more forcefully the next time and keep walking.`,

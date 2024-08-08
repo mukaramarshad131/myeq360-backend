@@ -5,7 +5,7 @@ import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
 import Card from '@/components/card';
-import { EqTestPreAssessment, EqTestPreAssessmentSelect } from '@/projectData';
+import { EqTestPreAssessment, eqTestPreAssessmentSelect } from '@/projectData';
 
 const notificationContent = (
   <div>
@@ -43,20 +43,20 @@ interface EqTestPreAssessmentItem {
 const selectAge = (
   <Select
     defaultValue={t('sys.preAssessmentQuestions.selectAge')}
-    options={EqTestPreAssessmentSelect['1']}
+    options={eqTestPreAssessmentSelect['1']}
   />
 );
 const selectEducation = (
   <Select
     defaultValue={t('sys.preAssessmentQuestions.selectDegree')}
-    options={EqTestPreAssessmentSelect['2']}
+    options={eqTestPreAssessmentSelect['2']}
   />
 );
 
 const selectCountry = (
   <Select
     defaultValue={t('sys.preAssessmentQuestions.selectCountry')}
-    options={EqTestPreAssessmentSelect['3']}
+    options={eqTestPreAssessmentSelect['3']}
   />
 );
 

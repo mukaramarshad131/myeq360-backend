@@ -2,9 +2,9 @@ import { ArrowLeftOutlined, ArrowRightOutlined } from '@ant-design/icons';
 import { Col, Row } from 'antd';
 import { useState } from 'react';
 
+import CustomRadioButton from '@/components/custom-radio-button/CustomRadioButton';
 import { eqRangeBasedQuestions } from '@/projectData';
 
-import CustomRadioButton from './CustomRadioButton';
 import ScenarioBaseQuestions from './ScenarioBaseQuestions';
 
 function EqAssessment() {

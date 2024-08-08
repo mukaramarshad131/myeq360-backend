@@ -1,13 +1,12 @@
 import { useState } from 'react';
 
-import { EqQuestionRadioButton } from '@/projectData';
+import { eqQuestionRadioButton } from '@/projectData';
 
 function CustomRadioButton({ questionIndex, selectedValue, handleOptionChange }: any) {
   const [options, setOptions] = useState<any>(
-    EqQuestionRadioButton.map((_, index) => [index, false]).reduce(
-      (acc, [key, value]: any) => ({ ...acc, [key]: value }),
-      {},
-    ),
+    eqQuestionRadioButton
+      .map((_, index) => [index, false])
+      .reduce((acc, [key, value]: any) => ({ ...acc, [key]: value }), {}),
   );
   const handleRadioRow = (idx: number) => {
     setOptions((prevOptions: any) => ({
@@ -20,7 +19,7 @@ function CustomRadioButton({ questionIndex, selectedValue, handleOptionChange }:
   };
   return (
     <div className=" flex flex-row justify-center gap-8 max-md:mt-8 max-md:gap-2">
-      {EqQuestionRadioButton?.map((option, index: number) => {
+      {eqQuestionRadioButton?.map((option, index: number) => {
         return (
           <div className="flex flex-col items-center">
             <label key={option?.value} htmlFor={`radio-${option.value}-${questionIndex}`}>

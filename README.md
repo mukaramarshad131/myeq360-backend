@@ -1,6 +1,4 @@
 
-```
-
 ### Install Dependencies
 
 In the project's root directory, run the following command to install project dependencies:
