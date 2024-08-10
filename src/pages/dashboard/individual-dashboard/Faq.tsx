@@ -33,6 +33,13 @@ function Faq() {
           {expandedId === data.id && (
             <div className="mt-2 rounded-lg p-4" style={{ backgroundColor: '#F0F4F8' }}>
               <p className="text-sm">{t(`sys.individualFaq.${data.Ans}`)}</p>
+              <p>
+                <div>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint laborum consequuntur
+                  deleniti quasi pariatur iure doloribus sed nostrum iusto atque recusandae, nisi
+                  tempora praesentium, unde at id saepe. Nemo, quia?
+                </div>
+              </p>
             </div>
           )}
         </div>

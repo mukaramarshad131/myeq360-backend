@@ -3,9 +3,8 @@ import { Col, Row } from 'antd';
 import { useState } from 'react';
 
 import CustomRadioButton from '@/components/custom-radio-button/CustomRadioButton';
+import ScenarioBaseQuestions from '@/components/scenario-based-questions/ScenarioBaseQuestions';
 import { eqRangeBasedQuestions } from '@/projectData';
-
-import ScenarioBaseQuestions from './ScenarioBaseQuestions';
 
 function EqAssessment() {
   const questionPerPageEqPost = 6;

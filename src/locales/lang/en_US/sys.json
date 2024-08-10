@@ -158,6 +158,20 @@
     "eqAssessment":"eqAssessment",
     "singlePageReport":"singlePageReport",
     "assessmentSurvey":"Assessment Survey",
+    "survey":{
+      "preAssessmentCompleted":"Pre-Assessment Completed",
+      "congratulationText":"Congratulations! You’ve completed the EQ assessment. Below is a quick summary of your results.",
+      "agreeWithResult":"How much do you agree with the results?",
+      "optimisticOutlook":"Optimistic Outlook",
+      "socialEngagement":"Social Engagement",
+      "enthusiasm":"Enthusiasm",
+      "internalRegulation":"Internal Regulation",
+      "recommendation":"Recommendation",
+      "selfManagement":"Self-management can help you manage stress, motivate yourself, and set and work towards personal, academic, and professional goals. Self-management is important because it can help you manage the stress that is associated with a new workplace, dealing with problems with your coworkers, and coming up with solutions to different problems that you may face.",
+      "selfRegulation":"Self-regulation involves taking a pause between a feeling and an action. It is important to take the time to think things through and make a plan. Without self-regulation, it will be difficult to stay calm under pressure. Adults with poor self-regulation skills may lack self-confidence and have trouble handling stress or frustration, which can lead to anger and anxiety. Whether you feel at ease or distressed, it is useful to pay attention to your breathing for self-regulation. Try 'square breathing': this brief exercise can help you notice patterns in your breathing and 'reset' your brain to process information better.",
+      "selActivities":"SEL Activities to help improve",
+      "detailResults":"Detail Results"
+  },
     "addToCart":"Add to Cart",
     "individualDashboardStats": {
       "understandingEmotions": "Understanding Emotion",

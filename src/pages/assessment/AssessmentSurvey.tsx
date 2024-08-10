@@ -1,5 +1,6 @@
 import { QuestionCircleOutlined } from '@ant-design/icons';
 import { Col, Row, Select } from 'antd';
+import { t } from 'i18next';
 import { useNavigate } from 'react-router-dom';
 
 import { assessmentSurvey, eqAssessmentSurveyItems } from '@/projectData';
@@ -35,11 +36,8 @@ function AssessmentSurvey() {
       >
         Pre-Assessment Completed!
       </p>
-      <p className="text-center">
-        Congratulations! You’ve completed the EQ assessment. Below is a quick summary of your
-        results.
-      </p>
-      <p className="text-2xl text-[#595757]">How much do you agree with the results?</p>
+      <p className="text-center">{t('sys.survey.congratulationText')}</p>
+      <p className="text-2xl text-[#595757]">{t('sys.survey.agreeWithResult')}</p>
       <Row gutter={16}>
         <Col
           span={24}
@@ -54,7 +52,7 @@ function AssessmentSurvey() {
                   <span className=" font-semibold text-[#3C4E6C]">{data?.areasfrequency}</span>
                 </p>
                 <p className="text-normal mb-1 ml-10 mt-5 text-left font-semibold text-[#302F2C]">
-                  {data?.emotions}
+                  {t(`sys.survey.${data?.emotions}`)}
                 </p>
                 <div className="flex flex-row items-center gap-3">
                   <QuestionCircleOutlined style={{ fontSize: 30, color: '#AAAAAA' }} />
@@ -69,27 +67,15 @@ function AssessmentSurvey() {
             );
           })}
           <p className="mb-8 mt-8 text-left text-xs text-[#302F2C]">
-            <span className="font-bold"> Recommendation:</span>Self-management can help you manage
-            stress, motivate yourself, and set and work towards personal, academic, and professional
-            goals. Self-management is important because it can help you manage the stress that is
-            associated with a new workplace, dealing with problems with your coworkers, and coming
-            up with solutions to different problems that you may face.
+            <span className="font-bold"> {t('sys.survey.recommendation')}:</span>
+            {t('sys.survey.selfManagement')}
           </p>
-          <p className=" text-left text-xs text-[#302F2C]">
-            Self-regulation involves taking a pause between a feeling and an action. It is important
-            to take the time to think things through and make a plan. Without self-regulation, it
-            will be difficult to stay calm under pressure. Adults with poor self-regulation skills
-            may lack self-confidence and have trouble handling stress or frustration, which can lead
-            to anger and anxiety. Whether you feel at ease or distressed, it is useful to pay
-            attention to your breathing for self-regulation. Try "square breathing": this brief
-            exercise can help you notice patterns in your breathing and "reset" your brain to
-            process information better.
-          </p>
+          <p className=" text-left text-xs text-[#302F2C]">{t('sys.survey.selfRegulation')}</p>
           <p
             className="mb-10 mt-10 cursor-pointer text-xl text-[#3B4970]"
             onClick={() => window.open('https://myeq360.com/')}
           >
-            SEL Activities to help improve
+            {t('sys.survey.selActivities')}
           </p>
         </Col>
       </Row>
@@ -98,7 +84,7 @@ function AssessmentSurvey() {
         style={{ backgroundColor: '#3D9176', color: '#fff', padding: 7, margin: 'auto' }}
         onClick={handleResult}
       >
-        <span className="ml-2 text-base font-normal">Detail Results</span>
+        <span className="ml-2 text-base font-normal">{t('sys.survey.detailResults')}</span>
       </button>
     </div>
   );
