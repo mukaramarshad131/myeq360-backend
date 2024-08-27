@@ -1,12 +1,12 @@
 import { Suspense, lazy } from 'react';
-import { Navigate, Outlet } from 'react-router-dom';
+import { Outlet } from 'react-router-dom';
 
 import { SvgIcon } from '@/components/icon';
 import { CircleLoading } from '@/components/loading';
 
 import { AppRouteObject } from '#/router';
 
-const HomePage = lazy(() => import(`@/pages/dashboard/workbench`));
+const HomePage = lazy(() => import(`@/pages/dashboard/individual-dashboard`));
 
 const dashboard: AppRouteObject = {
   order: 1,
@@ -24,12 +24,9 @@ const dashboard: AppRouteObject = {
   children: [
     {
       index: true,
-      element: <Navigate to="workbench" replace />,
-    },
-    {
-      path: 'workbench',
+      path: 'individual-dashboard',
       element: <HomePage />,
-      meta: { label: 'sys.menu.workbench', key: '/dashboard/workbench' },
+      meta: { label: 'sys.menu.individual-dashboard', key: '/dashboard/individual-dashboard' },
     },
   ],
 };

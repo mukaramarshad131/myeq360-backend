@@ -1,9 +1,13 @@
-import { lazy } from 'react';
+// import SinglePageReport from './index';
 
-const SinglePageReport = lazy(() => import('@/components/single-page-report'));
+import SinglePageReport from '@/pages/single-page-report';
 
 function OnePageReport() {
-  return <SinglePageReport />;
+  return (
+    <div>
+      <SinglePageReport />
+    </div>
+  );
 }
 
 export default OnePageReport;

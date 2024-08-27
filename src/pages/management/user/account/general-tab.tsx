@@ -39,7 +39,7 @@ export default function GeneralTab() {
           <UploadAvatar defaultAvatar={avatar} />
 
           <Space className="py-6">
-            <div>Public Profile</div>
+            <div>{username} </div>
             <Switch size="small" />
           </Space>
 

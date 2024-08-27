@@ -1,22 +1,16 @@
 import { SvgIcon } from '@/components/icon';
-import SinglePageReport from '@/components/single-page-report';
-import IndividualDashboard from '@/pages/sys/others/blank';
-import EqAssessment from '@/pages/sys/others/EqAssessment';
-import EqAssessmentTest from '@/pages/sys/others/eqAssessmentTest';
-import Packages from '@/pages/sys/others/packages';
+// import SinglePageReport from '@/components/single-page-report';
+import AssessmentSurvey from '@/pages/assessment/AssessmentSurvey';
+import EqAssessment from '@/pages/assessment/EqAssessment';
+import EqAssessmentTest from '@/pages/assessment/EqAssessmentTest';
+import EqPreAssessment from '@/pages/assessment/EqPreAssessment';
+import AddToCart from '@/pages/cart/AddToCart';
+import Packages from '@/pages/packages/packages';
+import SinglePageReport from '@/pages/single-page-report';
 
 import { AppRouteObject } from '#/router';
 
 const others: AppRouteObject[] = [
-  {
-    path: 'blank',
-    element: <IndividualDashboard />,
-    meta: {
-      label: 'sys.menu.blank',
-      icon: <SvgIcon icon="ic_blank" className="ant-menu-item-icon" size="24" />,
-      key: '/individual_dashboard',
-    },
-  },
   {
     path: 'packages',
     element: <Packages />,
@@ -27,39 +21,57 @@ const others: AppRouteObject[] = [
     },
   },
   {
-    path: 'eqAssessmentTest',
+    path: 'assessment',
     element: <EqAssessmentTest />,
     meta: {
       label: 'sys.menu.eqAssessmentTest',
       icon: <SvgIcon icon="ic_blank" className="ant-menu-item-icon" size="24" />,
-      key: '/eqAssessmentTest',
+      key: '/assessment',
     },
   },
   {
-    path: 'eqPreAssessment',
-    element: <EqAssessmentTest />,
+    path: 'assessment',
+    element: <EqPreAssessment />,
     meta: {
       label: 'sys.eqPreAssessment',
       icon: <SvgIcon icon="ic_blank" className="ant-menu-item-icon" size="24" />,
-      key: '/eqPreAssessment',
+      key: '/assessment',
     },
   },
   {
-    path: 'eqAssessment',
+    path: 'assessment',
     element: <EqAssessment />,
     meta: {
       label: 'sys.eqAssessment',
       icon: <SvgIcon icon="ic_blank" className="ant-menu-item-icon" size="24" />,
-      key: '/eqAssessment',
+      key: '/assessment',
     },
   },
   {
-    path: 'singlePageReport',
+    path: 'single-page-report',
     element: <SinglePageReport />,
     meta: {
       label: 'sys.singlePageReport',
       icon: <SvgIcon icon="ic_blank" className="ant-menu-item-icon" size="24" />,
-      key: '/singlePageReport',
+      key: '/single-page-report',
+    },
+  },
+  {
+    path: 'assessment',
+    element: <AssessmentSurvey />,
+    meta: {
+      label: 'sys.assessment-survey',
+      icon: <SvgIcon icon="ic_blank" className="ant-menu-item-icon" size="24" />,
+      key: '/assessment',
+    },
+  },
+  {
+    path: 'cart',
+    element: <AddToCart />,
+    meta: {
+      label: 'sys.addToCart',
+      icon: <SvgIcon icon="ic_blank" className="ant-menu-item-icon" size="24" />,
+      key: '/cart',
     },
   },
 ];

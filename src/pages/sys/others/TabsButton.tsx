@@ -1,7 +1,7 @@
 import { CheckCircleOutlined } from '@ant-design/icons';
 import { Col, Row } from 'antd';
 
-import { TabsButtonData } from '@/constants';
+import { tabsButtonData } from '@/projectData';
 
 interface Filter {
   packages: boolean;
@@ -15,7 +15,7 @@ interface TabsButtonProps {
 }
 
 function TabsButton({ handleFilter, filter, value }: TabsButtonProps) {
-  const data = TabsButtonData[value];
+  const data = tabsButtonData[value];
 
   return (
     <Row gutter={16} style={{ width: '100%', marginBottom: '10px' }}>

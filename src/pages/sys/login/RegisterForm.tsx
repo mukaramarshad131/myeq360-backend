@@ -15,7 +15,6 @@ function RegisterForm() {
   if (loginState !== LoginStateEnum.REGISTER) return null;
 
   const onFinish = async (values: any) => {
-    console.log('Received values of form: ', values);
     await signUpMutation.mutateAsync(values);
     backToLogin();
   };

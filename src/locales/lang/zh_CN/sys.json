@@ -80,7 +80,7 @@
     },
     "menu": {
       "dashboard": "仪表",
-      "workbench": "工作台",
+      "individual-dashboard": "工作台",
       "management": "管理",
       "user": {
         "index": "用户",
@@ -88,7 +88,7 @@
         "account": "账户"
       },
       
-      "blog": "博客",
+  
       "components": "组件",
       "icon": "图标",
       "animate": "动画",

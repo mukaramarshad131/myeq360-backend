@@ -48,21 +48,13 @@ const DASHBOARD_PERMISSION = {
     {
       id: '8426999229400979',
       parentId: '9100714781927703',
-      label: 'sys.menu.workbench',
-      name: 'Workbench',
-      type: PermissionType.MENU,
-      route: 'workbench',
-      component: '/dashboard/workbench/index.tsx',
-    },
-    {
-      id: '9710971640510357',
-      parentId: '9100714781927703',
-      label: 'sys.menu.blank',
+      label: 'sys.menu.individual-dashboard',
       name: 'Individual Dashboard',
       type: PermissionType.MENU,
-      route: 'individual_dashboard',
-      component: '/sys/others/blank.tsx',
+      route: 'individual-dashboard',
+      component: '/dashboard/individual-dashboard/index.tsx',
     },
+   
   ],
 };
 const MANAGEMENT_PERMISSION = {
@@ -106,7 +98,7 @@ const OTHERS_PERMISSION = [
     icon: 'ic_blank',
     type: PermissionType.MENU,
     route: 'packages',
-    component: '/sys/others/packages.tsx',
+    component: '/packages/packages.tsx',
     hide:true
   },
   {
@@ -117,7 +109,7 @@ const OTHERS_PERMISSION = [
     icon: 'ic_blank',
     type: PermissionType.MENU,
     route: 'eqAssessmentTest',
-    component: '/sys/others/eqAssessmentTest.tsx',
+    component: '/assessment/EqAssessmentTest.tsx',
     hide:true
   },
   {
@@ -128,7 +120,7 @@ const OTHERS_PERMISSION = [
     icon: 'ic_blank',
     type: PermissionType.MENU,
     route: 'eqPreAssessment',
-    component: '/sys/others/EqPreAssessment.tsx',
+    component: '/assessment/EqPreAssessment.tsx',
     hide:true,
   },
   {
@@ -139,7 +131,7 @@ const OTHERS_PERMISSION = [
     icon: 'ic_blank',
     type: PermissionType.MENU,
     route: 'eqAssessment',
-    component: '/sys/others/EqAssessment.tsx',
+    component: '/assessment/EqAssessment.tsx',
     hide:true,
   },
   {
@@ -152,6 +144,27 @@ const OTHERS_PERMISSION = [
     route: 'singlePageReport',
     component: '/sys/others/OnePageReport.tsx',
     hide:true
+  },
+  {
+    id: '0941594969900756',
+    parentId: '',
+    label: 'sys.assessmentSurvey',
+    name: 'assessment-survey',
+    icon: 'ic_blank',
+    type: PermissionType.MENU,
+    route: 'assessmentSurvey',
+    component: '/assessment/AssessmentSurvey.tsx',
+    hide:true
+  },
+  {
+    id: '0941594969900756',
+    parentId: '',
+    label: 'sys.addToCart',
+    name: 'add-to-cart',
+    icon: 'ic_blank',
+    type: PermissionType.MENU,
+    route: 'addToCart',
+    component: '/cart/AddToCart.tsx',
   },
 ];
 

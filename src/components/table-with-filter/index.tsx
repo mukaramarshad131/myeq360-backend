@@ -21,17 +21,11 @@ export default function TableWithFilter({
   modalTitle,
 }: TableInterface) {
   const [showModal, setShowModal] = useState(false);
-  // rowSelection objects indicates the need for row selection
+
   const rowSelection: TableRowSelection<Organization> = {
-    onChange: (selectedRowKeys, selectedRows) => {
-      console.log(`selectedRowKeys: ${selectedRowKeys}`, 'selectedRows: ', selectedRows);
-    },
-    onSelect: (record, selected, selectedRows) => {
-      console.log(record, selected, selectedRows);
-    },
-    onSelectAll: (selected, selectedRows, changeRows) => {
-      console.log(selected, selectedRows, changeRows);
-    },
+    onChange: (selectedRowKeys, selectedRows) => {},
+    onSelect: (record, selected, selectedRows) => {},
+    onSelectAll: (selected, selectedRows, changeRows) => {},
   };
 
   return (
@@ -62,9 +56,7 @@ export default function TableWithFilter({
         title={modalTitle || 'Add New'}
         onCancel={() => setShowModal(false)}
         show={showModal}
-        onSubmit={() => {
-          console.log('first');
-        }}
+        onSubmit={() => {}}
       >
         {modalChildren}
       </CustomModal>

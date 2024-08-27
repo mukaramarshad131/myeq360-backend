@@ -146,53 +146,33 @@
 
     "menu": {
       "dashboard": "Dashboard",
-      "workbench": "Self Assessment",
+      "individual-dashboard": "Individual Dashboard",
       "management": "User",
       "profile": "Profile",
       "account": "Account",
-    
-     
-      "blog": "Blog",
-      "components": "Components",
-      "icon": "Icon",
-      "animate": "Animate",
-      "scroll": "Scroll",
-      "markdown": "Markdown",
-      "editor": "Editor",
-      "i18n": "Multi Language",
-      "upload": "Upload",
-      "chart": "Chart",
-      "functions": "Functions",
-      "clipboard": "Clipboard",
-      "token_expired": "Token Expired",
-      "menulevel": {
-        "index": "Menu Level",
-        "1a": "Menu Level 1a",
-        "1b": {
-          "index": "Menu Level 1b",
-          "2a": "Menu Level 2a",
-          "2b": {
-            "index": "Menu Level 2b",
-            "3a": "Menu Level 3a",
-            "3b": "Menu Level 3b"
-          }
-        }
-      },
 
-      "blank": "Individual Assessment",
-      "error": {
-        "index": "Error Page",
-        "403": "403",
-        "404": "404",
-        "500": "500"
-      },
       "packages": "Packages ",
       "eqAssessmentTest":"EQ Assessment Test"
-     
     },
     "eqPreAssessment":"eqPreAssessment",
     "eqAssessment":"eqAssessment",
     "singlePageReport":"singlePageReport",
+    "assessmentSurvey":"Assessment Survey",
+    "survey":{
+      "preAssessmentCompleted":"Pre-Assessment Completed",
+      "congratulationText":"Congratulations! You’ve completed the EQ assessment. Below is a quick summary of your results.",
+      "agreeWithResult":"How much do you agree with the results?",
+      "optimisticOutlook":"Optimistic Outlook",
+      "socialEngagement":"Social Engagement",
+      "enthusiasm":"Enthusiasm",
+      "internalRegulation":"Internal Regulation",
+      "recommendation":"Recommendation",
+      "selfManagement":"Self-management can help you manage stress, motivate yourself, and set and work towards personal, academic, and professional goals. Self-management is important because it can help you manage the stress that is associated with a new workplace, dealing with problems with your coworkers, and coming up with solutions to different problems that you may face.",
+      "selfRegulation":"Self-regulation involves taking a pause between a feeling and an action. It is important to take the time to think things through and make a plan. Without self-regulation, it will be difficult to stay calm under pressure. Adults with poor self-regulation skills may lack self-confidence and have trouble handling stress or frustration, which can lead to anger and anxiety. Whether you feel at ease or distressed, it is useful to pay attention to your breathing for self-regulation. Try 'square breathing': this brief exercise can help you notice patterns in your breathing and 'reset' your brain to process information better.",
+      "selActivities":"SEL Activities to help improve",
+      "detailResults":"Detail Results"
+  },
+    "addToCart":"Add to Cart",
     "individualDashboardStats": {
       "understandingEmotions": "Understanding Emotion",
       "personalGrowth": "Personal Growth",
@@ -222,6 +202,64 @@
       "q5": "Q. IS THIS PERSONALITY TEST REALLY FREE?",
       "a5": "You do not need to purchase or register to take this test or view your results."
     },
+    "assessmentInstructions":{
+      "welocmeText":"Welcome to STRUT’s Emotional Intelligence 360",
+      "questionsAsked":"You’ll be asked a series of questions about how well you:",
+      "understandEmotions":"Understand and manage emotions",
+      "setGoals":"Set and achieve positive goals",
+      "feelEmpathy":"Feel and show empathy for others",
+      "maintainRelationship":"Establish and maintain positive relationships",
+      "makeDescision":"Make responsible decisions",
+      "stayMotivated":"Are motivated and stay motivated",
+      "rightAnswer":"There are no right answers and this is the first step on your journey to understanding your EQ at your own pace.",
+      "begin":"Begin"
+     },
+     "preAssessmentQuestions":{
+     "selectAge":"Select Age",
+     "yourAge":"What is your age?",
+     "selectDegree":"Professional Certificate / License",
+     "yourDegree":"What is the highest degree or level of education you have completed?",
+     "yourLanguage":"Which language is primarily spoken in your home?",
+     "maritalStatus":"What is your marital status?",
+     "selectCountry":"Select Counrty",
+     "yourCountryCode":"What country is your ZIP / Country code in?",
+     "demographicData":"Demographic data is for research purposes only"
+     },
+     "preAssessmentComplete":{
+      "preAssessment":"Pre-Assessment",
+     "preAssessmentCompleted":"Pre-Assessment Completed!",
+     "preCompletedAssessmentDescription":"You are about to be presented with a series of statements; you’ll just need to select the response corresponding to how frequently you believe that applies to you (“Almost Never”, “Rarely”, “Sometimes”, “Often”, or “Almost Always”). There’s no time limit to complete the assessment but give yourself about 20 minutes to finish. If you need to take a break, you can resume at a later time but we suggest completing the assessment in one sitting.",
+     "rangeDescription":"“Almost Never”, “Rarely”, “Sometimes”, “Often”, or “Almost Always”",
+     "assessmentTimeLimitDescription":". There’s no time limit to complete the assessment but give yourself about 20 minutes to finish. If you need to take a break, you can resume at a later time but we suggest completing the assessment in one sitting.",
+     "uponFinishing":"Upon finishing, you’ll receive a snapshot of your current SEL abilities",
+     "letStartEqAssessment":"Lets Start EQ Assessment"
+     },
+     "selectLanguage":{
+      "english": "English (US)",
+    "arabic": "Arabic",
+    "chinese": "Chinese",
+    "french": "French(/Creole)",
+    "hindi": "Hindi",
+    "italian": "Italian",
+    "japanese": "Japanese",
+    "korean": "Korean",
+    "polish": "Polish",
+    "portuguese": "Portuguese",
+    "russian": "Russian",
+    "spanish": "Spanish",
+    "tagalog": "Tagalog",
+    "vietnamese": "Vietnamese",
+    "other": "Other",
+    "prefer-not-to-say": "Prefer not to say"
+     },
+     "selectMaritalStatus":{
+      "single": "Single or never married",
+      "married": "Married or domestic partnership",
+      "divorced": "Divorced",
+      "widowed": "Widowed",
+      "separated": "Separated",
+      "prefer-not-to-say": "Prefer not to say"
+     },
     "docs": "Document"
   }
 }
