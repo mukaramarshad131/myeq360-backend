@@ -1,73 +1,85 @@
+<p align="center">
+  <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo-small.svg" width="120" alt="Nest Logo" /></a>
+</p>
 
-### Install Dependencies
+[circleci-image]: https://img.shields.io/circleci/build/github/nestjs/nest/master?token=abc123def456
+[circleci-url]: https://circleci.com/gh/nestjs/nest
 
-In the project's root directory, run the following command to install project dependencies:
+  <p align="center">A progressive <a href="http://nodejs.org" target="_blank">Node.js</a> framework for building efficient and scalable server-side applications.</p>
+    <p align="center">
+<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/v/@nestjs/core.svg" alt="NPM Version" /></a>
+<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/l/@nestjs/core.svg" alt="Package License" /></a>
+<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/dm/@nestjs/common.svg" alt="NPM Downloads" /></a>
+<a href="https://circleci.com/gh/nestjs/nest" target="_blank"><img src="https://img.shields.io/circleci/build/github/nestjs/nest/master" alt="CircleCI" /></a>
+<a href="https://coveralls.io/github/nestjs/nest?branch=master" target="_blank"><img src="https://coveralls.io/repos/github/nestjs/nest/badge.svg?branch=master#9" alt="Coverage" /></a>
+<a href="https://discord.gg/G7Qnnhy" target="_blank"><img src="https://img.shields.io/badge/discord-online-brightgreen.svg" alt="Discord"/></a>
+<a href="https://opencollective.com/nest#backer" target="_blank"><img src="https://opencollective.com/nest/backers/badge.svg" alt="Backers on Open Collective" /></a>
+<a href="https://opencollective.com/nest#sponsor" target="_blank"><img src="https://opencollective.com/nest/sponsors/badge.svg" alt="Sponsors on Open Collective" /></a>
+  <a href="https://paypal.me/kamilmysliwiec" target="_blank"><img src="https://img.shields.io/badge/Donate-PayPal-ff3f59.svg" alt="Donate us"/></a>
+    <a href="https://opencollective.com/nest#sponsor"  target="_blank"><img src="https://img.shields.io/badge/Support%20us-Open%20Collective-41B883.svg" alt="Support us"></a>
+  <a href="https://twitter.com/nestframework" target="_blank"><img src="https://img.shields.io/twitter/follow/nestframework.svg?style=social&label=Follow" alt="Follow us on Twitter"></a>
+</p>
+  <!--[![Backers on Open Collective](https://opencollective.com/nest/backers/badge.svg)](https://opencollective.com/nest#backer)
+  [![Sponsors on Open Collective](https://opencollective.com/nest/sponsors/badge.svg)](https://opencollective.com/nest#sponsor)-->
+
+## Description
+
+[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
+
+## Project setup
 
 ```bash
-pnpm install
+$ pnpm install
 ```
 
-### Start the Development Server
-
-Run the following command to start the development server:
+## Compile and run the project
 
 ```bash
-pnpm dev
+# development
+$ pnpm run start
+
+# watch mode
+$ pnpm run start:dev
+
+# production mode
+$ pnpm run start:prod
 ```
 
-Visit [http://localhost:3001](http://localhost:3001) to view your application.
-
-### Build for Production
-
-Run the following command to build the production version:
+## Run tests
 
 ```bash
-pnpm build
+# unit tests
+$ pnpm run test
+
+# e2e tests
+$ pnpm run test:e2e
+
+# test coverage
+$ pnpm run test:cov
 ```
 
-## Docker deployment
+## Resources
 
+Check out a few resources that may come in handy when working with NestJS:
 
-### Build image and Run container
-#### build image
-Enter the project root directory in the terminal and execute the following command to build the Docker image:
-```
-docker build -t your-image-name .
-```
-Make sure to replace `your-image-name` with your own image name 
+- Visit the [NestJS Documentation](https://docs.nestjs.com) to learn more about the framework.
+- For questions and support, please visit our [Discord channel](https://discord.gg/G7Qnnhy).
+- To dive deeper and get more hands-on experience, check out our official video [courses](https://courses.nestjs.com/).
+- Visualize your application graph and interact with the NestJS application in real-time using [NestJS Devtools](https://devtools.nestjs.com).
+- Need help with your project (part-time to full-time)? Check out our official [enterprise support](https://enterprise.nestjs.com).
+- To stay in the loop and get updates, follow us on [X](https://x.com/nestframework) and [LinkedIn](https://linkedin.com/company/nestjs).
+- Looking for a job, or have a job to offer? Check out our official [Jobs board](https://jobs.nestjs.com).
 
-#### run container
-Run your application in the Docker container using the following command:
-```
-docker run -p 3001:80 your-image-name
-```
-This will run your application on port `80`(exposed in `Dockerfile`) of the container and map it to port `3001` on your host.
+## Support
 
-Now you can access http://localhost:3001 to view the deployed applications.
+Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
 
-### use docker-compose.yaml
-Enter the project root directory in the terminal and execute the following command to start Docker Compose:
-```
-docker-compose up -d
-```
-Docker Compose will build an image based on the configuration defined by 'docker-compose. yaml' and run the container in the background.
+## Stay in touch
 
-After the container runs successfully, it can also be accessed through http://localhost:3001 To view the deployed applications.
+- Author - [Kamil Myśliwiec](https://twitter.com/kammysliwiec)
+- Website - [https://nestjs.com](https://nestjs.com/)
+- Twitter - [@nestframework](https://twitter.com/nestframework)
 
+## License
 
-## Git Contribution submission specification
-
-reference[.commitlint.config.js](./commitlint.config.js)
-
-- `feat` new features
-- `fix`  fix the
-- `docs` documentation or comments
-- `style` code format (changes that do not affect code execution)
-- `refactor` refactor
-- `perf` performance optimization
-- `revert` revert commit
-- `test` test related
-- `chore` changes in the construction process or auxiliary tools
-- `ci` modify CI configuration and scripts
-- `types` type definition file changes
-- `wip` in development
+Nest is [MIT licensed](https://github.com/nestjs/nest/blob/master/LICENSE).

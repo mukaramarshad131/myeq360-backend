@@ -1,0 +1,213 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
+// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider  = "postgresql"
+  url       = env("POSTGRES_PRISMA_URL") // uses connection pooling
+  directUrl = env("POSTGRES_URL_NON_POOLING") // uses a direct connection
+}
+
+model Roles {
+  id         Int       @id @default(autoincrement())
+  created_at DateTime  @default(now())
+  updated_at DateTime  @updatedAt
+  deleted_at DateTime?
+
+  name        String @unique
+  permissions Json?
+  user        User[] @relation("userRoles")
+
+  @@map("roles")
+}
+
+model User {
+  id         Int       @id @default(autoincrement())
+  created_at DateTime  @default(now())
+  updated_at DateTime  @updatedAt
+  deleted_at DateTime?
+
+  email    String  @unique
+  username String  @unique
+  hash     String
+  status   Boolean @default(false)
+  hashRt   String?
+
+  roles   Roles[]  @relation("userRoles")
+  profile Profile?
+
+  @@map("users")
+}
+
+model Profile {
+  id         Int       @id @default(autoincrement())
+  created_at DateTime  @default(now())
+  updated_at DateTime  @updatedAt
+  deleted_at DateTime?
+
+  fName   String
+  lName   String
+  phone   String
+  city    String
+  state   String
+  country String
+  address String
+  zip     String
+  bio     String
+
+  age     Int?
+  marital_status  String?
+  language  String?
+  education String?
+
+  userId Int  @unique
+  user   User @relation(fields: [userId], references: [id])
+  LicenseRelations LicenseProfileRelation[]
+
+  @@map("profile")
+}
+
+model Competency {
+  id         Int       @id @default(autoincrement())
+  created_at DateTime  @default(now())
+  updated_at DateTime  @updatedAt
+  deleted_at DateTime?
+
+  title      String @unique
+
+  subCompentency SubCompetency[]
+  Question       Question[]
+
+  @@map("competency")
+}
+
+model SubCompetency {
+  id           Int       @id @default(autoincrement())
+  created_at   DateTime  @default(now())
+  updated_at   DateTime  @updatedAt
+  deleted_at   DateTime?
+
+  title        String     @unique
+  competencyId Int
+  competency   Competency @relation(fields: [competencyId], references: [id])
+  Question     Question[]
+
+  @@map("subCompetency")
+}
+
+model AssignTo {
+  id         Int        @id @default(autoincrement())
+  created_at DateTime   @default(now())
+  updated_at DateTime   @updatedAt
+  deleted_at DateTime?
+  title      String     @unique
+  question   Question[]
+
+  @@map("assignTo")
+}
+
+model Options {
+  id         Int       @id @default(autoincrement())
+  created_at DateTime  @default(now())
+  updated_at DateTime  @updatedAt
+  deleted_at DateTime?
+
+  title      String    @unique
+  question   Question[]
+
+  @@map("options")
+}
+
+model Question {
+  id              Int       @id @default(autoincrement())
+  created_at      DateTime  @default(now())
+  updated_at      DateTime  @updatedAt
+  deleted_at      DateTime?
+
+  question        String
+  type            String
+  rank            String
+  options         Options[]
+  assignToId      Int
+  assignTo        AssignTo      @relation(fields: [assignToId], references: [id])
+  competencyId    Int
+  competency      Competency    @relation(fields: [competencyId], references: [id])
+  subCompetencyId Int
+  subCompetency   SubCompetency @relation(fields: [subCompetencyId], references: [id])
+
+  @@map("question")
+}
+
+model Packages {
+  id         Int       @id @default(autoincrement())
+  created_at DateTime  @default(now())
+  updated_at DateTime  @updatedAt
+  deleted_at DateTime?
+
+  title      String
+  des        String
+  price      Int
+  oldPrice   Int
+  disc       Int?
+  image      String?
+  packageLicenses PackageLicense[]
+}
+
+model License{
+  id         Int       @id @default(autoincrement())
+  created_at DateTime  @default(now())
+  updated_at DateTime  @updatedAt
+  deleted_at DateTime?
+
+  title      String
+  des        String
+  price      Int
+  oldPrice   Int
+  disc       Int?
+  image      String?
+  categoryId Int
+  category   Category @relation(fields: [categoryId],references: [id])
+  packageLicenses PackageLicense[]
+  LicenseRelations LicenseProfileRelation[]
+}
+model PackageLicense {
+  packageId Int
+  liscenseId Int
+  qty       Int         // The quantity of the specific license in the package
+
+  package   Packages  @relation(fields: [packageId], references: [id])
+  license  License  @relation(fields: [liscenseId], references: [id])
+
+  @@id([packageId, liscenseId]) // Composite primary key
+}
+model Category{
+  id         Int       @id @default(autoincrement())
+  created_at DateTime  @default(now())
+  updated_at DateTime  @updatedAt
+  deleted_at DateTime?
+
+  title String
+  License License[]
+}
+
+model LicenseProfileRelation{
+  id         Int       @id @default(autoincrement())
+  created_at DateTime  @default(now())
+  updated_at DateTime  @updatedAt
+  deleted_at DateTime?
+
+  qty        Int
+  expire_at  DateTime?
+  profileId  Int
+  LicenseId Int
+
+  profile    Profile   @relation(fields: [profileId], references: [id], onDelete: Cascade)
+  License   License  @relation(fields: [LicenseId], references: [id], onDelete: Cascade)
+
+  @@unique([profileId, LicenseId])
+}
