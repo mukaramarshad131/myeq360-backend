@@ -1,6 +1,6 @@
 import { Body, Controller, Get, HttpCode, HttpStatus, Param, Post, Res} from '@nestjs/common';
 import { AuthService } from './auth.service';
-import { AuthSignInDto, AuthSignUpDto, AuthUsername, ChangePassword, CreatePasswordDto, ForgetPasswordEmail } from './dto';
+import { AuthSignInDto, AuthSignUpDto, AuthUsername, ChangePassword, CheckOutDto, CreateMember, CreatePasswordDto, ForgetPasswordEmail } from './dto';
 import { Public } from '../common/decorators/public.decorator';
 import { Response } from 'express';
 import { response } from 'src/common/types';
@@ -59,7 +59,23 @@ export class AuthController {
     @Post('/createNewPassword')
     @HttpCode(200)
     createNewPassword(@Body () dto:CreatePasswordDto):Promise<response>{
-       return this.AuthService.createNewPassword(dto)
+       return apiWrapper(()=>this.AuthService.createNewPassword(dto))
+    }
+
+    @Post('/checkOut')
+    @HttpCode(200)
+    checkOut(@getId('give me id') id:number,@Body () dto:CheckOutDto):Promise<response>{
+       return apiWrapper(()=>this.AuthService.checkOut(id,dto))
+    }
+    @Post('/createMember')
+    @HttpCode(200)
+    creatMember(@getId('give me id') id:number,@Body () dto:CreateMember):Promise<response>{
+       return apiWrapper(()=>this.AuthService.creatMember(id,dto))
+    }
+    @Get('/members/:type?')
+    @HttpCode(200)
+    getMembers(@getId('give me id') id:number, @Param('type') type:string):Promise<response>{
+       return apiWrapper(()=>this.AuthService.getMembers(id, type))
     }
 
     @Public()

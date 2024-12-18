@@ -8,7 +8,7 @@ export class LicenseService {
   constructor(private Prisma: PrismaService) {}
 
   async createLiscense(filePath: string, dto: LicenseDto): Promise<response> {
-    const price = Number(dto.disc) >0?(Number(dto.disc)/Number(dto.price)) * 100 :Number(dto.price)
+    const price = Number(dto.disc) >0?Number(dto.price) - (Number(dto.price) * (Number(dto.disc) / 100)):Number(dto.price)
     try {
       await this.Prisma.license.upsert({
         where: { id: dto.id || 0 },
@@ -39,7 +39,7 @@ export class LicenseService {
         status: 200,
         message: `Liscense ${dto.id ? 'updated' : 'created'} successfully.`,
       };
-    } catch (error) {
+    } catch (error:any) {
       return {
         status: 500,
         message: `An error occurred. Please try again. Error: ${error.message}`,
@@ -47,10 +47,10 @@ export class LicenseService {
     }
   }
   async createPakages(filePath: string, dto: PackageDto): Promise<response>{
-    const price = Number(dto.disc) >0?(Number(dto.disc)/Number(dto.price)) * 100 :Number(dto.price)
+    const price = Number(dto.disc) >0?Number(dto.price) - (Number(dto.price) * (Number(dto.disc) / 100)):Number(dto.price)
     try {
       await this.Prisma.packages.upsert({
-        where: { id: dto.id || 0 },
+        where: { id: Number(dto.id) || 0 },
         update: {
           title: dto.title,
           des: dto.des,
@@ -61,11 +61,14 @@ export class LicenseService {
           packageLicenses: {
             deleteMany: {}, // Remove existing relations to avoid duplicates
             create: dto.licenses.map((license) => ({
-              qty: license.quantity, // Quantity of the license
+              qty: Number(license.quantity), // Quantity of the license
               license: {
-                connect: { id: license.LicenseId }, // Connect to an existing license by ID
+                connect: { id: Number(license.LicenseId) }, // Connect to an existing license by ID
               },
             })),
+          },
+          category: {
+            connect: { id: Number(dto.categoryId) },
           },
         },
         create: {
@@ -77,11 +80,14 @@ export class LicenseService {
           image: filePath,
           packageLicenses: {
             create: dto.licenses.map((license) => ({
-              qty: license.quantity, // Quantity of the license
+              qty: Number(license.quantity), // Quantity of the license
               license: {
-                connect: { id: license.LicenseId }, // Connect to an existing license by ID
+                connect: { id: Number(license.LicenseId )}, // Connect to an existing license by ID
               },
             })),
+          },
+          category: {
+            connect: { id: Number(dto.categoryId) },
           },
         },
       });
@@ -89,7 +95,7 @@ export class LicenseService {
         status: 200,
         message: `Package ${dto.id ? 'updated' : 'created'} successfully.`,
       };
-    } catch (error) {
+    } catch (error:any) {
       return {
         status: 500,
         message: `An error occurred. Please try again. Error: ${error.message}`,
@@ -109,7 +115,7 @@ export class LicenseService {
         status: 200,
         message: `Liscense Category ${dto.id ? 'updated' : 'created'} successfully.`,
       };
-    } catch (error) {
+    } catch (error:any) {
       return {
         status: 500,
         message: `An error occurred. Please try again. Error: ${error.message}`,
@@ -123,11 +129,69 @@ export class LicenseService {
             return { status: 401, message:'No data found.'};
          }
       return { status: 200, message: 'All Categories', list };
-    } catch (error) {
+    } catch (error:any) {
         return {
             status: 500,
             message: `An error occurred. Please try again. Error: ${error.message}`,
           };
+    }
+  }
+  async allPackages():Promise<{list?:Record<string,any>[]} & response>{
+    const packages = await this.Prisma.packages.findMany({
+      include:{
+        category:{
+          select:{
+            title:true
+          }
+        },
+        packageLicenses:{
+          include:{
+            license:{
+              select:{
+                title:true,
+                image:true,
+                price:true,
+                oldPrice:true,
+              }
+            }
+          }
+        }
+      }
+    });
+
+    if(!packages){
+      return {
+        status:404,
+        message:'No packages found.'
+      }
+    }
+    return {
+      status:200,
+      message:'All packages list.',
+      list:packages,
+    }
+  }
+  async allLicense():Promise<{list?:Record<string,any>[]} & response>{
+    const licenses = await this.Prisma.license.findMany({
+      include:{
+        category:{
+          select:{
+            title:true
+          }
+        }
+      }
+    });
+
+    if(!licenses){
+      return {
+        status:404,
+        message:'No liscense found.'
+      }
+    }
+    return {
+      status:200,
+      message:'All liscense list.',
+      list:licenses,
     }
   }
 }

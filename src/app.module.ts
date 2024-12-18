@@ -8,8 +8,9 @@ import { ProfileModule } from './profile/profile.module';
 import { QuestionsModule } from './questions/questions.module';
 import { LicenseModule } from './liscense/license.module';
 import { MulterModule } from '@nestjs/platform-express';
+import { AssessmentModule } from './assessment/assessment.module';
 @Module({
-  imports: [AuthModule, PrismaModule, MailModule, ProfileModule, QuestionsModule, LicenseModule, MulterModule.register({dest:'./upload'})],
+  imports: [AuthModule, PrismaModule, MailModule, ProfileModule, QuestionsModule, LicenseModule, MulterModule.register({dest:'./upload'}), AssessmentModule],
   providers: [{
     provide:APP_GUARD,
     useClass:authGaurd

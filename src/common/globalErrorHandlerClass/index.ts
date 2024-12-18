@@ -1,4 +1,5 @@
 import { HttpException, HttpStatus, Logger } from "@nestjs/common";
+import { Prisma } from "@prisma/client";
 
 const logger = new Logger('APIWrapper');
 
@@ -8,9 +9,14 @@ export const apiWrapper = async <T>(
 ): Promise<T> => {
   try {
     return await logic();
-  } catch (error) {
+  } catch (error:any) {
     logger.error(error?.message || error, error.stack);
-
+    if(error instanceof Prisma.PrismaClientKnownRequestError && error.code === 'P2002'){
+      throw new HttpException(
+        'A unique constraint violation occurred. Please check your input and try again.',
+        HttpStatus.CONFLICT,
+      );
+    }
     if (error instanceof HttpException) {
       // Re-throw known HttpExceptions
       throw error;

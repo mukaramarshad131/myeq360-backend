@@ -22,6 +22,7 @@ model Roles {
   name        String @unique
   permissions Json?
   user        User[] @relation("userRoles")
+  CategorizedMembers CategorizedMembers[]
 
   @@map("roles")
 }
@@ -38,9 +39,14 @@ model User {
   status   Boolean @default(false)
   hashRt   String?
 
-  roles   Roles[]  @relation("userRoles")
-  profile Profile?
-
+  roles           Roles[]          @relation("userRoles")
+  checkOutDetails CheckOutDetail[] @relation("checout")
+  coupan          Coupan[]         @relation("coupan")
+  referral        Coupan[]         @relation("referralCoupan")
+  assessments     Assessment[]     @relation("UserAssessments") // Relation to assessments
+  profile         Profile?
+  CategorizedMembers CategorizedMembers[]
+  members         Members[]        @relation("members")
   @@map("users")
 }
 
@@ -60,13 +66,13 @@ model Profile {
   zip     String
   bio     String
 
-  age     Int?
-  marital_status  String?
-  language  String?
-  education String?
+  age            Int?
+  marital_status String?
+  language       String?
+  education      String?
 
-  userId Int  @unique
-  user   User @relation(fields: [userId], references: [id])
+  userId           Int                      @unique
+  user             User                     @relation(fields: [userId], references: [id])
   LicenseRelations LicenseProfileRelation[]
 
   @@map("profile")
@@ -78,7 +84,7 @@ model Competency {
   updated_at DateTime  @updatedAt
   deleted_at DateTime?
 
-  title      String @unique
+  title String @unique
 
   subCompentency SubCompetency[]
   Question       Question[]
@@ -87,10 +93,10 @@ model Competency {
 }
 
 model SubCompetency {
-  id           Int       @id @default(autoincrement())
-  created_at   DateTime  @default(now())
-  updated_at   DateTime  @updatedAt
-  deleted_at   DateTime?
+  id         Int       @id @default(autoincrement())
+  created_at DateTime  @default(now())
+  updated_at DateTime  @updatedAt
+  deleted_at DateTime?
 
   title        String     @unique
   competencyId Int
@@ -117,19 +123,19 @@ model Options {
   updated_at DateTime  @updatedAt
   deleted_at DateTime?
 
-  title      String    @unique
-  question   Question[]
+  title    String     @unique
+  question Question[]
 
   @@map("options")
 }
 
 model Question {
-  id              Int       @id @default(autoincrement())
-  created_at      DateTime  @default(now())
-  updated_at      DateTime  @updatedAt
-  deleted_at      DateTime?
+  id         Int       @id @default(autoincrement())
+  created_at DateTime  @default(now())
+  updated_at DateTime  @updatedAt
+  deleted_at DateTime?
 
-  question        String
+  question        String        @unique
   type            String
   rank            String
   options         Options[]
@@ -149,65 +155,164 @@ model Packages {
   updated_at DateTime  @updatedAt
   deleted_at DateTime?
 
-  title      String
-  des        String
-  price      Int
-  oldPrice   Int
-  disc       Int?
-  image      String?
+  title           String           @unique
+  des             String
+  price           Int
+  oldPrice        Int
+  disc            Int?
+  image           String?
+  categoryId      Int
+  category        Category         @relation(fields: [categoryId], references: [id])
   packageLicenses PackageLicense[]
 }
 
-model License{
+model License {
   id         Int       @id @default(autoincrement())
   created_at DateTime  @default(now())
   updated_at DateTime  @updatedAt
   deleted_at DateTime?
 
-  title      String
-  des        String
-  price      Int
-  oldPrice   Int
-  disc       Int?
-  image      String?
-  categoryId Int
-  category   Category @relation(fields: [categoryId],references: [id])
-  packageLicenses PackageLicense[]
+  title            String                   @unique
+  des              String
+  price            Int
+  oldPrice         Int
+  disc             Int?
+  image            String?
+  categoryId       Int
+  category         Category                 @relation(fields: [categoryId], references: [id])
+  packageLicenses  PackageLicense[]
   LicenseRelations LicenseProfileRelation[]
 }
-model PackageLicense {
-  packageId Int
-  liscenseId Int
-  qty       Int         // The quantity of the specific license in the package
 
-  package   Packages  @relation(fields: [packageId], references: [id])
-  license  License  @relation(fields: [liscenseId], references: [id])
+model PackageLicense {
+  packageId  Int
+  liscenseId Int
+  qty        Int // The quantity of the specific license in the package
+
+  package Packages @relation(fields: [packageId], references: [id])
+  license License  @relation(fields: [liscenseId], references: [id])
 
   @@id([packageId, liscenseId]) // Composite primary key
 }
-model Category{
+
+model Category {
   id         Int       @id @default(autoincrement())
   created_at DateTime  @default(now())
   updated_at DateTime  @updatedAt
   deleted_at DateTime?
 
-  title String
-  License License[]
+  title    String     @unique
+  License  License[]
+  Packages Packages[]
 }
 
-model LicenseProfileRelation{
+model LicenseProfileRelation {
   id         Int       @id @default(autoincrement())
   created_at DateTime  @default(now())
   updated_at DateTime  @updatedAt
   deleted_at DateTime?
 
-  qty        Int
-  expire_at  DateTime?
-  profileId  Int
+  qty       Int
+  expire_at DateTime?
+  profileId Int
   LicenseId Int
 
-  profile    Profile   @relation(fields: [profileId], references: [id], onDelete: Cascade)
-  License   License  @relation(fields: [LicenseId], references: [id], onDelete: Cascade)
+  profile Profile @relation(fields: [profileId], references: [id], onDelete: Cascade)
+  License License @relation(fields: [LicenseId], references: [id], onDelete: Cascade)
 
   @@unique([profileId, LicenseId])
+}
+
+model Assessment {
+  id         Int       @id @default(autoincrement())
+  created_at DateTime  @default(now())
+  updated_at DateTime  @updatedAt
+  deleted_at DateTime?
+
+  userId Int // Foreign key to User
+  user   User @relation("UserAssessments", fields: [userId], references: [id])
+
+  userAge           Int
+  userLanguage      String
+  userMaritalStatus String
+  country           String
+  education         String
+  status            Boolean @default(false)
+  race              String?
+  sex               String?
+  income            String?
+
+  assessment Json
+  result     Json
+  survey     Json?
+}
+
+model CheckOutDetail {
+  id         Int       @id @default(autoincrement())
+  created_at DateTime  @default(now())
+  updated_at DateTime  @updatedAt
+  deleted_at DateTime?
+  expire_at DateTime?  
+
+  userId Int // Foreign key to User
+  user   User @relation("checout", fields: [userId], references: [id])
+
+  email       String
+  fName       String
+  Lname       String
+  companyName String?
+  country     String
+  zip         String
+  phoneNumber String
+  note        String?
+  items       Json
+  amount      Int
+
+  coupanId    Int?
+  coupan      Coupan? @relation("CouponCheckouts", fields: [coupanId], references: [id])
+  membersId    Int? @unique
+  members     Members? @relation(fields: [membersId], references: [id])
+}
+
+model Coupan {
+  id         Int       @id @default(autoincrement())
+  created_at DateTime  @default(now())
+  updated_at DateTime  @updatedAt
+  deleted_at DateTime?
+
+  title      String
+  createdBy  Int // Foreign key to User
+  referralId Int // Foreign key to User
+
+  checkout   CheckOutDetail[] @relation("CouponCheckouts")
+  createtor User @relation("coupan", fields: [createdBy], references: [id])
+  referral  User @relation("referralCoupan", fields: [referralId], references: [id])
+}
+
+model CategorizedMembers{
+  id         Int       @id @default(autoincrement())
+  created_at DateTime  @default(now())
+  updated_at DateTime  @updatedAt
+  deleted_at DateTime?
+
+  qty         Int
+  admin_id    Int?
+  roleId      Int
+  role        Roles     @relation(fields: [roleId], references: [id])
+  List        User[]
+  membersId   Int
+  members     Members @relation(fields: [membersId], references: [id])
+}
+model Members{
+  id         Int       @id @default(autoincrement())
+  created_at DateTime  @default(now())
+  updated_at DateTime  @updatedAt
+  deleted_at DateTime?
+  expire_at  DateTime
+
+  userId Int? // Foreign key to User
+  user   User? @relation("members", fields: [userId], references: [id])
+
+  checkOutDetail  CheckOutDetail?
+  memberList  CategorizedMembers[]
 }

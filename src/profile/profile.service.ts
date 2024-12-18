@@ -3,7 +3,7 @@ import { PrismaService } from '../prisma/prisma.service';
 import { ChangeRoleDto, CreateRoleDto, profileDto } from './dto/profile.dto';
 import { Prisma } from '@prisma/client';
 import { response } from 'src/common/types';
-import { connect } from 'http2';
+
 
 
 @Injectable()
@@ -12,8 +12,6 @@ export class ProfileService {
 
     async createProfile(id:string, dto: profileDto):Promise<{ user?: any, message?:string, status:number}>{
         const userId = Number(id)
-        try {
-            // Check if the profile exists for the given user
             await this.Prisma.getUserWithDetails(userId)
               // Update the profile if it exists
                await this.Prisma.profile.upsert({
@@ -49,16 +47,8 @@ export class ProfileService {
                 message: 'Profile updated successfully',
                 status: 200,
               };
-          } catch (error) {
-            // Handle any potential errors
-            return {
-              message: `An error occurred: ${error.message}`,
-              status: 500,
-            };
-          }
     }
     async changeRole(id:number, dto:ChangeRoleDto):Promise<response>{
-      try {
         await this.Prisma.user.update({
           where:{id},
           data:{
@@ -71,15 +61,8 @@ export class ProfileService {
           message: 'User role updated successfully',
           status: 200,
         };
-      } catch (error) {
-        return {
-          message: `An error occurred: ${error.message}`,
-          status: 500,
-        };
-      }
     }
     async createRole(dto:CreateRoleDto):Promise<response>{
-      try {
         await this.Prisma.roles.upsert({
           where:{id:dto.roleId?dto.roleId:0},
           update:{
@@ -94,13 +77,10 @@ export class ProfileService {
         return {
           message: `Role ${dto.roleId?'updated':'created'} successfully`,
           status: 200,
-        };
-      } catch (error) {
-        return {
-          message: `An error occurred: ${error.message}`,
-          status: 500,
-        };
-      }
+        }
     }
-
+    async getAllRoles (){
+      const roles = await this.Prisma.roles.findMany()
+      return {status:200, message:'All Roles.', list:roles}
+    }
 }

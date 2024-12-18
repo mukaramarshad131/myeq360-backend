@@ -6,6 +6,7 @@ import {FileInterceptor} from '@nestjs/platform-express'
 import { extname } from 'path';
 import { diskStorage } from 'multer';
 import { existsSync, mkdirSync } from 'fs';
+import { apiWrapper } from 'src/common/globalErrorHandlerClass';
 
 
 @Controller('license')
@@ -15,7 +16,7 @@ export class LicenseController {
     @UseInterceptors(FileInterceptor('image', {
         storage: diskStorage({
           destination:  (req, file, cb) => {
-            const uploadPath = '/tmp/uploads'; // Use /tmp/uploads as the directory
+            const uploadPath = './uploads'; // Use /tmp/uploads as the directory
             if (!existsSync(uploadPath)) {
               mkdirSync(uploadPath, { recursive: true });
             }
@@ -44,7 +45,7 @@ export class LicenseController {
     @UseInterceptors(FileInterceptor('image', {
         storage: diskStorage({
           destination:  (req, file, cb) => {
-            const uploadPath = '/tmp/uploads'; // Use /tmp/uploads as the directory
+            const uploadPath = './uploads'; // Use /tmp/uploads as the directory
             if (!existsSync(uploadPath)) {
               mkdirSync(uploadPath, { recursive: true });
             }
@@ -74,7 +75,15 @@ export class LicenseController {
      return this.LicenseService.createLiscenseCategory(dto)
     }
     @Get('/allCategories')
-    allCategories():Promise<any>{
+    allCategories():Promise<response>{
      return this.LicenseService.allCategories()
+    }
+    @Get('/allLicense')
+    allLicense():Promise<response>{
+     return apiWrapper(()=>this.LicenseService.allLicense())
+    }
+    @Get('/allPackages')
+    allPackages():Promise<response>{
+     return apiWrapper(()=>this.LicenseService.allPackages())
     }
 }

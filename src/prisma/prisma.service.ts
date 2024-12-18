@@ -30,7 +30,7 @@ async getUserWithDetails(id: number) {
       }
       const {hash, ...rest} =user
       return rest;
-    } catch (error) {
+    } catch (error:any) {
       // Handle errors (e.g., log or transform them as needed)
       throw new Error(`Failed to fetch user: ${error.message}`);
     }

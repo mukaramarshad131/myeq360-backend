@@ -31,6 +31,9 @@ export class PackageDto{
     title:string;
 
     @IsNotEmpty()
+    categoryId:number
+    
+    @IsNotEmpty()
     @IsString()
     des:string;
 
